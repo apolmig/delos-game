@@ -1,0 +1,20 @@
+REPUBLIC OF TALOS
+A game by Miguel Guerrero | https://miguelguerrero.eu
+
+Online: https://miguelguerrero.eu/talos-game/
+
+1. Extract the play ZIP.
+2. Open PLAY.html in Chrome, Edge, Firefox or Safari.
+3. Select Enter the republic and read the three-part prologue.
+4. Read one incident, prepare if useful, and make one decision.
+
+Three separate futures. 36 decisions. About two hours, at your pace.
+The game, images, films, original lofi music and sound effects work offline.
+Sound starts quietly when you enter. Use the header to mute or Menu > Music & sound for volume and SFX.
+
+Progress saves automatically in this browser. Menu offers export/import for portable saves.
+Existing saves from the prior edition remain compatible.
+
+The research is real; Talos and its future incidents are fictional.
+ERA: Capability, Deployment, Effect: https://miguelguerrero.eu/agencytransfer/
+Full research and limits are in the game's Research & credits panel.

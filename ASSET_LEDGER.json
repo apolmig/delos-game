@@ -1,0 +1,257 @@
+{
+  "edition": "3.0",
+  "date": "2026-10-18",
+  "author": "Miguel Guerrero",
+  "website": "https://miguelguerrero.eu",
+  "blender": "5.2.2 LTS",
+  "newPaidGenerations": 0,
+  "music": {
+    "title": "Night Session",
+    "mode": "Original bundled lofi composition; no external recording or player",
+    "defaultVolumePercent": 8,
+    "durationSeconds": 160,
+    "reproducibleSource": "compose-score.py"
+  },
+  "assets": [
+    {
+      "path": "assets/republic.glb",
+      "bytes": 546576,
+      "sha256": "a0dbfc1c510adced7c98bcf7936d25eaa8058c41339170ed89ebee62630936c5",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "path": "assets/portraits/mara.png",
+      "bytes": 138355,
+      "sha256": "13e59227e6f31e1bbde092d7b831c931cb8544d999c1a19cb37559354ac0bbd2",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "path": "assets/portraits/leon.png",
+      "bytes": 135358,
+      "sha256": "7a65acabd7d4aab655e3f9c8c5311e37b6b3886c7365648307b1e1a9db6d8203",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "path": "assets/portraits/ines.png",
+      "bytes": 139304,
+      "sha256": "179ad715c5889b188d1d9e4fb2a67f82bf44ad4d6691ae1e0410601abb9e618b",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "path": "assets/portraits/samir.png",
+      "bytes": 131128,
+      "sha256": "3fd92e6c422a7dd9cbf2903c50a6a961f833e5931224645879c98b3620e5c951",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "path": "assets/portraits/elsa.png",
+      "bytes": 135815,
+      "sha256": "f3ac8298c2d665ff6e5cda829f371756482f8fa47265efa20de999db500569e0",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "path": "assets/portraits/tomas.png",
+      "bytes": 135553,
+      "sha256": "a0694cd563a57f74e9e0cdb207a071f6a61b11166961c68064fb4e0a76e1b57a",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "path": "assets/portraits/nora.png",
+      "bytes": 138489,
+      "sha256": "37d5cec49fe7dc08dc1df7f2b211615e00aa5e39026215f9db18e4617d439050",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "path": "assets/portraits/ivo.png",
+      "bytes": 133245,
+      "sha256": "1f15d99554821fec17afbcd231392ae8e48042923d848ffb630b2918cf4234d8",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "path": "assets/incident-choice.mp4",
+      "bytes": 3659244,
+      "sha256": "b2867b4662707387f93aba25ae801897147de3c99985df2bf6f0fa9dbbe07334",
+      "provenance": "Existing Talos synthetic incident film"
+    },
+    {
+      "path": "assets/incident-continuity.mp4",
+      "bytes": 3738107,
+      "sha256": "4488b0367d311da97066543e61d459132dda43eaa6d088dcd9566767a7fd5e1d",
+      "provenance": "Existing Talos synthetic incident film"
+    },
+    {
+      "path": "assets/incident-dependency.mp4",
+      "bytes": 2851851,
+      "sha256": "be42dc50e9c89db4954abb373d417dbffd0ae422259c6fafbbc10f5ac7733363",
+      "provenance": "Existing Talos synthetic incident film"
+    },
+    {
+      "path": "assets/Barlow-Regular.ttf",
+      "bytes": 82624,
+      "sha256": "a35caa4687f434d66453c1fe423d7074cfa9fd7ab80c19b0780f3862887d2fc9",
+      "provenance": "Barlow, SIL Open Font License"
+    },
+    {
+      "path": "assets/Barlow-Bold.ttf",
+      "bytes": 85776,
+      "sha256": "74103fd6d41bc32c63aa2e6eb3db619ddb80ce9ca1b1420d5548a23b8ee5d154",
+      "provenance": "Barlow, SIL Open Font License"
+    },
+    {
+      "path": "blender/TALOS_Civic_Mandate.blend",
+      "bytes": 242512,
+      "sha256": "85a270c0886553f2f35c326df58cfca4d0bd9993b6e08e5b873724ef5fa14c85",
+      "provenance": "Original local Blender geometry or render"
+    },
+    {
+      "key": "g1_c01",
+      "path": "assets/scenes/g1_c01.webp",
+      "source": "G1_C01_no_route_back.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 78940,
+      "sha256": "c0f11b9b207f1da875dea6217fa57556fe0015108fce9a1539e534b1a799a941"
+    },
+    {
+      "key": "g1_c02",
+      "path": "assets/scenes/g1_c02.webp",
+      "source": "G1_C02_the_shutter.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 92098,
+      "sha256": "6de9b0950bb41e74c94e17280e2a814c7e8c57ba6cb2f2563670369a7db59d37"
+    },
+    {
+      "key": "g1_c03",
+      "path": "assets/scenes/g1_c03.webp",
+      "source": "G1_C03_the_recommended_life.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 78878,
+      "sha256": "cd9cdf6af5c02ad50610e91e90ddbd18ae7365e67db97ca475cc3f9d7aeeb1c1"
+    },
+    {
+      "key": "g1_c04",
+      "path": "assets/scenes/g1_c04.webp",
+      "source": "G1_C04_the_same_answer_everywhere.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 91560,
+      "sha256": "6be43152bf37555cc63c72b49288093ec01ad8c75d8e322eb046a23aef7003e9"
+    },
+    {
+      "key": "g1_c05",
+      "path": "assets/scenes/g1_c05.webp",
+      "source": "G1_C05_trust_breaks.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 101728,
+      "sha256": "31ebe23ba30f79c3f1faca675b5a38caa02d4d9ea54bc352c4560233c2531d1e"
+    },
+    {
+      "key": "g1_c06",
+      "path": "assets/scenes/g1_c06.webp",
+      "source": "G1_C06_the_backlog_reaches_home.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 66162,
+      "sha256": "92af1ced0e4d6f486e4fd127ba2004c05c59d96b1dbff2f5abe5f3754df65333"
+    },
+    {
+      "key": "g2_c01",
+      "path": "assets/scenes/g2_c01.webp",
+      "source": "G2_C01_the_safe_performance.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 48302,
+      "sha256": "5bd55a796816550f3e3c451ae323a57d6790167b52d1dbffc440265eaef68364"
+    },
+    {
+      "key": "g2_c02",
+      "path": "assets/scenes/g2_c02.webp",
+      "source": "G2_C02_the_decision_already_framed.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 62736,
+      "sha256": "86d93df7a1a7bd648eaf98c6f1cb60f1e4a49d3a4176263da7db78c4c80f6f55"
+    },
+    {
+      "key": "g2_c03",
+      "path": "assets/scenes/g2_c03.webp",
+      "source": "G2_C03_a_resource_commitment.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 135230,
+      "sha256": "dc71a2f44effb70f7db815ac8e84223a197a3c39b1b93c78e45f9ef17b955462"
+    },
+    {
+      "key": "g2_c04",
+      "path": "assets/scenes/g2_c04.webp",
+      "source": "G2_C04_it_is_still_running.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 68236,
+      "sha256": "c0098f5d14fc189fb53f22323c5f7434495150150b33e2dfef1836040ef5ee72"
+    },
+    {
+      "key": "g2_c05",
+      "path": "assets/scenes/g2_c05.webp",
+      "source": "G2_C05_a_country_cannot_click_undo.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 79032,
+      "sha256": "7a42cd0443f36db9262ef09184f70f752c32307e02297328609c41cbe6756526"
+    },
+    {
+      "key": "g2_c06",
+      "path": "assets/scenes/g2_c06.webp",
+      "source": "G2_C06_who_controls_the_commitment.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 118944,
+      "sha256": "e6c06fb06c68d974457f32919972bcf627282ee6761732717b81e5723277650f"
+    },
+    {
+      "key": "g3_c01",
+      "path": "assets/scenes/g3_c01.webp",
+      "source": "G3_C01_free_at_the_point_of_use.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 102258,
+      "sha256": "9037349dda2d67c44a3aca0c5870732098625e42c5b631cbf9b8e8918e360c7c"
+    },
+    {
+      "key": "g3_c02",
+      "path": "assets/scenes/g3_c02.webp",
+      "source": "G3_C02_the_remedy_disappears.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 56356,
+      "sha256": "08f9c224eabff0b63cd0de6f601b61f12c6debec06de055a04b7509b6b0d9c5c"
+    },
+    {
+      "key": "g3_c03",
+      "path": "assets/scenes/g3_c03.webp",
+      "source": "G3_C03_one_source_across_the_city.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 154252,
+      "sha256": "57b0a28441e0299b1a3b72f362897b169b05aa06984ee78b00684fcd06eab07b"
+    },
+    {
+      "key": "g3_c04",
+      "path": "assets/scenes/g3_c04.webp",
+      "source": "G3_C04_the_discount_has_conditions.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 112960,
+      "sha256": "76fa2cd5d6b24c34b81b556d60c8916a99075245f2b98d3838365c20780617b6"
+    },
+    {
+      "key": "g3_c05",
+      "path": "assets/scenes/g3_c05.webp",
+      "source": "G3_C05_judgement_narrows.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 80724,
+      "sha256": "7a03dbc02acb0c0a867231b63b012010521a7351ac1457c0dc916d0d2860bb57"
+    },
+    {
+      "key": "g3_c06",
+      "path": "assets/scenes/g3_c06.webp",
+      "source": "G3_C06_who_funds_our_civic_ai.png",
+      "provenance": "Existing Talos AI-generated cinematic incident illustration; fictional people and events.",
+      "bytes": 110726,
+      "sha256": "853796374de07efe61d08b1c5b247c62063a7b4cbbc109bb1867a419fc20e6fe"
+    },
+    {
+      "path": "assets/audio/night-session.mp3",
+      "bytes": 2241366,
+      "sha256": "31a8932ee9422b59550af32d3ffd4e38b6debeab10d9021a4594eeb7032fc683",
+      "provenance": "Original procedural composition for this game; no third-party samples"
+    }
+  ]
+}

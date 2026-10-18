@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import {EVENTS} from '../src/data.js';import {SCENES,ARCS,storyAfter} from '../src/story.js';
+test('Every decision has an existing illustration and three distinct story consequences',()=>{for(const e of EVENTS.flat()){const s=SCENES[e.id];assert.ok(s?.place&&s.beat);assert.ok(fs.existsSync(`assets/scenes/${s.image}.webp`));assert.equal(new Set(s.after).size,3);for(const option of e.options){assert.equal(storyAfter(e,option.title),s.after[option.route]);assert.ok(storyAfter(e,option.title).length>80);}}assert.equal(Object.keys(SCENES).length,36);});
+test('The three human arcs include opening, time jump and both endings',()=>{assert.equal(ARCS.length,3);for(const a of ARCS)for(const k of ['person','role','opening','bridge','win','loss'])assert.ok(a[k]);});
+test('Audio is bundled and contains no external player or navigation',()=>{assert.ok(fs.statSync('assets/audio/night-session.mp3').size>100000);const a=fs.readFileSync('src/audio.js','utf8');assert.doesNotMatch(a,/youtube|window\.open|createElement\(['"]iframe|https?:\/\//i);});
