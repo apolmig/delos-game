@@ -28,11 +28,3 @@ export const POLICY_LENSES={
  m:{title:'Make authority revocable',action:'Define the task, owner, expiry and permitted tools. Compare evaluation and deployment behaviour; rehearse an exit while preserving essential work.',law:'Systemic-risk GPAI duties belong to the relevant provider. The council still needs procurement evidence and oversight of its deployment. A supplier system card is evidence to assess, not permission to delegate without limits.',sources:['GPAI','CODE','PROCURE']},
  o:{title:'Keep institutional judgment independent',action:'Separate weights, sources, updates and support. Specify access to evidence, portability and an exit route that staff can operate.',law:'Open weights do not automatically remove provider obligations, and do not establish high-risk status. Covered public uses can require a fundamental-rights impact assessment. Determine the intended use before deciding which requirements apply.',sources:['FRIA','PROCURE','MAPPING']}
 };
-export const PLP_PATH=[
- {week:'Week 1 / Capabilities and progress',lesson:'Separate the model from its tools and workflow. Treat future capability paths as assumptions to monitor.',sources:['AISI','EXTREMEEVAL']},
- {week:'Week 2 / Measuring risk',lesson:'Ask what an evaluation measures, what context changes, and what remains unknown.',sources:['EXTREMEEVAL','GRADUAL','ADAPT']},
- {week:'Week 3 / Policy levers',lesson:'Choose where to intervene, who must act, and how evidence will change the rule.',sources:['PRINCIPLES','MAPPING']},
- {week:'Week 4 / European governance',lesson:'Distinguish legal duties from voluntary practices and track when each duty applies.',sources:['GPAI','CODE','TIMELINE']},
- {week:'Week 6 / AI sovereignty',lesson:'Use procurement and shared capacity to preserve options without promising complete self-sufficiency.',sources:['PROCURE']},
- {week:'Week 7 / Geopolitics and institutions',lesson:'Stress-test assumptions about concentrated power and preserve independent institutional checks.',sources:['GEOPOLITICS','COUPS']}
-];

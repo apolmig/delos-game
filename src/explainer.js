@@ -3,7 +3,7 @@ let cleanup=()=>{};
 export function stopExplainer(){cleanup();cleanup=()=>{};}
 export function mountExplainer(root,audio){
  const video=root.querySelector('[data-decision-film]');if(!video)return;
- video.muted=!audio.on;video.volume=Math.min(.3,audio.volume/30);
+ video.muted=!audio.on;video.volume=1;
  const play=()=>audio.setFilmPlaying(true),pause=()=>audio.setFilmPlaying(false);
  const hide=()=>{if(document.hidden)video.pause();};
  const error=()=>{const note=root.querySelector('[data-film-error]');if(note)note.hidden=false;pause();};

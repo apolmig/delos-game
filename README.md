@@ -1,5 +1,7 @@
 # Republic of Talos
 
+**A frontier AI governance game by Miguel Guerrero.**
+
 A strategy game by [Miguel Guerrero](https://miguelguerrero.eu). Edition 5.
 
 Talos is a fictional, prosperous European middle power. Its universities, exports and public institutions are strong, but its advanced chips, cloud infrastructure and frontier AI depend on larger powers. Energy, security and trade constrain its choices.
@@ -32,11 +34,11 @@ The campaign is designed for about two hours of thoughtful play, approximately 9
 
 The three-part prologue distinguishes the model from the tools, memory and permissions around it. Each era introduces the relevant fictional model, its access, the human stakes and what remains unknown. Transition and ending films respond to the state of the mandate.
 
-Mila, a carer; Ada, an infrastructure engineer; and Emil, a municipal clerk connect policy to everyday life. Every response has an aftermath image and narrative. Every incident has its own 42-second explainer with moving footage, a simple diagram, three conditional response paths and a reflection question. Readable transcripts and linked research accompany the films. They reuse eight moving fictional scenes and 27 cinematic illustrations; they are not recordings of real events.
+Mila, a carer; Ada, an infrastructure engineer; and Emil, a municipal clerk connect policy to everyday life. Every response has an aftermath image and narrative. Every incident has its own 42-second explainer with moving footage, a simple diagram, three conditional response paths and a reflection question. Natural English narration, readable transcripts and linked research accompany the films. The three-part prologue is narrated too. Speech remains clear above the quiet music. They reuse eight moving fictional scenes and 27 cinematic illustrations; they are not recordings of real events.
 
 ## Evidence and European governance
 
-The 38-source library includes [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/), UK AISI and Hackenburg's persuasion research, Google DeepMind, Anthropic, OpenAI, RAND, and selected public readings linked from Talos PLP. Findings, limits and design uses are stated separately. Astra and Opus 5.5 system-card results are interpreted in their test conditions.
+The 38-source library includes [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/), UK AISI and Hackenburg's persuasion research, Google DeepMind, Anthropic, OpenAI, RAND, and public research on evaluation, institutions and procurement. Findings, limits and design uses are stated separately. Astra and Opus 5.5 system-card results are interpreted in their test conditions.
 
 Each decision has a research question, tradeoff and sources. Optional policy lenses connect the dilemma to procurement, remedies, institutional checks and relevant EU duties. The 2027 and 2028 briefings use the implementation schedule reviewed on 18 October 2026, including scope and transition caveats. The exercise assumes Talos operates within the EU legal framework.
 

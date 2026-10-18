@@ -13,6 +13,9 @@ Game authored by [Miguel Guerrero](https://miguelguerrero.eu).
 - Game music: Night Session, an original 72 BPM, 160-second lofi composition created with electric-piano synthesis, bass, brushed percussion and room echoes. No third-party samples or recordings; reproducible with compose-score.py and FFmpeg.
 - Explainer music: a quiet original procedural instrumental bed, documented in the production archive.
 - Sound effects: original short procedural cues generated locally with Web Audio.
-- Research references, scope and limitations are in RESEARCH.md and the game. Selected Talos PLP reading lists and introductory teaching materials helped organise the learning path; only public originals are cited. Citations imply no endorsement by researchers, providers, Talos or course contributors.
+- Research references, scope and limitations are in RESEARCH.md and the game. The general bibliography cites public research originals. Citations imply no endorsement by researchers, providers, Talos or course contributors.
 
 The game contains no official Civilization assets, branding, code or affiliation. Progress remains local. The web edition loads assets from its own host. The standalone PLAY.html needs no network; only explicitly opened research links visit external sites. No private course slides, recordings, participant details or credentials are distributed.
+
+- English narration: synthetic voice generated with ElevenLabs, George, Eleven v4. Scene-aligned narration is mixed over a quietly carved original score.
+- Social card: original AI-generated cinematic artwork for this game.

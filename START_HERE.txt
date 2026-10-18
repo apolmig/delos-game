@@ -1,5 +1,5 @@
-REPUBLIC OF TALOS / EDITION 5
-An original strategy game by Miguel Guerrero
+REPUBLIC OF TALOS / EDITION 6
+A frontier AI governance game by Miguel Guerrero
 https://miguelguerrero.eu
 
 PLAY ONLINE: https://miguelguerrero.eu/talos-game/
@@ -7,7 +7,7 @@ PLAY ONLINE: https://miguelguerrero.eu/talos-game/
 PLAY OFFLINE:
 1. From Drive, download both Republic_of_Talos_Play.zip and Republic_of_Talos_Decision_Films.zip. Extract both into the same folder: assets should sit beside PLAY.html.
 2. Open PLAY.html in a modern browser. Keep the assets folder beside it.
-3. Enter the republic and read the three-part prologue.
+3. Enter the republic and listen to or read the three-part prologue.
 4. Read one incident, prepare if useful, and make one decision.
 
 Three possible futures. 36 decisions. About two hours at your pace.
@@ -17,12 +17,13 @@ For a single-file offline download, use https://miguelguerrero.eu/talos-game/PLA
 
 Editing the source: extract the film ZIP inside the source archive's civic-mandate folder before running the build. The film library serves both the play and source packages.
 
-Each decision has a different 42-second film explaining the human stakes and response paths. Use the film button before deciding or after seeing the result. Films are optional and never advance the game. A transcript is always available.
+Each decision has a different narrated 42-second film explaining the human stakes and response paths. Use the film button before deciding or after seeing the result. Films are optional and never advance the game. A transcript is always available.
 
 The prologue and 2027/2028 briefings explain the AI, its permissions, the uncertainty and European regulatory context. Research and legal details are optional, so the main turn stays simple.
 
-Images, films, original quiet music and sound effects work offline.
-Use the header to mute, or Menu > Music & sound for volume and SFX.
+All 36 films and the three prologue chapters have natural English voice narration. Listen/Pause controls and transcripts keep reading optional.
+Images, narration, films, original quiet music and sound effects work offline.
+Use the header to mute all sound. Menu > Music & sound adjusts background music and cues; speech remains clear at its own level.
 Use Menu > Reduce ambient movement for still presentations.
 
 Progress saves automatically in this browser. Export/import saves through the menu to move them. Prior saves remain compatible.

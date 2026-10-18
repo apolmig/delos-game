@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "language": "en-GB",
+  "synthetic": true,
+  "provider": "ElevenLabs",
+  "voice": "George",
+  "model": "eleven_v4",
+  "prologue": [
+    {
+      "file": "assets/audio/prologue-1.mp3",
+      "duration": 51.008,
+      "bytes": 613095,
+      "sha256": "b73d388f8b57f628d0e4a0849322d60712c7d16804c068c9371b3a4139170075"
+    },
+    {
+      "file": "assets/audio/prologue-2.mp3",
+      "duration": 52.010667,
+      "bytes": 625191,
+      "sha256": "fcd40e91591d8f7e49cdfd196525c49c50fe59e05f7fc55b373ebda3ccbc1e0e"
+    },
+    {
+      "file": "assets/audio/prologue-3.mp3",
+      "duration": 52.010667,
+      "bytes": 625191,
+      "sha256": "d62ea8d548817a60b3947aded0a228f97fddab613e9e52f2e4b4709622a57162"
+    }
+  ]
+}

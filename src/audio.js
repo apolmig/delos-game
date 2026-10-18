@@ -1,5 +1,5 @@
 import {SCORE} from './media.js';
-// All sound is original and bundled. No iframe, pop-up or network request.
+// Original score and effects, with synthetic English narration. All bundled.
 export class AudioDirector {
  constructor(){
   this.on=false;this.ready=false;this.volume=8;this.sfx=true;this.context=null;this.music=null;this.ducked=false;this.filmPlaying=false;this.lastCue=0;this.lastEffect=null;

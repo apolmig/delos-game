@@ -6,9 +6,9 @@ Primary research informs mechanisms and questions. Future incidents, policy cons
 
 The [Agency Transfer supporting collection](https://miguelguerrero.eu/agencytransfer/references/) helped locate primary research. ERA is working research, not yet peer reviewed. The public site resolves at /agencytransfer/.
 
-## How the PLP materials inform play
+## Research themes that inform play
 
-Selected reading lists from Talos PLP Autumn 2026 Weeks 1, 2, 3, 4, 6 and 7, plus introductory capability and threat-modelling teaching materials, informed the learning path. This was not a review of every lecture or supporting link. Private slides, recordings, participant details and Q&A are not reproduced. The bibliography below links public originals.
+The general library combines research on model capabilities, evaluation, societal effects, institutional power, procurement and European governance. Each card distinguishes findings, limitations and its use in the fictional scenario.
 
 - Capabilities: separate a model from its tools, memory, workflow and authority.
 - Risk measurement: trace a capability through exposure to an observable human effect; identify missing evidence.
@@ -247,7 +247,7 @@ Design use: Re-test the service around the model and look for human outcomes, no
 
 ### Pavel et al. / RAND: How AGI could affect the rise and fall of nations
 
-Scenario analysis / PLP Week 7 reading, 2025. [Original source](https://www.rand.org/pubs/research_reports/RRA3034-2.html)
+Scenario analysis, 2025. [Original source](https://www.rand.org/pubs/research_reports/RRA3034-2.html)
 
 Finding: Uses eight illustrative futures to examine how centralisation, governance and access could reshape geopolitical power.
 
@@ -257,7 +257,7 @@ Design use: Identify which assumptions would have to hold, and which observable 
 
 ### Davidson, Finnveden & Hadshar: AI-enabled coups
 
-Prospective risk analysis / PLP Week 7 reading, 2025. [Original source](https://www.forethought.org/research/ai-enabled-coups-how-a-small-group-could-use-ai-to-seize-power)
+Prospective risk analysis, 2025. [Original source](https://www.forethought.org/research/ai-enabled-coups-how-a-small-group-could-use-ai-to-seize-power)
 
 Finding: Examines how sufficiently advanced AI could concentrate power and argues for independent oversight and safeguards against misuse.
 
@@ -287,7 +287,7 @@ Design use: Distinguish model, prompt, safeguards, test environment and human ou
 
 ### Shevlane et al. / Google DeepMind: Model evaluation for extreme risks
 
-Research framework / PLP Week 2 reading, 2023. [Original source](https://arxiv.org/abs/2305.15324)
+Research framework, 2023. [Original source](https://arxiv.org/abs/2305.15324)
 
 Finding: Separates dangerous capabilities from whether a model would use them. Evaluations can inform training, deployment, security and external scrutiny.
 
@@ -297,7 +297,7 @@ Design use: Ask which capability, propensity and deployment tests are missing be
 
 ### Kulveit et al.: Gradual Disempowerment
 
-Conceptual analysis / PLP Week 2 reading, 2025. [Original source](https://arxiv.org/abs/2501.16946)
+Conceptual analysis, 2025. [Original source](https://arxiv.org/abs/2501.16946)
 
 Finding: Explores how many individually useful delegations could weaken human influence across economic, cultural and political systems.
 
@@ -307,7 +307,7 @@ Design use: Review accumulated dependence and the ability of future authorities 
 
 ### Bernardi et al.: Societal Adaptation to Advanced AI
 
-Policy framework / PLP Week 2 reading, 2024. [Original source](https://arxiv.org/abs/2405.10295)
+Policy framework, 2024. [Original source](https://arxiv.org/abs/2405.10295)
 
 Finding: Organises responses around avoiding, defending against and remedying harm, alongside upstream AI controls.
 
@@ -317,7 +317,7 @@ Design use: Plan service fallback and repair, as well as model restrictions.
 
 ### Afek Shamir / RAND Europe: Public procurement and AI governance
 
-Policy report / PLP Week 6 reading, 2026. [Original source](https://www.rand.org/pubs/research_reports/RRA5284-1.html)
+Policy report, 2026. [Original source](https://www.rand.org/pubs/research_reports/RRA5284-1.html)
 
 Finding: Examines how middle powers can seek information, evaluation access and exit options through procurement, shared demand and selective domestic or allied capacity.
 
@@ -327,7 +327,7 @@ Design use: Specify essential fallback functions and test whether contractual ri
 
 ### Schuett et al.: From Principles to Rules
 
-Regulatory analysis / PLP Week 3 reading, 2024. [Original source](https://arxiv.org/abs/2407.07300)
+Regulatory analysis, 2024. [Original source](https://arxiv.org/abs/2407.07300)
 
 Finding: Principles can adapt to uncertainty, while detailed rules improve clarity and enforcement. The appropriate balance can change as evidence and regulatory capacity improve.
 
@@ -337,7 +337,7 @@ Design use: Combine a clear public objective with concrete review triggers and a
 
 ### Curl & Rozenshtein: Mapping AI Policy
 
-LawAI working paper / PLP Week 3 reading, 2026. [Original source](https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/)
+LawAI working paper, 2026. [Original source](https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/)
 
 Finding: Connects the harm being addressed, the design of the intervention and the point in the AI ecosystem where it acts.
 
@@ -387,7 +387,7 @@ Design use: Request relevant provider evidence and assess the actual public depl
 
 ### European Commission: General-Purpose AI Code of Practice
 
-Voluntary compliance instrument / PLP Week 4 reading, 2025. [Original source](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai)
+Voluntary compliance instrument, 2025. [Original source](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai)
 
 Finding: Provides practices for transparency, copyright and, for systemic-risk model providers, safety and security.
 
