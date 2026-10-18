@@ -1,63 +1,57 @@
 # Republic of Talos
 
-A strategy game by Miguel Guerrero: https://miguelguerrero.eu
+A strategy game by [Miguel Guerrero](https://miguelguerrero.eu). Edition 5.
 
-Talos is a fictional, prosperous and developed European middle power. Its universities, exports and public institutions are strong, but its advanced chips, cloud infrastructure and frontier AI depend on larger powers. Energy, security and trade relationships also constrain its choices.
+Talos is a fictional, prosperous European middle power. Its universities, exports and public institutions are strong, but its advanced chips, cloud infrastructure and frontier AI depend on larger powers. Energy, security and trade constrain its choices.
 
 ## Play
 
-[Play Republic of Talos](https://miguelguerrero.eu/talos-game/)
+[Play Republic of Talos](https://miguelguerrero.eu/talos-game/) in a modern browser. No account or installation is needed. For offline play, download [PLAY.html](https://miguelguerrero.eu/talos-game/PLAY.html) and open it locally. All images, films, music and code are inside that large file; allow it to finish loading.
 
-Open the link in a modern browser. No account or installation is needed. For fully offline play, download [PLAY.html](https://miguelguerrero.eu/talos-game/PLAY.html) and open it locally. All images, films, music and code are inside that file.
+Progress saves in this browser. Menu > Export save and Import save move a mandate between the website, offline file and other browsers.
 
-Saved games belong to each browser origin. Use Menu > Export save and Import save to move between the website and the offline file.
+## One incident, one decision
 
-## A simpler turn
+1. Read an incident. Open its case finding, ask an adviser or watch its optional 42-second explainer.
+2. Make one preparation if useful: invest, reassign funds or build support.
+3. Choose a response, confirm it, and see its human consequences.
 
-1. Read one incident. Read its case finding for free, ask an adviser or open Why this dilemma? to see the research.
-2. If useful, make one preparation: invest, reassign funds or build support. You may skip it.
-3. Choose one response and confirm. Review its consequences, then continue.
+Services, rights, independence and available funds stay visible. The menu holds detailed status, council support, research and sound settings. Optional films and research panels never advance a turn.
 
-Three indicators stay in view: services, rights and independence. Funds are visible beside them. Full status, trust, council support, all investments and the detailed strategy view are in the menu. Warnings surface low trust or support. District development remains available from the map.
+## Three possible futures
 
-## The campaign
+The Capture of Choice follows concealed steering through useful public services. The Continuity Mandate explores a fictional AI preserving access to resources through accumulated permissions. The Open Door Dependency examines an autocratic sponsor's fictional influence through cheap models, sources, updates and support.
 
-Three separate what-if histories: The Capture of Choice, The Continuity Mandate and The Open Door Dependency. Each begins in mid-2027 and jumps to late-2028 after six decisions. The full campaign has 36 decisions, 108 responses and eight characters. Up to two foundation policies carry into a new history as institutional learning; the timeline itself resets to 2027.
+Each history begins in mid-2027 and jumps to late-2028 after six decisions. There are 36 decisions, 108 responses and eight advisers. Up to two foundation policies carry into the next history as institutional learning; its timeline resets to 2027.
 
-The target is about two hours of thoughtful play, approximately 90-150 minutes. This is an estimate, not a measured human playtest. There is no timer. The game autosaves; a portable save and decision debrief can be exported. Existing edition-1 saves remain readable and migrate to the simple view when they do not contain a view preference.
+The campaign is designed for about two hours of thoughtful play, approximately 90-150 minutes. This is an estimate, not a measured human playtest. Watching every optional explainer adds about 25 minutes. There is no timer. Existing saves remain compatible.
 
-## Research and decisions
+## Understand the AI and its consequences
 
-ERA: Capability, Deployment, Effect is linked to https://miguelguerrero.eu/agencytransfer/ . Sixteen sources include UK AISI and Kobi Hackenburg's political-persuasion, expert-persuader and behavioural-outcome work, alongside Google DeepMind, Anthropic and OpenAI research. Each of the 36 decisions has its own research question, tradeoff and source links.
+The three-part prologue distinguishes the model from the tools, memory and permissions around it. Each era introduces the relevant fictional model, its access, the human stakes and what remains unknown. Transition and ending films respond to the state of the mandate.
 
-All country details, people, models, future incidents and numeric effects are fictional. Policy options are design inferences. The research does not validate the numerical outcomes. Superpersuasion is a concern to investigate, not irresistible control; evaluation awareness alone does not prove hostile intent; open weights and national origin do not establish manipulation. See RESEARCH.md.
+Mila, a carer; Ada, an infrastructure engineer; and Emil, a municipal clerk connect policy to everyday life. Every response has an aftermath image and narrative. Every incident has its own 42-second explainer with moving footage, a simple diagram, three conditional response paths and a reflection question. Readable transcripts and linked research accompany the films. They reuse eight moving fictional scenes and 27 cinematic illustrations; they are not recordings of real events.
 
-## Story, images and sound
+## Evidence and European governance
 
-Three recurring people connect the policy dilemmas to everyday life: Mila, a carer; Ada, an infrastructure engineer; and Emil, a municipal clerk. All 36 decisions have a scene, an existing Talos cinematic illustration and a consequence specific to the selected response. Twenty-seven images and eight moving scenes are fictional AI-generated dramatizations.
+The 38-source library includes [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/), UK AISI and Hackenburg's persuasion research, Google DeepMind, Anthropic, OpenAI, RAND, and selected public readings linked from Talos PLP. Findings, limits and design uses are stated separately. Astra and Opus 5.5 system-card results are interpreted in their test conditions.
 
-Night Session is an original 160-second instrumental lofi score bundled with the game. Quiet sound starts with Enter the republic when the sound checkbox is selected. The header mutes all sound. Menu > Music & sound adjusts the volume and switches subtle sound effects independently. Sound pauses when the tab is hidden and music softens during reading panels. No YouTube player, popup or streaming service is used. The previous external mix is not redistributed.
+Each decision has a research question, tradeoff and sources. Optional policy lenses connect the dilemma to procurement, remedies, institutional checks and relevant EU duties. The 2027 and 2028 briefings use the implementation schedule reviewed on 18 October 2026, including scope and transition caveats. The exercise assumes Talos operates within the EU legal framework.
 
-## Controls and editing
+All people, model names, future incidents and numerical effects are fictional. Policy responses are design inferences; research does not validate their scores. Evaluation awareness alone does not prove hostile intent. Open weights or national origin do not establish manipulation. See RESEARCH.md.
 
-Select a map label or an institution from the dropdown; drag to orbit and scroll to zoom. Keys 1, 2 and 3 select a response. E opens evidence, C opens council, Escape closes optional panels. All controls are available with a keyboard.
+## Quiet sound and accessible controls
 
-Source: npm ci, then npm run build. Test: npm test; npm run test:browser. Blender 5.2.2 source is in blender/TALOS_Civic_Mandate.blend, with build_world.py for reproducibility. Runtime assets are bundled locally with Three.js 0.180.0.
+Night Session is an original instrumental lofi score bundled with the game. Sound starts after entry with sound enabled. The header mutes all audio; Menu > Music & sound adjusts volume and SFX. During a decision film the main score pauses, leaving the film's quiet original bed. Hidden tabs pause playback. There are no music popups or external streaming players.
 
-See VERIFICATION.md for actual checks and limits. No credentials or private source documents are included.
+Films can be paused, skipped or replayed. Decision films wait for an explicit play action. Reduced motion suppresses automatic cinematic movement. Transcripts remain available without watching.
 
-## GitHub Pages
+Keys 1, 2 and 3 select responses. E opens evidence, C opens council, Escape closes optional panels. Select a map label or institution; drag to orbit and scroll to zoom. All controls are available with a keyboard.
 
-The workflow in .github/workflows/pages.yml tests and builds each main-branch update, then deploys dist. The web build loads scene images, music and optional films on demand. PLAY.html is a separate, self-contained offline edition. GitHub Pages uses the account site's existing custom domain, so this repository does not need its own CNAME file or a DNS change.
+## Source and verification
 
-Game content is authored by Miguel Guerrero. Third-party libraries retain their own licences; see CREDITS.md.
+Run npm ci, npm test, then npm run build. Browser checks: npm run test:browser, npm run test:web, npm run test:cinema, and npm run test:explainers. A release build requires all 36 films. node build.mjs --web-only supports development while media is being produced.
 
-## Edition 4: decisions have a human aftermath
+The editable Blender world is in blender/TALOS_Civic_Mandate.blend, with build_world.py for reproduction. Third-party libraries retain their licences; see CREDITS.md. VERIFICATION.md records actual checks and limitations.
 
-Every one of the 108 responses selects an aftermath illustration and its own narrative. A second scene shows the wider condition of the republic, based on its weakest public indicator. This is context from the whole mandate, not a claim that one choice alone caused that condition.
-
-Twelve-second films introduce the country and each future, bridge 2027 to 2028, and close each mandate. The time jump remembers actual choices; the ending follows the result, including an early emergency. Films combine moving fictional footage with short captions. Pause, skip, replay and a readable transcript are available. Reduced motion uses stills until the player explicitly starts playback. The films never make decisions or advance turns.
-
-The research library now has 22 sources, including six additional primary references on agency erosion, disempowerment, scheming, situational awareness, public-sector human review, and contextual evaluation. Every decision links to findings and limits. See [Miguel Guerrero's supporting research](https://miguelguerrero.eu/agencytransfer/references/).
-
-Additional checks: npm run test:cinema. The save format and game balance are unchanged.
+The GitHub Pages workflow tests and builds main, then deploys dist. Web media loads on demand; PLAY.html is a separate self-contained edition. Pages inherits the account site's custom domain, so no project CNAME or DNS change is required. Private course documents and credentials are excluded.

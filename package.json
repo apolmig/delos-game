@@ -1,6 +1,6 @@
 {
   "name": "republic-of-talos",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,7 +9,9 @@
     "test": "node --test tests/*.test.mjs",
     "test:browser": "node tests/revision-browser.mjs",
     "test:web": "node tests/web-release.mjs",
-    "test:cinema": "node tests/cinema-browser.mjs"
+    "test:cinema": "node tests/cinema-browser.mjs",
+    "test:explainers": "node tests/explainers-browser.mjs",
+    "test:films": "node tests/film-collection.mjs"
   },
   "dependencies": {
     "three": "0.180.0"

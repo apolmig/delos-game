@@ -1,25 +1,28 @@
-REPUBLIC OF TALOS
-A game by Miguel Guerrero | https://miguelguerrero.eu
+REPUBLIC OF TALOS / EDITION 5
+An original strategy game by Miguel Guerrero
+https://miguelguerrero.eu
 
-Online: https://miguelguerrero.eu/talos-game/
+PLAY ONLINE: https://miguelguerrero.eu/talos-game/
 
+PLAY OFFLINE:
 1. Extract the play ZIP.
-2. Open PLAY.html in Chrome, Edge, Firefox or Safari.
-3. Select Enter the republic and read the three-part prologue.
+2. Open PLAY.html in a modern browser and let the large file load.
+3. Enter the republic and read the three-part prologue.
 4. Read one incident, prepare if useful, and make one decision.
 
-Three separate futures. 36 decisions. About two hours, at your pace.
-The game, images, films, original lofi music and sound effects work offline.
-Sound starts quietly when you enter. Use the header to mute or Menu > Music & sound for volume and SFX.
+Three possible futures. 36 decisions. About two hours at your pace.
+This is a design estimate; watching all optional explainers adds 25 minutes.
 
-Progress saves automatically in this browser. Menu offers export/import for portable saves.
-Existing saves from the prior edition remain compatible.
+Each decision has a different 42-second film explaining the human stakes and response paths. Use the film button before deciding or after seeing the result. Films are optional and never advance the game. A transcript is always available.
 
-The research is real; Talos and its future incidents are fictional.
-ERA: Capability, Deployment, Effect: https://miguelguerrero.eu/agencytransfer/
-Full research and limits are in the game's Research & credits panel.
+The prologue and 2027/2028 briefings explain the AI, its permissions, the uncertainty and European regulatory context. Research and legal details are optional, so the main turn stays simple.
 
-EDITION 4
-Every response has a human aftermath. Expand the wider impact or research when useful.
-The short films can be paused, skipped or replayed; they never advance a decision.
+Images, films, original quiet music and sound effects work offline.
+Use the header to mute, or Menu > Music & sound for volume and SFX.
 Use Menu > Reduce ambient movement for still presentations.
+
+Progress saves automatically in this browser. Export/import saves through the menu to move them. Prior saves remain compatible.
+
+The research is real; Talos and its incidents are fictional.
+ERA: Capability, Deployment, Effect: https://miguelguerrero.eu/agencytransfer/
+Find all 38 references, their limits and policy uses in Research & credits.

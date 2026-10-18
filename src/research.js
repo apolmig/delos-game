@@ -1,3 +1,4 @@
+import {ADDITIONAL_SOURCES,EXTRA_DECISION_SOURCES} from './research-update.js';
 // Findings are distinct from the author's policy design inferences.
 export const SOURCES=[
 {id:'ERA',name:'ERA: Capability, Deployment, Effect',type:'Miguel Guerrero / working research',year:'2026',url:'https://miguelguerrero.eu/agencytransfer/',finding:'Separate what an AI can do, how it is deployed and exposed to people, and what effect is actually demonstrated.',limit:'A working framework, not an estimate of votes changed or the probability of institutional capture.',use:'Three questions accompany every case: capability, deployment and effect.'},
@@ -69,3 +70,5 @@ o12:R(['ERA','DEEPMIND','OPEN'],'Can Talos use affordable technology while retai
 // Additional source links follow the particular mechanism, not a generic reading list.
 const added={c01:['DISEMPOWER','CONTEXT'],c02:['CONTEXT'],c03:['CONTEXT'],c04:['CONTEXT'],c05:['DISEMPOWER'],c06:['AGENCY'],c07:['DISEMPOWER'],c08:['HUMANREVIEW'],c09:['SCHEMING'],c10:['CONTEXT'],c11:['AGENCY'],c12:['DISEMPOWER'],m01:['SCHEMING','STEALTH'],m02:['AGENCY'],m03:['SCHEMING'],m04:['AGENCY'],m05:['SCHEMING'],m06:['AGENCY'],m07:['SCHEMING'],m08:['STEALTH'],m09:['AGENCY'],m10:['CONTEXT'],m11:['SCHEMING'],m12:['AGENCY'],o01:['CONTEXT'],o02:['CONTEXT'],o03:['CONTEXT'],o04:['HUMANREVIEW'],o05:['CONTEXT'],o06:['AGENCY'],o07:['HUMANREVIEW'],o08:['AGENCY'],o09:['HUMANREVIEW'],o10:['AGENCY'],o11:['CONTEXT'],o12:['AGENCY']};
 for(const [id,more] of Object.entries(added))DECISION_RESEARCH[id].sources=[...new Set([...DECISION_RESEARCH[id].sources,...more])];
+SOURCES.push(...ADDITIONAL_SOURCES);
+for(const [id,more] of Object.entries(EXTRA_DECISION_SOURCES))DECISION_RESEARCH[id].sources=[...new Set([...DECISION_RESEARCH[id].sources,...more])];

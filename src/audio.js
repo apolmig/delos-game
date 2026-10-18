@@ -2,9 +2,9 @@ import {SCORE} from './media.js';
 // All sound is original and bundled. No iframe, pop-up or network request.
 export class AudioDirector {
  constructor(){
-  this.on=false;this.ready=false;this.volume=8;this.sfx=true;this.context=null;this.music=null;this.ducked=false;this.lastCue=0;this.lastEffect=null;
+  this.on=false;this.ready=false;this.volume=8;this.sfx=true;this.context=null;this.music=null;this.ducked=false;this.filmPlaying=false;this.lastCue=0;this.lastEffect=null;
   try{const p=JSON.parse(localStorage.getItem('talos-audio')||'{}');this.volume=Math.max(0,Math.min(30,p.volume??8));this.sfx=p.sfx!==false;}catch{}
-  document.addEventListener('visibilitychange',()=>{if(document.hidden){this.music?.pause();this.context?.suspend();}else if(this.on){this.context?.resume().catch(()=>{});this.music?.play().catch(()=>{});}});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){this.music?.pause();this.context?.suspend();}else if(this.on){this.context?.resume().catch(()=>{});if(!this.filmPlaying)this.music?.play().catch(()=>{});}});
  }
  notify(){window.dispatchEvent(new CustomEvent('talos-music-change',{detail:{on:this.on}}));}
  save(){try{localStorage.setItem('talos-audio',JSON.stringify({volume:this.volume,sfx:this.sfx}));}catch{}}
@@ -16,14 +16,15 @@ export class AudioDirector {
    const AC=window.AudioContext||window.webkitAudioContext;if(!this.context&&AC)this.context=new AC();
    if(this.context?.state==='suspended')await this.context.resume();
    if(!this.on||document.hidden){this.notify();return;}
-   this.applyVolume();await this.music.play();this.ready=true;
-  }catch{this.on=false;window.dispatchEvent(new CustomEvent('talos-audio-error'));}
+   this.applyVolume();if(!this.filmPlaying)await this.music.play();this.ready=true;
+  }catch(error){if(error?.name==='AbortError'&&(this.filmPlaying||!this.on)){this.ready=true;}else{this.on=false;window.dispatchEvent(new CustomEvent('talos-audio-error'));}}
   this.notify();
  }
  setVolume(v){this.volume=Math.max(0,Math.min(30,Number(v)||0));this.applyVolume();this.save();}
  applyVolume(){if(this.music)this.music.volume=this.volume/100*(this.ducked?.55:1);}
  pauseForPanel(){this.ducked=true;this.applyVolume();}
  resumeFromPanel(){this.ducked=false;this.applyVolume();}
+ setFilmPlaying(playing){this.filmPlaying=playing;if(playing)this.music?.pause();else if(this.on&&!document.hidden)this.music?.play().catch(()=>{});}
  effect(kind='click'){
   if(!this.on||!this.sfx||this.volume===0||!this.context||this.context.state!=='running'||document.hidden)return;
   const now=this.context.currentTime;if(now-this.lastCue<.08)return;this.lastCue=now;this.lastEffect=kind;
