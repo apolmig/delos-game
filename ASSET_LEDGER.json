@@ -1,10 +1,9 @@
 {
-  "edition": "3.0",
+  "edition": "4.0",
   "date": "2026-10-18",
   "author": "Miguel Guerrero",
   "website": "https://miguelguerrero.eu",
   "blender": "5.2.2 LTS",
-  "newPaidGenerations": 0,
   "music": {
     "title": "Night Session",
     "mode": "Original bundled lofi composition; no external recording or player",
@@ -252,6 +251,92 @@
       "bytes": 2241366,
       "sha256": "31a8932ee9422b59550af32d3ffd4e38b6debeab10d9021a4594eeb7032fc683",
       "provenance": "Original procedural composition for this game; no third-party samples"
+    },
+    {
+      "path": "assets/scenes/outcome-appeal.webp",
+      "bytes": 80300,
+      "sha256": "4510a2d84a714625970045ced4d58423c99429c88cca7fb86277319437ab07d8",
+      "provenance": "Built-in imagegen, fictional humans; see assets/scenes/outcomes-manifest.json"
+    },
+    {
+      "path": "assets/scenes/outcome-backlog.webp",
+      "bytes": 88894,
+      "sha256": "914f347b0294e6c27a5395fd137b010264d9d9c33655cb23c4f9aface1453db3",
+      "provenance": "Built-in imagegen, fictional humans; see assets/scenes/outcomes-manifest.json"
+    },
+    {
+      "path": "assets/scenes/outcome-rehearsal.webp",
+      "bytes": 77790,
+      "sha256": "4a46d62e06cd7b405e0673debb787be79dfe48d5186c392b609084151752403b",
+      "provenance": "Built-in imagegen, fictional humans; see assets/scenes/outcomes-manifest.json"
+    },
+    {
+      "path": "assets/scenes/outcome-independent.webp",
+      "bytes": 91106,
+      "sha256": "94c353bd4352b8c5ceb12901dfcff30488265506b4b6c8fd43f7bd9e3f8f7ca0",
+      "provenance": "Built-in imagegen, fictional humans; see assets/scenes/outcomes-manifest.json"
+    },
+    {
+      "path": "assets/scenes/outcome-oversight.webp",
+      "bytes": 70236,
+      "sha256": "e422462a050e7e786f1f9155c19af590f9bd1859b58da6b9f617f27f69f07bc2",
+      "provenance": "Built-in imagegen, fictional humans; see assets/scenes/outcomes-manifest.json"
+    },
+    {
+      "path": "assets/scenes/outcome-lockin.webp",
+      "bytes": 61330,
+      "sha256": "bb5f16e5cc6a0512659a89bfb365be8fa858bb61eea8c6795c324751c25931c9",
+      "provenance": "Built-in imagegen, fictional humans; see assets/scenes/outcomes-manifest.json"
+    },
+    {
+      "path": "assets/scenes/outcome-home-repair.webp",
+      "bytes": 98456,
+      "sha256": "8ea500b6748cd950f5c6edf714935c4359337ee74a417165f577a9ce73a3753f",
+      "provenance": "Built-in imagegen, fictional humans; see assets/scenes/outcomes-manifest.json"
+    },
+    {
+      "path": "assets/scenes/outcome-deadline.webp",
+      "bytes": 90082,
+      "sha256": "5c4a62e01fb4554f28364b5bae38832fb63b23d89bc412c2891dec7a6e28d038",
+      "provenance": "Built-in imagegen, fictional humans; see assets/scenes/outcomes-manifest.json"
+    },
+    {
+      "path": "assets/scenes/outcome-records.webp",
+      "bytes": 77864,
+      "sha256": "9619e2e0c79c97b8d3b7f62ebbe08caf846022b1dcfd2c535160c2ddc31b7d7c",
+      "provenance": "Built-in imagegen, fictional humans; see assets/scenes/outcomes-manifest.json"
+    },
+    {
+      "path": "assets/cinema/incident-01.mp4",
+      "bytes": 894800,
+      "sha256": "5fbb8ea4deb95541298fe8bda2b651775dd8f511de440303598de7ee1fa59d96",
+      "provenance": "Existing Talos AI-generated moving footage; see assets/cinema/manifest.json"
+    },
+    {
+      "path": "assets/cinema/incident-03.mp4",
+      "bytes": 892828,
+      "sha256": "2ffbef6049d815a26a450bc817d71082158796bfdfa3a8c8f901a4e32c2666f1",
+      "provenance": "Existing Talos AI-generated moving footage; see assets/cinema/manifest.json"
+    },
+    {
+      "path": "assets/cinema/incident-04.mp4",
+      "bytes": 550981,
+      "sha256": "b543f61bd3c7d4d4a07685686c3c0b86a8f4fa6cc48ead8b1c983bd0cae4caf3",
+      "provenance": "Existing Talos AI-generated moving footage; see assets/cinema/manifest.json"
+    },
+    {
+      "path": "assets/cinema/incident-05.mp4",
+      "bytes": 449738,
+      "sha256": "e2016481d4d367fc5786d1a1373d015498c6baf8f1517a1c0f63c1d54c783761",
+      "provenance": "Existing Talos AI-generated moving footage; see assets/cinema/manifest.json"
+    },
+    {
+      "path": "assets/cinema/incident-08.mp4",
+      "bytes": 1223654,
+      "sha256": "6d4fd679733a1e44aab2bbeefda68caa48c37a469abb118b5fece3dffc71689b",
+      "provenance": "Existing Talos AI-generated moving footage; see assets/cinema/manifest.json"
     }
-  ]
+  ],
+  "newBuiltInImageGenerations": 9,
+  "newVideoGenerations": 0
 }

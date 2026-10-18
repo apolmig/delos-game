@@ -34,7 +34,7 @@ All country details, people, models, future incidents and numeric effects are fi
 
 ## Story, images and sound
 
-Three recurring people connect the policy dilemmas to everyday life: Mila, a carer; Ada, an infrastructure engineer; and Emil, a municipal clerk. All 36 decisions have a scene, an existing Talos cinematic illustration and a consequence specific to the selected response. Eighteen images and three optional films are fictional AI-generated dramatizations.
+Three recurring people connect the policy dilemmas to everyday life: Mila, a carer; Ada, an infrastructure engineer; and Emil, a municipal clerk. All 36 decisions have a scene, an existing Talos cinematic illustration and a consequence specific to the selected response. Twenty-seven images and eight moving scenes are fictional AI-generated dramatizations.
 
 Night Session is an original 160-second instrumental lofi score bundled with the game. Quiet sound starts with Enter the republic when the sound checkbox is selected. The header mutes all sound. Menu > Music & sound adjusts the volume and switches subtle sound effects independently. Sound pauses when the tab is hidden and music softens during reading panels. No YouTube player, popup or streaming service is used. The previous external mix is not redistributed.
 
@@ -51,3 +51,13 @@ See VERIFICATION.md for actual checks and limits. No credentials or private sour
 The workflow in .github/workflows/pages.yml tests and builds each main-branch update, then deploys dist. The web build loads scene images, music and optional films on demand. PLAY.html is a separate, self-contained offline edition. GitHub Pages uses the account site's existing custom domain, so this repository does not need its own CNAME file or a DNS change.
 
 Game content is authored by Miguel Guerrero. Third-party libraries retain their own licences; see CREDITS.md.
+
+## Edition 4: decisions have a human aftermath
+
+Every one of the 108 responses selects an aftermath illustration and its own narrative. A second scene shows the wider condition of the republic, based on its weakest public indicator. This is context from the whole mandate, not a claim that one choice alone caused that condition.
+
+Twelve-second films introduce the country and each future, bridge 2027 to 2028, and close each mandate. The time jump remembers actual choices; the ending follows the result, including an early emergency. Films combine moving fictional footage with short captions. Pause, skip, replay and a readable transcript are available. Reduced motion uses stills until the player explicitly starts playback. The films never make decisions or advance turns.
+
+The research library now has 22 sources, including six additional primary references on agency erosion, disempowerment, scheming, situational awareness, public-sector human review, and contextual evaluation. Every decision links to findings and limits. See [Miguel Guerrero's supporting research](https://miguelguerrero.eu/agencytransfer/references/).
+
+Additional checks: npm run test:cinema. The save format and game balance are unchanged.

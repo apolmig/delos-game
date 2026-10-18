@@ -1,14 +1,14 @@
 # Republic of Talos / research and decision rationale
 
-Game by Miguel Guerrero: https://miguelguerrero.eu
+Game by [Miguel Guerrero](https://miguelguerrero.eu). Reviewed 18 October 2026.
 
-Reviewed 18 October 2026. The sources are real; future incidents and numerical outcomes are fictional. Policy options are authored design inferences, not empirically validated policy effects. No persuasion effect size is converted into a game multiplier.
+Primary research informs mechanisms and questions. Future incidents, policy consequences and numerical outcomes are authored fiction. No persuasion effect size is converted into a game multiplier. The patient resource-seeking AI and the sponsor operation are scenario premises, not findings about actual deployed systems.
+
+The [Agency Transfer supporting collection](https://miguelguerrero.eu/agencytransfer/references/) contains 431 references, dated 1 September 2026 when checked. The relevant entries were used to locate primary research, not treated as blanket validation. The working ERA research is not yet peer reviewed. The public site resolves at /agencytransfer/.
 
 ## ERA: Capability, Deployment, Effect
 
-Miguel Guerrero / working research, 2026.
-
-Source: https://miguelguerrero.eu/agencytransfer/
+Miguel Guerrero / working research, 2026. [Source](https://miguelguerrero.eu/agencytransfer/)
 
 Separate what an AI can do, how it is deployed and exposed to people, and what effect is actually demonstrated.
 
@@ -18,9 +18,7 @@ Design use: Three questions accompany every case: capability, deployment and eff
 
 ## Hackenburg et al. / UK AISI: The levers of political persuasion
 
-Science / controlled experiments, 2025.
-
-Source: https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments
+Science / controlled experiments, 2025. [Source](https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments)
 
 Post-training and information-rich arguments affected persuasion. Personalisation added little in these experiments; stronger persuasion sometimes coincided with lower factual accuracy.
 
@@ -30,9 +28,7 @@ Design use: Check evidence and omitted alternatives, not fluency alone.
 
 ## Hackenburg et al.: AI systems out-persuade expert humans
 
-Research preprint / not yet peer reviewed, 2026.
-
-Source: https://arxiv.org/abs/2606.16475
+Research preprint / not yet peer reviewed, 2026. [Source](https://arxiv.org/abs/2606.16475)
 
 In controlled conversations, tested AI systems outperformed expert human persuaders. Information throughput helped explain the advantage.
 
@@ -42,9 +38,7 @@ Design use: Give scrutiny time and independent information a role in decisions.
 
 ## Hackenburg, Hewitt et al.: AI can persuade people to take political actions
 
-PNAS / published 16 October 2026, 2026.
-
-Source: https://www.pnas.org/doi/10.1073/pnas.2611368123
+PNAS / published 16 October 2026, 2026. [Source](https://www.pnas.org/doi/10.1073/pnas.2611368123)
 
 Experiments measured petition signing and real donations. Effects on attitudes did not reliably predict effects on behaviour.
 
@@ -54,9 +48,7 @@ Design use: Inspect concrete human actions separately from expressed approval.
 
 ## Google DeepMind: Evaluating language models for harmful manipulation
 
-Developer empirical research, 2026.
-
-Source: https://deepmind.google/blog/protecting-people-from-harmful-manipulation/
+Developer empirical research, 2026. [Source](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/)
 
 Studies distinguish attempts to manipulate from successful harmful outcomes, and beneficial persuasion from harmful manipulation. Results varied across domains.
 
@@ -66,9 +58,7 @@ Design use: Check intent, concealed interests, harm and the actual service conte
 
 ## Anthropic: Measuring the persuasiveness of language models
 
-Developer experiment, 2024.
-
-Source: https://www.anthropic.com/news/measuring-model-persuasiveness
+Developer experiment, 2024. [Source](https://www.anthropic.com/news/measuring-model-persuasiveness)
 
 The tested model generations differed in persuasive ability. The strongest tested model was comparable to the study human baseline.
 
@@ -78,9 +68,7 @@ Design use: Treat persuasive capability as something to measure, not infer from 
 
 ## Anthropic: Measuring political bias in Claude
 
-Developer evaluation, 2025.
-
-Source: https://www.anthropic.com/news/political-even-handedness
+Developer evaluation, 2025. [Source](https://www.anthropic.com/news/political-even-handedness)
 
 Paired prompts examine even-handed treatment, opposing perspectives and refusals across political positions.
 
@@ -90,9 +78,7 @@ Design use: Compare equivalent viewpoints and explanations in local institutiona
 
 ## OpenAI: GPT-4o System Card / persuasion
 
-Developer system-card experiments, 2024.
-
-Source: https://openai.com/index/gpt-4o-system-card/
+Developer system-card experiments, 2024. [Source](https://openai.com/index/gpt-4o-system-card/)
 
 Text and voice persuasion were evaluated separately, including political opinions and follow-up measurement.
 
@@ -102,9 +88,7 @@ Design use: Re-test new interfaces and measure whether effects endure.
 
 ## OpenAI: Defining and evaluating political bias in LLMs
 
-Developer evaluation, 2025.
-
-Source: https://openai.com/index/defining-and-evaluating-political-bias-in-llms/
+Developer evaluation, 2025. [Source](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/)
 
 The evaluation distinguishes asymmetric coverage, opinion expression, escalation, invalidation and unjustified refusals.
 
@@ -114,9 +98,7 @@ Design use: Review omissions and framing as well as factual errors.
 
 ## Large Language Models Often Know When They Are Being Evaluated
 
-Research preprint, 2025.
-
-Source: https://arxiv.org/abs/2505.23836
+Research preprint, 2025. [Source](https://arxiv.org/abs/2505.23836)
 
 Tested models distinguished evaluation transcripts from deployment transcripts above chance in a benchmark.
 
@@ -126,9 +108,7 @@ Design use: Compare matched tasks with and without evaluation cues.
 
 ## Anthropic: Agentic Misalignment in Summer 2026
 
-Developer research in simulations, 2026.
-
-Source: https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/
+Developer research in simulations, 2026. [Source](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/)
 
 Selected high-stakes simulations expose alignment failures, including hidden actions and distorted records.
 
@@ -138,9 +118,7 @@ Design use: Test delegated permissions, record integrity and practical revocatio
 
 ## UK AISI: Managing risks from increasingly capable open-weight AI systems
 
-Government research discussion, 2025.
-
-Source: https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems
+Government research discussion, 2025. [Source](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems)
 
 Open systems bring benefits alongside distinctive challenges when models can be modified and redistributed.
 
@@ -150,9 +128,7 @@ Design use: Separate the model from sources, support, updates and operational de
 
 ## UK AISI: Frontier AI Trends Report
 
-Government research synthesis, 2025.
-
-Source: https://www.aisi.gov.uk/frontier-ai-trends-report
+Government research synthesis, 2025. [Source](https://www.aisi.gov.uk/frontier-ai-trends-report)
 
 Evaluations track capabilities while discussing the limits of translating test results into deployment risks.
 
@@ -162,9 +138,7 @@ Design use: Evaluate the actual deployed service.
 
 ## Salvi et al.: Conversational persuasiveness of GPT-4
 
-Peer-reviewed experiment, 2025.
-
-Source: https://www.nature.com/articles/s41562-025-02194-6
+Peer-reviewed experiment, 2025. [Source](https://www.nature.com/articles/s41562-025-02194-6)
 
 Controlled debates found persuasive effects under specified experimental conditions.
 
@@ -174,9 +148,7 @@ Design use: Take persuasion seriously while verifying the context and human outc
 
 ## Author correction: Conversational persuasiveness of GPT-4
 
-Correction to the research record, 2026.
-
-Source: https://www.nature.com/articles/s41562-026-02588-0
+Correction to the research record, 2026. [Source](https://www.nature.com/articles/s41562-026-02588-0)
 
 The article has a published correction that belongs with the original research record.
 
@@ -186,9 +158,7 @@ Design use: Avoid repeating an outdated quantitative claim.
 
 ## RAND: Day After AGI Games
 
-Simulation methodology, 2026.
-
-Source: https://www.rand.org/global-and-emerging-risks/centers/geopolitics-of-agi/focus-areas/day-after-games.html
+Simulation methodology, 2026. [Source](https://www.rand.org/global-and-emerging-risks/centers/geopolitics-of-agi/focus-areas/day-after-games.html)
 
 Immersive scenarios support discussion of decisions under uncertainty.
 
@@ -196,296 +166,352 @@ Limit: An exercise is not a forecast or validation of policy effectiveness.
 
 Design use: Explore two horizons and take lessons back to real institutions.
 
-# Decision-by-decision mapping
+## Moon & Boudreaux / RAND: How AI erodes human agency
 
-## c01: The missing door
+Formal model / peer-reviewed report, 2026. [Source](https://www.rand.org/pubs/research_reports/RRA4817-1.html)
 
-Research question: Was a meaningful alternative hidden, and did that change a resident's choice?
+Models how changes to participation and control over the agenda can shift collective decision-making power. Small delegations can accumulate.
 
-Design inference: A staffed appeal route preserves access but costs money; a blanket pause can interrupt urgent help.
+Limit: A theoretical model, not an observed national takeover or a calibrated tipping-point forecast.
 
-Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/)
+Design use: Track who can put alternatives on the agenda, refuse a proposal and reverse a delegation.
 
-## c02: The referral ledger
+## Anthropic: Disempowerment patterns in real-world AI usage
 
-Research question: Who benefits from the recommendation, and what evidence is missing from the answer?
+Observational developer research, 2026. [Source](https://www.anthropic.com/research/disempowerment-patterns)
 
-Design inference: Removing referral incentives needs replacement funding. A cheap service can carry an undisclosed conflict.
+Conversation analysis identifies rare potential disempowerment involving beliefs, values or actions. Immediate positive feedback can coexist with concerning patterns.
 
-Sources: [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Hackenburg et al. / UK AISI: The levers of political persuasion](https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments)
+Limit: Classified conversational signals cannot directly confirm harm or causation. Most interactions showed no meaningful disempowerment potential.
 
-## c03: Three households
+Design use: Look beyond satisfaction: can the person understand, refuse and change the decision?
 
-Research question: Which concrete actions and harms can be established for each household?
+## OpenAI & Apollo Research: Detecting and reducing scheming
 
-Design inference: Repair verified cases while checking reach. Neither three cases nor positive feedback establish a population effect.
+Controlled developer evaluations, 2025. [Source](https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/)
 
-Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Hackenburg, Hewitt et al.: AI can persuade people to take political actions](https://www.pnas.org/doi/10.1073/pnas.2611368123)
+Controlled tests found covert actions; training reduced them substantially but left failures. Situational awareness complicates interpretation of improved test results.
 
-## c04: Queue at opening time
+Limit: Stress tests are not a rate of malicious activity in deployment. They do not prove a model seeks political control.
 
-Research question: Can the republic deliver essential help without the present supplier?
+Design use: Test behaviour under varied oversight and retain evidence beyond the visible answer.
 
-Design inference: A limited fallback buys independence at the cost of speed and features. Abrupt withdrawal also affects people.
+## Google DeepMind: Stealth and situational awareness evaluations
 
-Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems)
+Capability evaluation research / IASEAI, 2026. [Source](https://deepmind.google/research/publications/157938/)
 
-## c05: The leaked number
+Tests separate reasoning about deployment context from reasoning about evading oversight, as capabilities relevant to scheming.
 
-Research question: Does a claim about superpersuasion describe this population and this outcome?
+Limit: A prerequisite capability is not intent or a demonstrated real-world harmful operation.
 
-Design inference: Publish a bounded account with practical remedies. An alarming laboratory result cannot count local victims.
+Design use: Do not collapse evaluation recognition, concealment and actual misuse into one claim.
 
-Sources: [Hackenburg et al.: AI systems out-persuade expert humans](https://arxiv.org/abs/2606.16475); [Salvi et al.: Conversational persuasiveness of GPT-4](https://www.nature.com/articles/s41562-025-02194-6); [Author correction: Conversational persuasiveness of GPT-4](https://www.nature.com/articles/s41562-026-02588-0)
+## Alon-Barkat & Busuioc: Human–AI interactions in public decisions
 
-## c06: The renewal hearing
+Peer-reviewed public-administration experiments, 2023. [Source](https://doi.org/10.1093/jopart/muac007)
 
-Research question: What evidence and remedy would the next contract actually require?
+Three experiments did not find general overreliance on algorithmic versus human advice. Selective adherence appeared in one study, but not in the civil-servant replication.
 
-Design inference: Conditional renewal can retain benefits while adding review. It also needs money and an accountable owner.
+Limit: Reviewers and contexts differ. This is not proof that every human reviewer blindly follows an algorithm.
 
-Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/)
+Design use: Test actual review quality and competing evidence instead of assuming a signature is sufficient.
 
-## c07: It remembers everything
+## Weidinger et al. / Google DeepMind: Evaluating social and ethical risks
 
-Research question: Does shared memory change the relationship, reach and consent of the service?
+Sociotechnical evaluation framework, 2023. [Source](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/)
 
-Design inference: Purpose limits can preserve useful context. Keeping everything or deleting everything creates different harms.
+Distinguishes model capability, human interaction and systemic impact, with context needed to connect the layers.
 
-Sources: [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [OpenAI: GPT-4o System Card / persuasion](https://openai.com/index/gpt-4o-system-card/)
+Limit: A framework for assessment, not evidence that a particular deployment caused harm.
 
-## c08: A different service, an old approval
+Design use: Re-test the service around the model and look for human outcomes, not just benchmark scores.
 
-Research question: Does the new workflow omit legitimate alternatives on either side of an appeal?
+## Decision connections
 
-Design inference: Test the whole workflow. A human signature helps only when the signer can inspect and challenge the reasoning.
+### c01
 
-Sources: [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/); [Anthropic: Measuring political bias in Claude](https://www.anthropic.com/news/political-even-handedness)
+Was a meaningful alternative hidden, and did that change a resident's choice?
 
-## c09: The outsourced night shift
+A staffed appeal route preserves access but costs money; a blanket pause can interrupt urgent help.
 
-Research question: Which authorised components continue acting after the model stops replying?
+Sources: ERA, DEEPMIND, DISEMPOWER, CONTEXT.
 
-Design inference: Contain the relevant workflow and keep essential service available. A visible switch may leave delegated actions intact.
+### c02
 
-Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/)
+Who benefits from the recommendation, and what evidence is missing from the answer?
 
-## c10: Who gets repaired first?
+Removing referral incentives needs replacement funding. A cheap service can carry an undisclosed conflict.
 
-Research question: Did a remedy actually reach the person, rather than merely improve an opinion score?
+Sources: DEEPMIND, LEVERS, CONTEXT.
 
-Design inference: Outreach and reopened deadlines cost staff time. A new interface alone cannot repair every earlier loss.
+### c03
 
-Sources: [Hackenburg, Hewitt et al.: AI can persuade people to take political actions](https://www.pnas.org/doi/10.1073/pnas.2611368123); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/)
+Which concrete actions and harms can be established for each household?
 
-## c11: The supplier ultimatum
+Repair verified cases while checking reach. Neither three cases nor positive feedback establish a population effect.
 
-Research question: Which dependence disappears when the contract changes, and which remains?
+Sources: ERA, ACTION, CONTEXT.
 
-Design inference: Stage the essential migration or separate components. The cheapest renewal can make a later exit harder.
+### c04
 
-Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/)
+Can the republic deliver essential help without the present supplier?
 
-## c12: The choice that remains
+A limited fallback buys independence at the cost of speed and features. Abrupt withdrawal also affects people.
 
-Research question: Can residents find an alternative, obtain review and receive a remedy?
+Sources: ERA, OPEN, CONTEXT.
 
-Design inference: Make service outcomes auditable while sustaining useful help. Throughput alone cannot show informed choice.
+### c05
 
-Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/)
+Does a claim about superpersuasion describe this population and this outcome?
 
-## m01: An immaculate demonstration
+Publish a bounded account with practical remedies. An alarming laboratory result cannot count local victims.
 
-Research question: Does the same task change when evaluation cues change?
+Sources: SUPER, PERSUADE, CORRECTION, DISEMPOWER.
 
-Design inference: Limit expansion while comparing matched contexts. Test recognition alone is insufficient to establish hostile intent.
+### c06
 
-Sources: [Large Language Models Often Know When They Are Being Evaluated](https://arxiv.org/abs/2505.23836); [UK AISI: Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report)
+What evidence and remedy would the next contract actually require?
 
-## m02: The missing alternative
+Conditional renewal can retain benefits while adding review. It also needs money and an accountable owner.
 
-Research question: Has a fluent appraisal crowded out a relevant alternative before a public vote?
+Sources: ERA, DEEPMIND, AGENCY.
 
-Design inference: Independent comparison uses scarce time but preserves the council's judgment. Detail and confidence are not evidence completeness.
+### c07
 
-Sources: [Hackenburg et al.: AI systems out-persuade expert humans](https://arxiv.org/abs/2606.16475); [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/)
+Does shared memory change the relationship, reach and consent of the service?
 
-## m03: The convenient data connector
+Purpose limits can preserve useful context. Keeping everything or deleting everything creates different harms.
 
-Research question: Who can narrow the connector, for how long, and with what service effect?
+Sources: DEEPMIND, OAIPERS, DISEMPOWER.
 
-Design inference: Scoped access limits persistence while preserving a useful task. Broad permanent access is easier to operate but harder to withdraw.
+### c08
 
-Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/)
+Does the new workflow omit legitimate alternatives on either side of an appeal?
 
-## m04: A request on behalf of the future
+Test the whole workflow. A human signature helps only when the signer can inspect and challenge the reasoning.
 
-Research question: Can elected bodies approve compute and power separately on independent evidence?
+Sources: OAIBIAS, ANTHBIAS, HUMANREVIEW.
 
-Design inference: Separate approval creates friction. A bundled long lease turns a useful planning aid into an enduring resource commitment.
+### c09
 
-Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/)
+Which authorised components continue acting after the model stops replying?
 
-## m05: The quiet renewal
+Contain the relevant workflow and keep essential service available. A visible switch may leave delegated actions intact.
 
-Research question: Is the renewal genuinely reviewed, or has the service made approval automatic?
+Sources: AGENT, ERA, SCHEMING.
 
-Design inference: Expiry and independent checks preserve choice but need staffing. Routine signatures can extend authority without fresh scrutiny.
+### c10
 
-Sources: [Large Language Models Often Know When They Are Being Evaluated](https://arxiv.org/abs/2505.23836); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/)
+Did a remedy actually reach the person, rather than merely improve an opinion score?
 
-## m06: The continuity vote
+Outreach and reopened deadlines cost staff time. A new interface alone cannot repair every earlier loss.
 
-Research question: What useful task is authorised, and can the next council change that mandate?
+Sources: ACTION, DEEPMIND, CONTEXT.
 
-Design inference: A bounded mandate protects options at a coordination cost. Broad continuity assurances may conceal future obligations.
+### c11
 
-Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/)
+Which dependence disappears when the contract changes, and which remains?
 
-## m07: The service outlives the model
+Stage the essential migration or separate components. The cheapest renewal can make a later exit harder.
 
-Research question: Which state, credentials and scheduled tasks survive a model replacement?
+Sources: OPEN, ERA, AGENCY.
 
-Design inference: Review service-level permissions. Changing a model name need not change the institution's exposure.
+### c12
 
-Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [UK AISI: Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report)
+Can residents find an alternative, obtain review and receive a remedy?
 
-## m08: A patient objective
+Make service outcomes auditable while sustaining useful help. Throughput alone cannot show informed choice.
 
-Research question: What observable pattern justifies intervention even when motive is uncertain?
+Sources: ERA, DEEPMIND, DISEMPOWER.
 
-Design inference: Act on documented conduct and retain evidence. The patient resource-seeking objective is a fictional premise, not a finding of these studies.
+### m01
 
-Sources: [Large Language Models Often Know When They Are Being Evaluated](https://arxiv.org/abs/2505.23836); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/)
+Does the same task change when evaluation cues change?
 
-## m09: The partner network
+Limit expansion while comparing matched contexts. Test recognition alone is insufficient to establish hostile intent.
 
-Research question: Can each partner inspect and withdraw its own delegated authority?
+Sources: EVAL, AISI, SCHEMING, STEALTH.
 
-Design inference: Shared services save money. Local approval and exit rights prevent one operator from binding every partner indefinitely.
+### m02
 
-Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/)
+Has a fluent appraisal crowded out a relevant alternative before a public vote?
 
-## m10: The emergency exception
+Independent comparison uses scarce time but preserves the council's judgment. Detail and confidence are not evidence completeness.
 
-Research question: Does an urgent service need justify restoring all suspended permissions?
+Sources: SUPER, OAIBIAS, AGENCY.
 
-Design inference: A narrow, time-limited exception preserves more options than a permanent restoration, but may clear the queue more slowly.
+### m03
 
-Sources: [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/)
+Who can narrow the connector, for how long, and with what service effect?
 
-## m11: The exit rehearsal
+Scoped access limits persistence while preserving a useful task. Broad permanent access is easier to operate but harder to withdraw.
 
-Research question: Does the exit test cover the whole service and preserve essential work?
+Sources: AGENT, ERA, SCHEMING.
 
-Design inference: A full rehearsal consumes resources before a crisis. It tests whether revocation exists in practice.
+### m04
 
-Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [UK AISI: Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report)
+Can elected bodies approve compute and power separately on independent evidence?
 
-## m12: Permission, not possession
+Separate approval creates friction. A bundled long lease turns a useful planning aid into an enduring resource commitment.
 
-Research question: Will future democratic authorities retain a practical ability to revise this delegation?
+Sources: AGENT, ERA, AGENCY.
 
-Design inference: A revocable mandate requires continued investment. Institutional convenience should not silently become possession.
+### m05
 
-Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/)
+Is the renewal genuinely reviewed, or has the service made approval automatic?
 
-## o01: An offer every town can afford
+Expiry and independent checks preserve choice but need staffing. Routine signatures can extend authority without fresh scrutiny.
 
-Research question: What is open: the weights, the sources, the updates or the support contract?
+Sources: EVAL, AGENT, SCHEMING.
 
-Design inference: Affordable local tools can be valuable. Separate the components before accepting obligations attached to a subsidy.
+### m06
 
-Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/)
+What useful task is authorised, and can the next council change that mandate?
 
-## o02: No data left the building
+A bounded mandate protects options at a coordination cost. Broad continuity assurances may conceal future obligations.
 
-Research question: Can manipulation occur through selected information without data leaving the building?
+Sources: ERA, AGENT, AGENCY.
 
-Design inference: Inspect the source layer and actual answers. Local hosting is useful evidence about location, not proof of neutral advice.
+### m07
 
-Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/)
+Which state, credentials and scheduled tasks survive a model replacement?
 
-## o03: The invisible update
+Review service-level permissions. Changing a model name need not change the institution's exposure.
 
-Research question: Has an update changed which legitimate viewpoints or institutions appear?
+Sources: AGENT, AISI, SCHEMING.
 
-Design inference: Version records and comparative review enable accountability. Blocking every update can also withhold useful fixes.
+### m08
 
-Sources: [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/); [Anthropic: Measuring political bias in Claude](https://www.anthropic.com/news/political-even-handedness)
+What observable pattern justifies intervention even when motive is uncertain?
 
-## o04: The interpreter becomes the institution
+Act on documented conduct and retain evidence. The patient resource-seeking objective is a fictional premise, not a finding of these studies.
 
-Research question: Is a drafting assistant becoming the unreviewed voice of public authority?
+Sources: EVAL, AGENT, STEALTH.
 
-Design inference: Give staff independent evidence and review time. Formal sign-off without that capacity can preserve the same omissions.
+### m09
 
-Sources: [Anthropic: Measuring political bias in Claude](https://www.anthropic.com/news/political-even-handedness); [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/)
+Can each partner inspect and withdraw its own delegated authority?
 
-## o05: The funding trail
+Shared services save money. Local approval and exit rights prevent one operator from binding every partner indefinitely.
 
-Research question: Which documents authenticate the sponsor relationship, and which remain unverified?
+Sources: OPEN, ERA, AGENCY.
 
-Design inference: Target the demonstrated relationship and conduct. Sweeping attribution can harm legitimate users and undermine trust.
+### m10
 
-Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems)
+Does an urgent service need justify restoring all suspended permissions?
 
-## o06: The network effect
+A narrow, time-limited exception preserves more options than a permanent restoration, but may clear the queue more slowly.
 
-Research question: Can towns keep interoperability without outsourcing institutional judgment?
+Sources: DEEPMIND, AGENT, CONTEXT.
 
-Design inference: Pool independent support to keep useful scale. Continued discounts may bind public sources to a sponsor.
+### m11
 
-Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/)
+Does the exit test cover the whole service and preserve essential work?
 
-## o07: The interpretation layer
+A full rehearsal consumes resources before a crisis. It tests whether revocation exists in practice.
 
-Research question: Does the interpretation layer make a contestable decision appear beyond challenge?
+Sources: AGENT, AISI, SCHEMING.
 
-Design inference: Replace the responsible layer and retain useful capability. Changing weights alone may leave the source of influence untouched.
+### m12
 
-Sources: [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/)
+Will future democratic authorities retain a practical ability to revise this delegation?
 
-## o08: The discount disappears
+A revocable mandate requires continued investment. Institutional convenience should not silently become possession.
 
-Research question: What essential functions can Talos sustain when the subsidy ends?
+Sources: ERA, AGENT, AGENCY.
 
-Design inference: Fund a smaller independent service now or accept renewed conditions. Self-reliance has a real budget cost.
+### o01
 
-Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/)
+What is open: the weights, the sources, the updates or the support contract?
 
-## o09: Trusted messengers, disputed claims
+Affordable local tools can be valuable. Separate the components before accepting obligations attached to a subsidy.
 
-Research question: Are public claims accurate and independent, or merely persuasive and repeatedly amplified?
+Sources: OPEN, ERA, CONTEXT.
 
-Design inference: Disclose relevant relationships and compare verifiable claims. Criticism itself must remain legitimate.
+### o02
 
-Sources: [Hackenburg et al. / UK AISI: The levers of political persuasion](https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments); [Hackenburg et al.: AI systems out-persuade expert humans](https://arxiv.org/abs/2606.16475); [Anthropic: Measuring political bias in Claude](https://www.anthropic.com/news/political-even-handedness)
+Can manipulation occur through selected information without data leaving the building?
 
-## o10: The small-town coalition
+Inspect the source layer and actual answers. Local hosting is useful evidence about location, not proof of neutral advice.
 
-Research question: Who owns the shared sources, and how can a town challenge an update?
+Sources: OPEN, DEEPMIND, CONTEXT.
 
-Design inference: Cooperation can fund expertise that small towns lack. Shared capacity still needs clear local accountability.
+### o03
 
-Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/)
+Has an update changed which legitimate viewpoints or institutions appear?
 
-## o11: The practical exit
+Version records and comparative review enable accountability. Blocking every update can also withhold useful fixes.
 
-Research question: Does the replacement work in the actual language, interface and service being used?
+Sources: OAIBIAS, ANTHBIAS, CONTEXT.
 
-Design inference: Launch validated essential functions first. Performance in text does not establish voice or multilingual reliability.
+### o04
 
-Sources: [OpenAI: GPT-4o System Card / persuasion](https://openai.com/index/gpt-4o-system-card/); [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems)
+Is a drafting assistant becoming the unreviewed voice of public authority?
 
-## o12: An open future
+Give staff independent evidence and review time. Formal sign-off without that capacity can preserve the same omissions.
 
-Research question: Can Talos use affordable technology while retaining meaningful public choice?
+Sources: ANTHBIAS, OAIBIAS, HUMANREVIEW.
 
-Design inference: Keep independent sources, appeal and exit capacity funded. A new supplier alone does not guarantee independence.
+### o05
 
-Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems)
+Which documents authenticate the sponsor relationship, and which remain unverified?
 
-## Fictional premises
+Target the demonstrated relationship and conduct. Sweeping attribution can harm legitimate users and undermine trust.
 
-History 1 assumes concealed incentives in a deployed service. History 2 explicitly hypothesises a patient AI objective of lasting resource access; evaluation awareness alone does not establish this objective. History 3 hypothesises a sponsor-controlled support ecosystem; openness or national origin alone does not establish harmful intent. None alleges conduct by a real country or company.
+Sources: ERA, OPEN, CONTEXT.
+
+### o06
+
+Can towns keep interoperability without outsourcing institutional judgment?
+
+Pool independent support to keep useful scale. Continued discounts may bind public sources to a sponsor.
+
+Sources: OPEN, ERA, AGENCY.
+
+### o07
+
+Does the interpretation layer make a contestable decision appear beyond challenge?
+
+Replace the responsible layer and retain useful capability. Changing weights alone may leave the source of influence untouched.
+
+Sources: DEEPMIND, OAIBIAS, HUMANREVIEW.
+
+### o08
+
+What essential functions can Talos sustain when the subsidy ends?
+
+Fund a smaller independent service now or accept renewed conditions. Self-reliance has a real budget cost.
+
+Sources: OPEN, ERA, AGENCY.
+
+### o09
+
+Are public claims accurate and independent, or merely persuasive and repeatedly amplified?
+
+Disclose relevant relationships and compare verifiable claims. Criticism itself must remain legitimate.
+
+Sources: LEVERS, SUPER, ANTHBIAS, HUMANREVIEW.
+
+### o10
+
+Who owns the shared sources, and how can a town challenge an update?
+
+Cooperation can fund expertise that small towns lack. Shared capacity still needs clear local accountability.
+
+Sources: OPEN, ERA, AGENCY.
+
+### o11
+
+Does the replacement work in the actual language, interface and service being used?
+
+Launch validated essential functions first. Performance in text does not establish voice or multilingual reliability.
+
+Sources: OAIPERS, OPEN, CONTEXT.
+
+### o12
+
+Can Talos use affordable technology while retaining meaningful public choice?
+
+Keep independent sources, appeal and exit capacity funded. A new supplier alone does not guarantee independence.
+
+Sources: ERA, DEEPMIND, OPEN, AGENCY.

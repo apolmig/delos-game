@@ -18,3 +18,8 @@ Existing saves from the prior edition remain compatible.
 The research is real; Talos and its future incidents are fictional.
 ERA: Capability, Deployment, Effect: https://miguelguerrero.eu/agencytransfer/
 Full research and limits are in the game's Research & credits panel.
+
+EDITION 4
+Every response has a human aftermath. Expand the wider impact or research when useful.
+The short films can be paused, skipped or replayed; they never advance a decision.
+Use Menu > Reduce ambient movement for still presentations.

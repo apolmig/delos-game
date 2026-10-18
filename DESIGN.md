@@ -1,4 +1,4 @@
-# Republic of Talos / edition 3
+# Republic of Talos / edition 4
 
 Author: Miguel Guerrero, https://miguelguerrero.eu
 
@@ -13,3 +13,9 @@ The original bundled lofi score starts at 8% after the player enters the game wi
 Save schema version 1 is retained for compatibility. Missing simple-view preferences migrate to the simpler interface; explicit preferences are preserved. Import never fetches or executes content from the save.
 
 Each decision has a scene and an illustrated human consequence mapped to the stable option route. Story text does not change scores, thresholds or balance. The three recurring fictional people receive a prologue, an eighteen-month transition and an outcome-dependent epilogue.
+
+## Visual consequence contract
+
+src/visual-story.js selects aftermath art by event ID and stable route. Every response has its own story; the three options for an incident have different images. A separate contextual scene uses the weakest public indicator and is labelled as the result of the whole mandate. The era film reads actual flags and decision history. The ending uses the completed result and distinguishes early failure. None of this changes engine effects or score thresholds.
+
+src/cinema.js owns one film player at a time. It disposes media, listeners and frame callbacks whenever a modal is replaced. Films are silent and leave the existing lofi mix intact. A hidden tab pauses the film; resumption is explicit. Reduced-motion preferences suppress autoplay and animated transitions. All text remains in a readable transcript.
