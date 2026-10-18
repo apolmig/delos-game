@@ -19,7 +19,7 @@ test('2028 films retain actual decisions and change with the route and republic 
  }
 });
 test('Endings reflect both mandate success and early institutional emergency',()=>{
- for(let c=0;c<3;c++){const s=G.createGame({chapter:c});s.turn=11;s.results=[{win:true,grade:'A guarded recovery'}];const good=cinematicStory(s,'ending');s.results=[{win:false,grade:'An unfinished mandate'}];s.stats.rights=20;const bad=cinematicStory(s,'ending');assert.notDeepEqual(good.shots,bad.shots);s.turn=3;s.criticalStreak=3;assert.match(cinematicStory(s,'ending').shots[0].kicker,/2027/);assert.match(cinematicStory(s,'ending').shots[0].title,/early/);}
+ for(let c=0;c<3;c++){const s=G.createGame({chapter:c});s.turn=11;s.results=[{win:true,grade:'A guarded recovery'}];const good=cinematicStory(s,'ending');s.results=[{win:false,grade:'An unfinished mandate'}];s.stats.rights=20;const bad=cinematicStory(s,'ending');assert.notDeepEqual(good.shots,bad.shots);s.turn=3;s.criticalStreak=3;assert.match(cinematicStory(s,'ending').shots[0].kicker,/2027/);assert.match(cinematicStory(s,'ending').shots[0].title,/council loses office/);}
 });
 test('The wider-impact image responds to each weak institution independently',()=>{
  for(const k of ['services','rights','autonomy']){const s=G.createGame();s.stats.services=s.stats.rights=s.stats.autonomy=80;s.stats[k]=25;assert.equal(civicCondition(s).metric,k);assert.equal(civicCondition(s).low,true);}

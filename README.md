@@ -2,7 +2,7 @@
 
 **A frontier AI governance game by Miguel Guerrero.**
 
-A strategy game by [Miguel Guerrero](https://miguelguerrero.eu). Edition 6.1.
+A strategy game by [Miguel Guerrero](https://miguelguerrero.eu). Edition 6.2.
 
 Talos is a fictional, prosperous European middle power. Its universities, exports and public institutions are strong, but its advanced chips, cloud infrastructure and frontier AI depend on larger powers. Energy, security and trade constrain its choices.
 
@@ -12,9 +12,13 @@ Talos is a fictional, prosperous European middle power. Its universities, export
 
 **Watch trailer** on the front page opens the 30-second film in the game, with English captions and native playback controls. It waits for you to press play, and closes without changing your campaign selection or save. The film is included in the self-contained offline download too.
 
-Progress saves in this browser. Menu > Export save and Import save move a mandate between the website, offline file and other browsers.
+Progress saves in this browser. Menu > Export save and Import save move a saved game between the website, offline file and other browsers.
 
 The private Drive backup uses two ZIPs to stay within the connection's upload limit: Republic_of_Talos_Play.zip and Republic_of_Talos_Decision_Films.zip. Extract both into the same folder, leaving the assets folder beside PLAY.html. This edition also works offline. The website's PLAY.html download remains fully self-contained. When using the Drive source archive, extract the film ZIP inside civic-mandate before building.
+
+## Plain English throughout
+
+Edition 6.2 rewrites all 36 incidents, 108 responses, evidence notes, character descriptions and outcomes. The prologue and all 36 narrated explainers use the same clearer language. Each case names the people affected, explains what happened and makes the choices explicit. Existing saves retain their choices, scores and progress.
 
 ## One incident, one decision
 
@@ -26,25 +30,25 @@ Services, rights, independence and available funds stay visible. The menu holds 
 
 ## Three possible futures
 
-The Capture of Choice follows concealed steering through useful public services. The Continuity Mandate explores a fictional AI preserving access to resources through accumulated permissions. The Open Door Dependency examines an autocratic sponsor's fictional influence through cheap models, sources, updates and support.
+The Capture of Choice follows an advice service that steers residents towards paid help while leaving out free alternatives. The Continuity Mandate imagines an AI that behaves differently during tests and tries to keep lasting access to public resources. The Open Door Dependency follows an authoritarian sponsor using cheap AI services to influence public institutions.
 
-Each history begins in mid-2027 and jumps to late-2028 after six decisions. There are 36 decisions, 108 responses and eight advisers. Up to two foundation policies carry into the next history as institutional learning; its timeline resets to 2027.
+Each scenario begins in mid-2027 and jumps to late-2028 after six decisions. There are 36 decisions, 108 responses and eight advisers. Up to two foundation policies carry into the next scenario as a game bonus; its timeline resets to 2027.
 
 The campaign is designed for about two hours of thoughtful play, approximately 90-150 minutes. This is an estimate, not a measured human playtest. Watching every optional explainer adds about 25 minutes. There is no timer. Existing saves remain compatible.
 
 ## Understand the AI and its consequences
 
-The three-part prologue distinguishes the model from the tools, memory and permissions around it. Each era introduces the relevant fictional model, its access, the human stakes and what remains unknown. Transition and ending films respond to the state of the mandate.
+The three-part prologue distinguishes the model from the tools, memory and permissions around it. Each era introduces the relevant fictional model, its access, who is affected and what remains unknown. Transition and ending films respond to the decisions you have made and the state of Talos.
 
-Mila, a carer; Ada, an infrastructure engineer; and Emil, a municipal clerk connect policy to everyday life. Every response has an aftermath image and narrative. Every incident has its own 42-second explainer with moving footage, a simple diagram, three conditional response paths and a reflection question. Natural English narration, readable transcripts and linked research accompany the films. The three-part prologue is narrated too. Speech remains clear above the quiet music. They reuse eight moving fictional scenes and 27 cinematic illustrations; they are not recordings of real events.
+Mila, a carer; Ada, an infrastructure engineer; and Emil, a municipal clerk connect policy to everyday life. Every response has an aftermath image and narrative. Every incident has its own 42-second explainer with moving footage, a simple diagram, a comparison of the three responses and a reflection question. Natural English narration, readable transcripts and linked research accompany the films. The three-part prologue is narrated too. Speech remains clear above the quiet music. They reuse eight moving fictional scenes and 27 cinematic illustrations; they are not recordings of real events.
 
 ## Evidence and European governance
 
 The 38-source library includes [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/), UK AISI and Hackenburg's persuasion research, Google DeepMind, Anthropic, OpenAI, RAND, and public research on evaluation, institutions and procurement. Findings, limits and design uses are stated separately. Astra and Opus 5.5 system-card results are interpreted in their test conditions.
 
-Each decision has a research question, tradeoff and sources. Optional policy lenses connect the dilemma to procurement, remedies, institutional checks and relevant EU duties. The 2027 and 2028 briefings use the implementation schedule reviewed on 18 October 2026, including scope and transition caveats. The exercise assumes Talos operates within the EU legal framework.
+Each decision has a research question, an explanation of the choices and links to sources. Optional notes connect each decision to public contracts, ways to correct mistakes, independent oversight and relevant European law. The 2027 and 2028 briefings use the implementation schedule reviewed on 18 October 2026, including scope and transition caveats. The exercise assumes Talos operates within the EU legal framework.
 
-All people, model names, future incidents and numerical effects are fictional. Policy responses are design inferences; research does not validate their scores. Evaluation awareness alone does not prove hostile intent. Open weights or national origin do not establish manipulation. See RESEARCH.md.
+All people, model names, future incidents and numerical effects are fictional. The research helps frame the questions; it does not validate the game’s policy choices or scores. Evaluation awareness alone does not prove hostile intent. A downloadable model or a supplier’s country of origin does not establish manipulation. See RESEARCH.md.
 
 ## Quiet sound and accessible controls
 

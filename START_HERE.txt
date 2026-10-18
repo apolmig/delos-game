@@ -1,4 +1,4 @@
-REPUBLIC OF TALOS / EDITION 6
+REPUBLIC OF TALOS / EDITION 6.2
 A frontier AI governance game by Miguel Guerrero
 https://miguelguerrero.eu
 
@@ -17,9 +17,9 @@ For a single-file offline download, use https://miguelguerrero.eu/talos-game/PLA
 
 Editing the source: extract the film ZIP inside the source archive's civic-mandate folder before running the build. The film library serves both the play and source packages.
 
-Each decision has a different narrated 42-second film explaining the human stakes and response paths. Use the film button before deciding or after seeing the result. Films are optional and never advance the game. A transcript is always available.
+Each decision has a different narrated 42-second film explaining who is affected and what each response could change. Use the film button before deciding or after seeing the result. Films are optional and never advance the game. A transcript is always available.
 
-The prologue and 2027/2028 briefings explain the AI, its permissions, the uncertainty and European regulatory context. Research and legal details are optional, so the main turn stays simple.
+The prologue and 2027/2028 briefings explain the AI, its permissions, what remains uncertain and the relevant European rules. Research and legal details are optional, so each decision stays simple.
 
 All 36 films and the three prologue chapters have natural English voice narration. Listen/Pause controls and transcripts keep reading optional.
 Images, narration, films, original quiet music and sound effects work offline.

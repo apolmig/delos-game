@@ -9,7 +9,7 @@ test('Every decision has a distinct 30–60 second explainer with continuous tra
 });
 test('All three AI histories have distinct 2027/2028 capability, exposure and uncertainty briefings',()=>{
  assert.equal(AI_CONTEXT.length,3);for(const c of AI_CONTEXT){assert.notEqual(c.first.name,c.later.name);for(const era of [c.first,c.later])for(const k of ['capability','deployment','stakes','unknown'])assert.ok(era[k].length>40);}
- assert.match(AI_CONTEXT[1].first.unknown,/fictional premise/);assert.match(AI_CONTEXT[2].first.unknown,/neither openness nor origin/);
+ assert.match(AI_CONTEXT[1].first.unknown,/explicit fictional assumption/);assert.match(AI_CONTEXT[2].first.unknown,/neither openness nor national origin/);
 });
 test('Public research, system-card and regulatory claims resolve to bounded public sources',()=>{
  const ids=new Set(SOURCES.map(s=>s.id));assert.equal(ids.size,SOURCES.length);

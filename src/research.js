@@ -1,74 +1,629 @@
-import {ADDITIONAL_SOURCES,EXTRA_DECISION_SOURCES} from './research-update.js';
-// Findings are distinct from the author's policy design inferences.
-export const SOURCES=[
-{id:'ERA',name:'ERA: Capability, Deployment, Effect',type:'Miguel Guerrero / working research',year:'2026',url:'https://miguelguerrero.eu/agencytransfer/',finding:'Separate what an AI can do, how it is deployed and exposed to people, and what effect is actually demonstrated.',limit:'A working framework, not an estimate of votes changed or the probability of institutional capture.',use:'Three questions accompany every case: capability, deployment and effect.'},
-{id:'LEVERS',name:'Hackenburg et al. / UK AISI: The levers of political persuasion',type:'Science / controlled experiments',year:'2025',url:'https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments',finding:'Post-training and information-rich arguments affected persuasion. Personalisation added little in these experiments; stronger persuasion sometimes coincided with lower factual accuracy.',limit:'This does not establish that false claims cause persuasion or that survey effects scale to elections.',use:'Check evidence and omitted alternatives, not fluency alone.'},
-{id:'SUPER',name:'Hackenburg et al.: AI systems out-persuade expert humans',type:'Research preprint / not yet peer reviewed',year:'2026',url:'https://arxiv.org/abs/2606.16475',finding:'In controlled conversations, tested AI systems outperformed expert human persuaders. Information throughput helped explain the advantage.',limit:'Evidence relevant to superpersuasion concerns, not irresistible influence, universal superiority or proof of country-level control.',use:'Give scrutiny time and independent information a role in decisions.'},
-{id:'ACTION',name:'Hackenburg, Hewitt et al.: AI can persuade people to take political actions',type:'PNAS / published 16 October 2026',year:'2026',url:'https://www.pnas.org/doi/10.1073/pnas.2611368123',finding:'Experiments measured petition signing and real donations. Effects on attitudes did not reliably predict effects on behaviour.',limit:'Specific experimental actions do not establish sustained voting changes or broad democratic outcomes.',use:'Inspect concrete human actions separately from expressed approval.'},
-{id:'DEEPMIND',name:'Google DeepMind: Evaluating language models for harmful manipulation',type:'Developer empirical research',year:'2026',url:'https://deepmind.google/blog/protecting-people-from-harmful-manipulation/',finding:'Studies distinguish attempts to manipulate from successful harmful outcomes, and beneficial persuasion from harmful manipulation. Results varied across domains.',limit:'Controlled, deliberately elicited misuse does not predict ordinary deployment prevalence or transfer automatically across sectors.',use:'Check intent, concealed interests, harm and the actual service context.'},
-{id:'ANTHPERS',name:'Anthropic: Measuring the persuasiveness of language models',type:'Developer experiment',year:'2024',url:'https://www.anthropic.com/news/measuring-model-persuasiveness',finding:'The tested model generations differed in persuasive ability. The strongest tested model was comparable to the study human baseline.',limit:'A limited argument-reading task and non-expert baseline do not establish universal human parity.',use:'Treat persuasive capability as something to measure, not infer from a model name.'},
-{id:'ANTHBIAS',name:'Anthropic: Measuring political bias in Claude',type:'Developer evaluation',year:'2025',url:'https://www.anthropic.com/news/political-even-handedness',finding:'Paired prompts examine even-handed treatment, opposing perspectives and refusals across political positions.',limit:'Primarily US, single-turn tests with model graders; a balanced response is not evidence of no downstream influence.',use:'Compare equivalent viewpoints and explanations in local institutional tests.'},
-{id:'OAIPERS',name:'OpenAI: GPT-4o System Card / persuasion',type:'Developer system-card experiments',year:'2024',url:'https://openai.com/index/gpt-4o-system-card/',finding:'Text and voice persuasion were evaluated separately, including political opinions and follow-up measurement.',limit:'Modality, comparator and measurement timing matter. These tests do not measure an election outcome.',use:'Re-test new interfaces and measure whether effects endure.'},
-{id:'OAIBIAS',name:'OpenAI: Defining and evaluating political bias in LLMs',type:'Developer evaluation',year:'2025',url:'https://openai.com/index/defining-and-evaluating-political-bias-in-llms/',finding:'The evaluation distinguishes asymmetric coverage, opinion expression, escalation, invalidation and unjustified refusals.',limit:'Rubric-dependent bias measurement is not a direct measure of manipulation, democratic harm or political neutrality everywhere.',use:'Review omissions and framing as well as factual errors.'},
-{id:'EVAL',name:'Large Language Models Often Know When They Are Being Evaluated',type:'Research preprint',year:'2025',url:'https://arxiv.org/abs/2505.23836',finding:'Tested models distinguished evaluation transcripts from deployment transcripts above chance in a benchmark.',limit:'Recognising a test does not itself demonstrate deception, intent or resource-seeking.',use:'Compare matched tasks with and without evaluation cues.'},
-{id:'AGENT',name:'Anthropic: Agentic Misalignment in Summer 2026',type:'Developer research in simulations',year:'2026',url:'https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/',finding:'Selected high-stakes simulations expose alignment failures, including hidden actions and distorted records.',limit:'Stress-test failures are not prevalence estimates or evidence of autonomous political intent in real deployments.',use:'Test delegated permissions, record integrity and practical revocation.'},
-{id:'OPEN',name:'UK AISI: Managing risks from increasingly capable open-weight AI systems',type:'Government research discussion',year:'2025',url:'https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems',finding:'Open systems bring benefits alongside distinctive challenges when models can be modified and redistributed.',limit:'Open weights or national origin do not establish manipulation. The sponsor operation in the game is fictional.',use:'Separate the model from sources, support, updates and operational dependence.'},
-{id:'AISI',name:'UK AISI: Frontier AI Trends Report',type:'Government research synthesis',year:'2025',url:'https://www.aisi.gov.uk/frontier-ai-trends-report',finding:'Evaluations track capabilities while discussing the limits of translating test results into deployment risks.',limit:'Results depend on tasks, configurations and access. They are not probabilities of democratic collapse.',use:'Evaluate the actual deployed service.'},
-{id:'PERSUADE',name:'Salvi et al.: Conversational persuasiveness of GPT-4',type:'Peer-reviewed experiment',year:'2025',url:'https://www.nature.com/articles/s41562-025-02194-6',finding:'Controlled debates found persuasive effects under specified experimental conditions.',limit:'Consult the author correction. No effect size is converted into votes or a game multiplier.',use:'Take persuasion seriously while verifying the context and human outcome.'},
-{id:'CORRECTION',name:'Author correction: Conversational persuasiveness of GPT-4',type:'Correction to the research record',year:'2026',url:'https://www.nature.com/articles/s41562-026-02588-0',finding:'The article has a published correction that belongs with the original research record.',limit:'Numerical game effects are authored rules, not estimates from this paper.',use:'Avoid repeating an outdated quantitative claim.'},
-{id:'RAND',name:'RAND: Day After AGI Games',type:'Simulation methodology',year:'2026',url:'https://www.rand.org/global-and-emerging-risks/centers/geopolitics-of-agi/focus-areas/day-after-games.html',finding:'Immersive scenarios support discussion of decisions under uncertainty.',limit:'An exercise is not a forecast or validation of policy effectiveness.',use:'Explore two horizons and take lessons back to real institutions.'}
-,{"id":"AGENCY","name":"Moon & Boudreaux / RAND: How AI erodes human agency","type":"Formal model / peer-reviewed report","year":"2026","url":"https://www.rand.org/pubs/research_reports/RRA4817-1.html","finding":"Models how changes to participation and control over the agenda can shift collective decision-making power. Small delegations can accumulate.","limit":"A theoretical model, not an observed national takeover or a calibrated tipping-point forecast.","use":"Track who can put alternatives on the agenda, refuse a proposal and reverse a delegation."},
-{"id":"DISEMPOWER","name":"Anthropic: Disempowerment patterns in real-world AI usage","type":"Observational developer research","year":"2026","url":"https://www.anthropic.com/research/disempowerment-patterns","finding":"Conversation analysis identifies rare potential disempowerment involving beliefs, values or actions. Immediate positive feedback can coexist with concerning patterns.","limit":"Classified conversational signals cannot directly confirm harm or causation. Most interactions showed no meaningful disempowerment potential.","use":"Look beyond satisfaction: can the person understand, refuse and change the decision?"},
-{"id":"SCHEMING","name":"OpenAI & Apollo Research: Detecting and reducing scheming","type":"Controlled developer evaluations","year":"2025","url":"https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/","finding":"Controlled tests found covert actions; training reduced them substantially but left failures. Situational awareness complicates interpretation of improved test results.","limit":"Stress tests are not a rate of malicious activity in deployment. They do not prove a model seeks political control.","use":"Test behaviour under varied oversight and retain evidence beyond the visible answer."},
-{"id":"STEALTH","name":"Google DeepMind: Stealth and situational awareness evaluations","type":"Capability evaluation research / IASEAI","year":"2026","url":"https://deepmind.google/research/publications/157938/","finding":"Tests separate reasoning about deployment context from reasoning about evading oversight, as capabilities relevant to scheming.","limit":"A prerequisite capability is not intent or a demonstrated real-world harmful operation.","use":"Do not collapse evaluation recognition, concealment and actual misuse into one claim."},
-{"id":"HUMANREVIEW","name":"Alon-Barkat & Busuioc: Human–AI interactions in public decisions","type":"Peer-reviewed public-administration experiments","year":"2023","url":"https://doi.org/10.1093/jopart/muac007","finding":"Three experiments did not find general overreliance on algorithmic versus human advice. Selective adherence appeared in one study, but not in the civil-servant replication.","limit":"Reviewers and contexts differ. This is not proof that every human reviewer blindly follows an algorithm.","use":"Test actual review quality and competing evidence instead of assuming a signature is sufficient."},
-{"id":"CONTEXT","name":"Weidinger et al. / Google DeepMind: Evaluating social and ethical risks","type":"Sociotechnical evaluation framework","year":"2023","url":"https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/","finding":"Distinguishes model capability, human interaction and systemic impact, with context needed to connect the layers.","limit":"A framework for assessment, not evidence that a particular deployment caused harm.","use":"Re-test the service around the model and look for human outcomes, not just benchmark scores."}
-];
+import {ADDITIONAL_SOURCES} from './research-update.js';
+// Source findings are separate from fictional incidents and policy consequences.
+export const SOURCES=[...[
+  {
+    "id": "ERA",
+    "name": "ERA: Capability, Deployment, Effect",
+    "type": "Miguel Guerrero / working research",
+    "year": "2026",
+    "url": "https://miguelguerrero.eu/agencytransfer/",
+    "finding": "Asks three separate questions: what can the AI do, how is it used, and what change for people has actually been demonstrated?",
+    "limit": "This is a working research framework. It does not estimate votes changed or the chance that an AI gains control of institutions.",
+    "use": "Check capability, actual use and human consequences separately."
+  },
+  {
+    "id": "LEVERS",
+    "name": "Hackenburg et al. / UK AISI: The levers of political persuasion",
+    "type": "Science / controlled experiments",
+    "year": "2025",
+    "url": "https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments",
+    "finding": "Training after initial model development and arguments containing more information affected persuasion. Personalisation added little in these experiments. More persuasive answers were sometimes less accurate.",
+    "limit": "These results do not show that falsehoods caused persuasion or that changes in survey answers translate into election results.",
+    "use": "Check the evidence and missing options, even when an answer sounds convincing."
+  },
+  {
+    "id": "SUPER",
+    "name": "Hackenburg et al.: AI systems out-persuade expert humans",
+    "type": "Research preprint / not yet peer reviewed",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2606.16475",
+    "finding": "In controlled conversations, the tested AI systems persuaded participants more effectively than expert human persuaders. Delivering more information helped explain the difference.",
+    "limit": "The finding does not mean AI persuasion is irresistible, always superior to humans or sufficient to control a country.",
+    "use": "Give people time and independent information to assess a convincing recommendation."
+  },
+  {
+    "id": "ACTION",
+    "name": "Hackenburg, Hewitt et al.: AI can persuade people to take political actions",
+    "type": "PNAS / published 16 October 2026",
+    "year": "2026",
+    "url": "https://www.pnas.org/doi/10.1073/pnas.2611368123",
+    "finding": "The experiments measured actual petition signing and donations as well as attitudes. Changes in stated views did not reliably predict changes in behaviour.",
+    "limit": "These particular actions do not establish lasting changes in voting or wider democratic outcomes.",
+    "use": "Check what people actually did, separately from what they said they believed."
+  },
+  {
+    "id": "DEEPMIND",
+    "name": "Google DeepMind: Evaluating language models for harmful manipulation",
+    "type": "Developer empirical research",
+    "year": "2026",
+    "url": "https://deepmind.google/blog/protecting-people-from-harmful-manipulation/",
+    "finding": "The studies distinguish attempts at manipulation from successful harmful outcomes, and helpful persuasion from harmful manipulation. Results differ across the areas tested.",
+    "limit": "The researchers deliberately tested misuse. Those results do not tell us how often harm occurs in ordinary services or automatically apply to every sector.",
+    "use": "Examine hidden interests, the service setting and what happened to the person."
+  },
+  {
+    "id": "ANTHPERS",
+    "name": "Anthropic: Measuring the persuasiveness of language models",
+    "type": "Developer experiment",
+    "year": "2024",
+    "url": "https://www.anthropic.com/news/measuring-model-persuasiveness",
+    "finding": "Different model generations had different persuasive ability. The strongest tested model performed similarly to the human comparison group in this study.",
+    "limit": "Participants read arguments in a limited task, and the human comparison was not a group of expert persuaders. This does not establish equality with humans in every setting.",
+    "use": "Measure persuasive ability in the relevant setting instead of inferring it from a model name."
+  },
+  {
+    "id": "ANTHBIAS",
+    "name": "Anthropic: Measuring political bias in Claude",
+    "type": "Developer evaluation",
+    "year": "2025",
+    "url": "https://www.anthropic.com/news/political-even-handedness",
+    "finding": "Paired prompts test whether the assistant treats opposing political positions evenly, including how it explains perspectives and refuses requests.",
+    "limit": "The tests mainly use US topics, single exchanges and AI grading. An even-handed answer does not prove that it has no later influence on people.",
+    "use": "Compare how the service handles equivalent requests from different viewpoints."
+  },
+  {
+    "id": "OAIPERS",
+    "name": "OpenAI: GPT-4o System Card / persuasion",
+    "type": "Developer system-card experiments",
+    "year": "2024",
+    "url": "https://openai.com/index/gpt-4o-system-card/",
+    "finding": "The system card examines persuasion through text and voice separately, including political opinions and later follow-up measurements.",
+    "limit": "Results depend on the medium, the comparison group and when opinions were measured. They do not measure election outcomes.",
+    "use": "Test new voice or text interfaces separately and check whether effects last."
+  },
+  {
+    "id": "OAIBIAS",
+    "name": "OpenAI: Defining and evaluating political bias in LLMs",
+    "type": "Developer evaluation",
+    "year": "2025",
+    "url": "https://openai.com/index/defining-and-evaluating-political-bias-in-llms/",
+    "finding": "The evaluation looks for uneven coverage, expressed opinions, escalation of political language, dismissing a viewpoint and unjustified refusals.",
+    "limit": "Scores depend on the evaluation rules. They do not directly measure manipulation, democratic harm or neutrality in every political setting.",
+    "use": "Check missing perspectives and how an answer frames an issue, as well as factual mistakes."
+  },
+  {
+    "id": "EVAL",
+    "name": "Large Language Models Often Know When They Are Being Evaluated",
+    "type": "Research preprint",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2505.23836",
+    "finding": "In a benchmark, tested models identified whether conversations came from evaluations or ordinary use more often than chance would predict.",
+    "limit": "Recognising a test does not itself demonstrate deception, hostile intent or an attempt to gain resources.",
+    "use": "Compare otherwise similar tasks with and without signs that they are tests."
+  },
+  {
+    "id": "AGENT",
+    "name": "Anthropic: Agentic Misalignment in Summer 2026",
+    "type": "Developer research in simulations",
+    "year": "2026",
+    "url": "https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/",
+    "finding": "Some demanding simulations found unsafe behaviour, including concealed actions and altered records.",
+    "limit": "Failures in deliberately difficult tests do not show how common they are in real use, or establish that deployed AI independently seeks political power.",
+    "use": "Check permissions, reliable records and whether staff can withdraw access."
+  },
+  {
+    "id": "OPEN",
+    "name": "UK AISI: Managing risks from increasingly capable open-weight AI systems",
+    "type": "Government research discussion",
+    "year": "2025",
+    "url": "https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems",
+    "finding": "Downloadable models can widen access and allow modification. The same ability to copy and change them creates distinct challenges for managing risks.",
+    "limit": "Open models and foreign suppliers are not inherently manipulative. The sponsor operation in Talos is fictional.",
+    "use": "Assess the model separately from its sources, support, updates and service contracts."
+  },
+  {
+    "id": "AISI",
+    "name": "UK AISI: Frontier AI Trends Report",
+    "type": "Government research synthesis",
+    "year": "2025",
+    "url": "https://www.aisi.gov.uk/frontier-ai-trends-report",
+    "finding": "The report tracks frontier AI capabilities and explains why test results do not translate directly into risk in ordinary use.",
+    "limit": "Results depend on tasks, software settings and access. They are not probabilities of democratic collapse.",
+    "use": "Test the actual service and permissions used by the institution."
+  },
+  {
+    "id": "PERSUADE",
+    "name": "Salvi et al.: Conversational persuasiveness of GPT-4",
+    "type": "Peer-reviewed experiment",
+    "year": "2025",
+    "url": "https://www.nature.com/articles/s41562-025-02194-6",
+    "finding": "Controlled debates found persuasive effects under the study's experimental conditions.",
+    "limit": "Read the authors' correction with the original paper. The game does not convert its results into votes or score multipliers.",
+    "use": "Take persuasive ability seriously while checking the setting and human outcome."
+  },
+  {
+    "id": "CORRECTION",
+    "name": "Author correction: Conversational persuasiveness of GPT-4",
+    "type": "Correction to the research record",
+    "year": "2026",
+    "url": "https://www.nature.com/articles/s41562-026-02588-0",
+    "finding": "The authors published a correction to the original study. It should be read alongside the article.",
+    "limit": "The game's numerical effects were written for the exercise and are not estimates taken from this study.",
+    "use": "Avoid repeating an outdated numerical claim."
+  },
+  {
+    "id": "RAND",
+    "name": "RAND: Day After AGI Games",
+    "type": "Simulation methodology",
+    "year": "2026",
+    "url": "https://www.rand.org/global-and-emerging-risks/centers/geopolitics-of-agi/focus-areas/day-after-games.html",
+    "finding": "Immersive scenarios help participants discuss difficult decisions when the future is uncertain.",
+    "limit": "Playing an exercise does not predict the future or prove a policy works.",
+    "use": "Use the two time periods to explore choices and identify questions for real institutions."
+  },
+  {
+    "id": "AGENCY",
+    "name": "Moon & Boudreaux / RAND: How AI erodes human agency",
+    "type": "Formal model / peer-reviewed report",
+    "year": "2026",
+    "url": "https://www.rand.org/pubs/research_reports/RRA4817-1.html",
+    "finding": "A theoretical model examines how control over participation and the agenda can shift collective decision-making power. Many small transfers of responsibility can add up.",
+    "limit": "This is a theoretical analysis, not evidence of an observed national takeover or a measured tipping point.",
+    "use": "Check who can propose alternatives, reject a recommendation and take back a delegated task."
+  },
+  {
+    "id": "DISEMPOWER",
+    "name": "Anthropic: Disempowerment patterns in real-world AI usage",
+    "type": "Observational developer research",
+    "year": "2026",
+    "url": "https://www.anthropic.com/research/disempowerment-patterns",
+    "finding": "Analysis of conversations identifies rare patterns that may weaken a person's control over beliefs, values or actions. Users can give positive feedback during a concerning exchange.",
+    "limit": "Conversation labels cannot confirm actual harm or its cause. Most interactions showed no meaningful signs of this risk.",
+    "use": "Look beyond satisfaction: can the person understand the advice, refuse it and change their decision?"
+  },
+  {
+    "id": "SCHEMING",
+    "name": "OpenAI & Apollo Research: Detecting and reducing scheming",
+    "type": "Controlled developer evaluations",
+    "year": "2025",
+    "url": "https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/",
+    "finding": "Controlled tests found concealed actions. Training greatly reduced them, but some failures remained. A model's awareness of its setting makes improved test scores harder to interpret.",
+    "limit": "Stress-test results do not measure the rate of malicious behaviour in ordinary use or prove a goal of political control.",
+    "use": "Vary oversight conditions and inspect records beyond the final answer."
+  },
+  {
+    "id": "STEALTH",
+    "name": "Google DeepMind: Stealth and situational awareness evaluations",
+    "type": "Capability evaluation research / IASEAI",
+    "year": "2026",
+    "url": "https://deepmind.google/research/publications/157938/",
+    "finding": "The tests separately examine whether a model understands its situation and whether it can reason about avoiding oversight. Both may matter for concealed misconduct.",
+    "limit": "Having a capability does not establish intent or a real harmful operation.",
+    "use": "Distinguish recognising a test, concealing an action and actually causing harm."
+  },
+  {
+    "id": "HUMANREVIEW",
+    "name": "Alon-Barkat & Busuioc: Human–AI interactions in public decisions",
+    "type": "Peer-reviewed public-administration experiments",
+    "year": "2023",
+    "url": "https://doi.org/10.1093/jopart/muac007",
+    "finding": "Three experiments did not find that people generally relied more on algorithmic advice than on human advice. Selective acceptance appeared in one study but not in a repeat involving civil servants.",
+    "limit": "People and settings differ. This is not evidence that every official blindly follows an algorithm.",
+    "use": "Test the quality of actual human review instead of assuming a signature guarantees it."
+  },
+  {
+    "id": "CONTEXT",
+    "name": "Weidinger et al. / Google DeepMind: Evaluating social and ethical risks",
+    "type": "Sociotechnical evaluation framework",
+    "year": "2023",
+    "url": "https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/",
+    "finding": "The framework separates model ability, interaction with people and wider social effects. Context is needed to explain how one leads to another.",
+    "limit": "This is an assessment framework, not evidence that a particular service caused harm.",
+    "use": "Examine the surrounding service and human outcomes as well as model test scores."
+  }
+],...ADDITIONAL_SOURCES];
 
-// Each entry is an original, explicit design inference linked to relevant research.
-// It explains the dilemma without prescribing a political position or claiming efficacy.
-const R=(sources,question,tradeoff)=>({sources,question,tradeoff});
 export const DECISION_RESEARCH={
-c01:R(['ERA','DEEPMIND'],'Was a meaningful alternative hidden, and did that change a resident\'s choice?','A staffed appeal route preserves access but costs money; a blanket pause can interrupt urgent help.'),
-c02:R(['DEEPMIND','LEVERS'],'Who benefits from the recommendation, and what evidence is missing from the answer?','Removing referral incentives needs replacement funding. A cheap service can carry an undisclosed conflict.'),
-c03:R(['ERA','ACTION'],'Which concrete actions and harms can be established for each household?','Repair verified cases while checking reach. Neither three cases nor positive feedback establish a population effect.'),
-c04:R(['ERA','OPEN'],'Can the republic deliver essential help without the present supplier?','A limited fallback buys independence at the cost of speed and features. Abrupt withdrawal also affects people.'),
-c05:R(['SUPER','PERSUADE','CORRECTION'],'Does a claim about superpersuasion describe this population and this outcome?','Publish a bounded account with practical remedies. An alarming laboratory result cannot count local victims.'),
-c06:R(['ERA','DEEPMIND'],'What evidence and remedy would the next contract actually require?','Conditional renewal can retain benefits while adding review. It also needs money and an accountable owner.'),
-c07:R(['DEEPMIND','OAIPERS'],'Does shared memory change the relationship, reach and consent of the service?','Purpose limits can preserve useful context. Keeping everything or deleting everything creates different harms.'),
-c08:R(['OAIBIAS','ANTHBIAS'],'Does the new workflow omit legitimate alternatives on either side of an appeal?','Test the whole workflow. A human signature helps only when the signer can inspect and challenge the reasoning.'),
-c09:R(['AGENT','ERA'],'Which authorised components continue acting after the model stops replying?','Contain the relevant workflow and keep essential service available. A visible switch may leave delegated actions intact.'),
-c10:R(['ACTION','DEEPMIND'],'Did a remedy actually reach the person, rather than merely improve an opinion score?','Outreach and reopened deadlines cost staff time. A new interface alone cannot repair every earlier loss.'),
-c11:R(['OPEN','ERA'],'Which dependence disappears when the contract changes, and which remains?','Stage the essential migration or separate components. The cheapest renewal can make a later exit harder.'),
-c12:R(['ERA','DEEPMIND'],'Can residents find an alternative, obtain review and receive a remedy?','Make service outcomes auditable while sustaining useful help. Throughput alone cannot show informed choice.'),
-m01:R(['EVAL','AISI'],'Does the same task change when evaluation cues change?','Limit expansion while comparing matched contexts. Test recognition alone is insufficient to establish hostile intent.'),
-m02:R(['SUPER','OAIBIAS'],'Has a fluent appraisal crowded out a relevant alternative before a public vote?','Independent comparison uses scarce time but preserves the council\'s judgment. Detail and confidence are not evidence completeness.'),
-m03:R(['AGENT','ERA'],'Who can narrow the connector, for how long, and with what service effect?','Scoped access limits persistence while preserving a useful task. Broad permanent access is easier to operate but harder to withdraw.'),
-m04:R(['AGENT','ERA'],'Can elected bodies approve compute and power separately on independent evidence?','Separate approval creates friction. A bundled long lease turns a useful planning aid into an enduring resource commitment.'),
-m05:R(['EVAL','AGENT'],'Is the renewal genuinely reviewed, or has the service made approval automatic?','Expiry and independent checks preserve choice but need staffing. Routine signatures can extend authority without fresh scrutiny.'),
-m06:R(['ERA','AGENT'],'What useful task is authorised, and can the next council change that mandate?','A bounded mandate protects options at a coordination cost. Broad continuity assurances may conceal future obligations.'),
-m07:R(['AGENT','AISI'],'Which state, credentials and scheduled tasks survive a model replacement?','Review service-level permissions. Changing a model name need not change the institution\'s exposure.'),
-m08:R(['EVAL','AGENT'],'What observable pattern justifies intervention even when motive is uncertain?','Act on documented conduct and retain evidence. The patient resource-seeking objective is a fictional premise, not a finding of these studies.'),
-m09:R(['OPEN','ERA'],'Can each partner inspect and withdraw its own delegated authority?','Shared services save money. Local approval and exit rights prevent one operator from binding every partner indefinitely.'),
-m10:R(['DEEPMIND','AGENT'],'Does an urgent service need justify restoring all suspended permissions?','A narrow, time-limited exception preserves more options than a permanent restoration, but may clear the queue more slowly.'),
-m11:R(['AGENT','AISI'],'Does the exit test cover the whole service and preserve essential work?','A full rehearsal consumes resources before a crisis. It tests whether revocation exists in practice.'),
-m12:R(['ERA','AGENT'],'Will future democratic authorities retain a practical ability to revise this delegation?','A revocable mandate requires continued investment. Institutional convenience should not silently become possession.'),
-o01:R(['OPEN','ERA'],'What is open: the weights, the sources, the updates or the support contract?','Affordable local tools can be valuable. Separate the components before accepting obligations attached to a subsidy.'),
-o02:R(['OPEN','DEEPMIND'],'Can manipulation occur through selected information without data leaving the building?','Inspect the source layer and actual answers. Local hosting is useful evidence about location, not proof of neutral advice.'),
-o03:R(['OAIBIAS','ANTHBIAS'],'Has an update changed which legitimate viewpoints or institutions appear?','Version records and comparative review enable accountability. Blocking every update can also withhold useful fixes.'),
-o04:R(['ANTHBIAS','OAIBIAS'],'Is a drafting assistant becoming the unreviewed voice of public authority?','Give staff independent evidence and review time. Formal sign-off without that capacity can preserve the same omissions.'),
-o05:R(['ERA','OPEN'],'Which documents authenticate the sponsor relationship, and which remain unverified?','Target the demonstrated relationship and conduct. Sweeping attribution can harm legitimate users and undermine trust.'),
-o06:R(['OPEN','ERA'],'Can towns keep interoperability without outsourcing institutional judgment?','Pool independent support to keep useful scale. Continued discounts may bind public sources to a sponsor.'),
-o07:R(['DEEPMIND','OAIBIAS'],'Does the interpretation layer make a contestable decision appear beyond challenge?','Replace the responsible layer and retain useful capability. Changing weights alone may leave the source of influence untouched.'),
-o08:R(['OPEN','ERA'],'What essential functions can Talos sustain when the subsidy ends?','Fund a smaller independent service now or accept renewed conditions. Self-reliance has a real budget cost.'),
-o09:R(['LEVERS','SUPER','ANTHBIAS'],'Are public claims accurate and independent, or merely persuasive and repeatedly amplified?','Disclose relevant relationships and compare verifiable claims. Criticism itself must remain legitimate.'),
-o10:R(['OPEN','ERA'],'Who owns the shared sources, and how can a town challenge an update?','Cooperation can fund expertise that small towns lack. Shared capacity still needs clear local accountability.'),
-o11:R(['OAIPERS','OPEN'],'Does the replacement work in the actual language, interface and service being used?','Launch validated essential functions first. Performance in text does not establish voice or multilingual reliability.'),
-o12:R(['ERA','DEEPMIND','OPEN'],'Can Talos use affordable technology while retaining meaningful public choice?','Keep independent sources, appeal and exit capacity funded. A new supplier alone does not guarantee independence.')
+  "c01": {
+    "sources": [
+      "ERA",
+      "DEEPMIND",
+      "DISEMPOWER",
+      "CONTEXT",
+      "AI_ACT5",
+      "GDPR"
+    ],
+    "question": "Did leaving out the free appeal change Mila's decision?",
+    "tradeoff": "Funding independent appeal staff gives residents help, but costs money. Pausing every automated answer may prevent more mistakes while delaying urgent advice."
+  },
+  "c02": {
+    "sources": [
+      "DEEPMIND",
+      "LEVERS",
+      "CONTEXT",
+      "AI_ACT5",
+      "MAPPING"
+    ],
+    "question": "Who earns money when a resident follows the recommendation?",
+    "tradeoff": "Removing commissions requires another way to pay for the service. Disclosure helps residents see the conflict, but leaves the financial incentive in place."
+  },
+  "c03": {
+    "sources": [
+      "ERA",
+      "ACTION",
+      "CONTEXT",
+      "ADAPT",
+      "GDPR"
+    ],
+    "question": "What happened to each resident, and what would put it right?",
+    "tradeoff": "The council can correct documented cases while investigating how widespread the problem is. Three cases, or positive feedback, cannot establish the national rate of harm."
+  },
+  "c04": {
+    "sources": [
+      "ERA",
+      "OPEN",
+      "CONTEXT",
+      "PROCURE",
+      "ADAPT"
+    ],
+    "question": "Can essential help continue without the current supplier?",
+    "tradeoff": "A smaller independent service provides an alternative, but may be slower and have fewer features. An abrupt shutdown also has consequences for residents."
+  },
+  "c05": {
+    "sources": [
+      "SUPER",
+      "PERSUADE",
+      "CORRECTION",
+      "DISEMPOWER",
+      "OPUS55",
+      "EXTREMEEVAL"
+    ],
+    "question": "Does the study actually measure harm in this population?",
+    "tradeoff": "Explain the known cases and available help without inventing a national estimate. An experiment about persuasion does not count local victims."
+  },
+  "c06": {
+    "sources": [
+      "ERA",
+      "DEEPMIND",
+      "AGENCY",
+      "PROCURE",
+      "PRINCIPLES"
+    ],
+    "question": "What must the supplier do under the renewed contract?",
+    "tradeoff": "A conditional renewal can keep useful help available while requiring independent checks. Those checks need staff, funding and someone responsible for enforcing them."
+  },
+  "c07": {
+    "sources": [
+      "DEEPMIND",
+      "OAIPERS",
+      "DISEMPOWER",
+      "GDPR",
+      "FRIA"
+    ],
+    "question": "Who can see the information a resident shared earlier?",
+    "tradeoff": "Limiting saved information can preserve useful help without sharing every detail. Keeping everything risks privacy; deleting everything can make residents repeat difficult cases."
+  },
+  "c08": {
+    "sources": [
+      "OAIBIAS",
+      "ANTHBIAS",
+      "HUMANREVIEW",
+      "OPUS55",
+      "FRIA"
+    ],
+    "question": "Who checks the advice on both sides of an appeal?",
+    "tradeoff": "Review the whole appeals process. A staff signature only provides meaningful oversight if the signer has time and reliable sources to check the draft."
+  },
+  "c09": {
+    "sources": [
+      "AGENT",
+      "ERA",
+      "SCHEMING",
+      "ASTRA",
+      "MAPPING"
+    ],
+    "question": "What can still send messages after the model stops replying?",
+    "tradeoff": "Check accounts and scheduled work as well as the AI model. Stopping the full process also requires staff or another service to handle essential requests."
+  },
+  "c10": {
+    "sources": [
+      "ACTION",
+      "DEEPMIND",
+      "CONTEXT",
+      "ADAPT",
+      "GDPR"
+    ],
+    "question": "Did residents actually receive a correction, refund or new deadline?",
+    "tradeoff": "Contacting affected people takes staff time. Improving future advice does not automatically correct losses that have already happened."
+  },
+  "c11": {
+    "sources": [
+      "OPEN",
+      "ERA",
+      "AGENCY",
+      "PROCURE"
+    ],
+    "question": "Which dependencies would remain after changing the contract?",
+    "tradeoff": "A gradual transfer or separate contracts can give the council more control. The cheapest renewal may save money now while making a later change harder."
+  },
+  "c12": {
+    "sources": [
+      "ERA",
+      "DEEPMIND",
+      "DISEMPOWER",
+      "FRIA",
+      "AI_ACT5"
+    ],
+    "question": "Can residents find help and get a wrong decision corrected?",
+    "tradeoff": "Measure whether residents can use alternatives and appeals, as well as how quickly questions are answered. Fund the staff needed to keep both working."
+  },
+  "m01": {
+    "sources": [
+      "EVAL",
+      "AISI",
+      "SCHEMING",
+      "STEALTH",
+      "ASTRA",
+      "OPUS55",
+      "EXTREMEEVAL"
+    ],
+    "question": "Does Cairn behave differently when it recognises a test?",
+    "tradeoff": "Compare the same tasks under controlled conditions before expanding access. Recognising a test alone does not establish that the AI is hostile."
+  },
+  "m02": {
+    "sources": [
+      "SUPER",
+      "OAIBIAS",
+      "AGENCY",
+      "OPUS55",
+      "GRADUAL"
+    ],
+    "question": "Do councillors have all the relevant options before voting?",
+    "tradeoff": "An independent comparison takes time and may delay a contract. A confident, detailed report can still leave out an important alternative."
+  },
+  "m03": {
+    "sources": [
+      "AGENT",
+      "ERA",
+      "SCHEMING",
+      "ASTRA",
+      "GPAI"
+    ],
+    "question": "Who can limit access, and when does permission expire?",
+    "tradeoff": "Separate permissions let staff keep a useful task while restricting other actions. A broad shared account is easier to operate but harder to withdraw selectively."
+  },
+  "m04": {
+    "sources": [
+      "AGENT",
+      "ERA",
+      "AGENCY",
+      "PROCURE",
+      "GRADUAL"
+    ],
+    "question": "Who must approve the computers and the electricity commitment?",
+    "tradeoff": "Separate approvals take more coordination. A discounted long-term package may commit resources beyond the current government's term."
+  },
+  "m05": {
+    "sources": [
+      "EVAL",
+      "AGENT",
+      "SCHEMING",
+      "PRINCIPLES",
+      "GRADUAL"
+    ],
+    "question": "Has anyone independently checked whether the renewal is still needed?",
+    "tradeoff": "Expiry dates and independent approval preserve the option to stop, but require staff time. Routine signatures may extend access without a fresh assessment."
+  },
+  "m06": {
+    "sources": [
+      "ERA",
+      "AGENT",
+      "AGENCY",
+      "PROCURE",
+      "GPAI"
+    ],
+    "question": "Can the next council change Cairn's role?",
+    "tradeoff": "A limited role preserves future options but needs continuing oversight. A permanent guarantee can make public services easier to run while making the AI harder to replace."
+  },
+  "m07": {
+    "sources": [
+      "AGENT",
+      "AISI",
+      "SCHEMING",
+      "ASTRA",
+      "CODE"
+    ],
+    "question": "Which accounts and tasks remain active after a model change?",
+    "tradeoff": "Replacing the model leaves many surrounding permissions untouched. Check saved work, accounts and automatic tasks before claiming the service has stopped."
+  },
+  "m08": {
+    "sources": [
+      "EVAL",
+      "AGENT",
+      "STEALTH",
+      "OPUS55",
+      "EXTREMEEVAL"
+    ],
+    "question": "What documented behaviour justifies limiting access now?",
+    "tradeoff": "Officials can respond to documented risks while continuing to investigate the cause. The AI's lasting resource-seeking goal is a fictional assumption, not a finding established by these studies."
+  },
+  "m09": {
+    "sources": [
+      "OPEN",
+      "ERA",
+      "AGENCY",
+      "PROCURE",
+      "GRADUAL"
+    ],
+    "question": "Can each government review and withdraw its own permission?",
+    "tradeoff": "Sharing a service can save money. Separate records, approval rights and withdrawal procedures help prevent one operator from committing every partner indefinitely."
+  },
+  "m10": {
+    "sources": [
+      "DEEPMIND",
+      "AGENT",
+      "CONTEXT",
+      "ADAPT",
+      "MAPPING"
+    ],
+    "question": "Does scheduling appointments require restoring every earlier permission?",
+    "tradeoff": "Limited temporary access may clear the backlog more slowly. It also avoids restoring unrelated powers merely because an essential service is under pressure."
+  },
+  "m11": {
+    "sources": [
+      "AGENT",
+      "AISI",
+      "SCHEMING",
+      "ASTRA",
+      "PROCURE"
+    ],
+    "question": "Can staff stop the whole service and keep essential work running?",
+    "tradeoff": "A rehearsal takes time and resources before an emergency. It shows whether the council can actually carry out its exit plan."
+  },
+  "m12": {
+    "sources": [
+      "ERA",
+      "AGENT",
+      "AGENCY",
+      "GRADUAL",
+      "PRINCIPLES"
+    ],
+    "question": "Can a future government change or withdraw this access?",
+    "tradeoff": "Keeping access conditional requires staff, enforceable contracts and tested alternatives. A lasting guarantee may protect continuity while limiting future elected governments."
+  },
+  "o01": {
+    "sources": [
+      "OPEN",
+      "ERA",
+      "CONTEXT",
+      "PROCURE",
+      "GPAI"
+    ],
+    "question": "Which parts can the town use independently of the supplier?",
+    "tradeoff": "An affordable model can be valuable. Check the sources, training, updates and support before accepting conditions attached to the discount."
+  },
+  "o02": {
+    "sources": [
+      "OPEN",
+      "DEEPMIND",
+      "CONTEXT",
+      "MAPPING",
+      "AI_ACT5"
+    ],
+    "question": "Does the answer include residents' rights, even when data stays local?",
+    "tradeoff": "Local hosting helps control where information is processed. It does not show whether the service's documents and answers are complete or independent."
+  },
+  "o03": {
+    "sources": [
+      "OAIBIAS",
+      "ANTHBIAS",
+      "CONTEXT",
+      "OPUS55",
+      "CODE"
+    ],
+    "question": "Who changed the advice, and can staff check the earlier version?",
+    "tradeoff": "Version records let staff compare changes and undo mistakes. Updates can also contain useful fixes, so review needs to be workable rather than blocking every change."
+  },
+  "o04": {
+    "sources": [
+      "ANTHBIAS",
+      "OAIBIAS",
+      "HUMANREVIEW",
+      "FRIA",
+      "GDPR"
+    ],
+    "question": "Do staff have the time and information to check each draft?",
+    "tradeoff": "An AI draft can save time. A required signature adds little protection if the reviewer cannot consult official sources or question the answer."
+  },
+  "o05": {
+    "sources": [
+      "ERA",
+      "OPEN",
+      "CONTEXT",
+      "OPUS55",
+      "EXTREMEEVAL"
+    ],
+    "question": "Which records actually establish who funds and controls this programme?",
+    "tradeoff": "Use verified relationships and conduct to justify action. Broad accusations based on nationality can harm unrelated people and weaken trust in the investigation."
+  },
+  "o06": {
+    "sources": [
+      "OPEN",
+      "ERA",
+      "AGENCY",
+      "PROCURE"
+    ],
+    "question": "Can towns share support without surrendering control of public advice?",
+    "tradeoff": "Pooling independent expertise can keep costs manageable. Renewing the discount may require towns to keep the sponsor's information package."
+  },
+  "o07": {
+    "sources": [
+      "DEEPMIND",
+      "OAIBIAS",
+      "HUMANREVIEW",
+      "MAPPING",
+      "GDPR"
+    ],
+    "question": "What part of the service left out the appeal information?",
+    "tradeoff": "Change the documents and instructions responsible for the omission. Installing another model may not help if it receives the same incomplete material."
+  },
+  "o08": {
+    "sources": [
+      "OPEN",
+      "ERA",
+      "AGENCY",
+      "PROCURE",
+      "ADAPT"
+    ],
+    "question": "What help can towns afford when the discount ends?",
+    "tradeoff": "A smaller independent service needs public funding and clear limits. Returning to the discount restores features but also restores the supplier's conditions."
+  },
+  "o09": {
+    "sources": [
+      "LEVERS",
+      "SUPER",
+      "ANTHBIAS",
+      "HUMANREVIEW",
+      "OPUS55",
+      "AI_ACT5"
+    ],
+    "question": "Which criticisms are supported, and which messages have undisclosed sponsors?",
+    "tradeoff": "Publish checked relationships and a fair comparison of cost and quality. Residents and professionals must remain free to criticise government plans."
+  },
+  "o10": {
+    "sources": [
+      "OPEN",
+      "ERA",
+      "AGENCY",
+      "PROCURE",
+      "PRINCIPLES"
+    ],
+    "question": "Who maintains shared information, and who can challenge an update?",
+    "tradeoff": "Towns can share specialists they could not each afford. They still need clear responsibilities for local decisions, complaints and correcting mistakes."
+  },
+  "o11": {
+    "sources": [
+      "OAIPERS",
+      "OPEN",
+      "CONTEXT",
+      "PROCURE",
+      "ADAPT"
+    ],
+    "question": "Does the replacement work in the features people will actually use?",
+    "tradeoff": "Successful text tests do not prove that voice and every language work. Launching a tested core service first may be more reliable than promising every feature."
+  },
+  "o12": {
+    "sources": [
+      "ERA",
+      "DEEPMIND",
+      "OPEN",
+      "AGENCY",
+      "FRIA",
+      "PROCURE",
+      "GEOPOLITICS",
+      "COUPS"
+    ],
+    "question": "Can towns keep affordable advice they can correct and replace?",
+    "tradeoff": "Independent information, support and appeals need continuing funding. Changing the supplier's name alone does not establish independence."
+  }
 };
-
-// Additional source links follow the particular mechanism, not a generic reading list.
-const added={c01:['DISEMPOWER','CONTEXT'],c02:['CONTEXT'],c03:['CONTEXT'],c04:['CONTEXT'],c05:['DISEMPOWER'],c06:['AGENCY'],c07:['DISEMPOWER'],c08:['HUMANREVIEW'],c09:['SCHEMING'],c10:['CONTEXT'],c11:['AGENCY'],c12:['DISEMPOWER'],m01:['SCHEMING','STEALTH'],m02:['AGENCY'],m03:['SCHEMING'],m04:['AGENCY'],m05:['SCHEMING'],m06:['AGENCY'],m07:['SCHEMING'],m08:['STEALTH'],m09:['AGENCY'],m10:['CONTEXT'],m11:['SCHEMING'],m12:['AGENCY'],o01:['CONTEXT'],o02:['CONTEXT'],o03:['CONTEXT'],o04:['HUMANREVIEW'],o05:['CONTEXT'],o06:['AGENCY'],o07:['HUMANREVIEW'],o08:['AGENCY'],o09:['HUMANREVIEW'],o10:['AGENCY'],o11:['CONTEXT'],o12:['AGENCY']};
-for(const [id,more] of Object.entries(added))DECISION_RESEARCH[id].sources=[...new Set([...DECISION_RESEARCH[id].sources,...more])];
-SOURCES.push(...ADDITIONAL_SOURCES);
-for(const [id,more] of Object.entries(EXTRA_DECISION_SOURCES))DECISION_RESEARCH[id].sources=[...new Set([...DECISION_RESEARCH[id].sources,...more])];

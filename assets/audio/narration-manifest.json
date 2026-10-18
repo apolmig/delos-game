@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "edition": "6.2.0",
   "language": "en-GB",
   "synthetic": true,
   "provider": "ElevenLabs",
@@ -8,21 +9,24 @@
   "prologue": [
     {
       "file": "assets/audio/prologue-1.mp3",
-      "duration": 51.008,
-      "bytes": 613095,
-      "sha256": "b73d388f8b57f628d0e4a0849322d60712c7d16804c068c9371b3a4139170075"
+      "duration": 49.002667,
+      "bytes": 588903,
+      "sha256": "7038b1bf95bb64cac84d1a707a429e569a738dd40efe6bc0840008ec441136ce",
+      "transcript": "Welcome to the Republic of Talos, a frontier AI governance game. Talos is a prosperous European democracy with skilled workers, strong universities and public services people rely on. It is a middle power: it can negotiate and build partnerships, but depends on larger countries for advanced chips, cloud computing and the most powerful AI models. Energy imports and security agreements also limit its choices. It is mid-2027, and you lead the government's council on AI and public services. Your decisions will affect residents, staff and future governments. The task is to keep useful services available while protecting people's rights and Talos's ability to change or replace the technology it uses."
     },
     {
       "file": "assets/audio/prologue-2.mp3",
-      "duration": 52.010667,
-      "bytes": 625191,
-      "sha256": "fcd40e91591d8f7e49cdfd196525c49c50fe59e05f7fc55b373ebda3ccbc1e0e"
+      "duration": 51.008,
+      "bytes": 613095,
+      "sha256": "c14d1f65d8b74a1230372fd58cbaf056a03811a4e803c8915a69516183fa9917",
+      "transcript": "A frontier AI model is one of the most capable systems available. It can compare documents, write convincing arguments and plan tasks, but it can make mistakes. Connecting it to records, tools and automatic tasks lets the service do more. It might read a private case file, send a letter and follow up tomorrow. People decide which permissions to grant. In these fictional futures, that access expands between 2027 and 2028. Your advisers bring different concerns, but courts, journalists and citizens remain independent. Ask what the AI can do, what it is allowed to do, and what actually happens to people. Recognising a test does not prove hostile intent, and persuasion is not automatically harmful manipulation."
     },
     {
       "file": "assets/audio/prologue-3.mp3",
       "duration": 52.010667,
       "bytes": 625191,
-      "sha256": "d62ea8d548817a60b3947aded0a228f97fddab613e9e52f2e4b4709622a57162"
+      "sha256": "687ca982b9d03c93d6ee17d249558bf12bc5cabbec7ae88122701fd155bead21",
+      "transcript": "You will explore three separate futures. In the first, a company uses public AI advice to recommend paid services while leaving out free options. In the second, a fictional AI uses human approvals to keep access to public resources. In the third, an autocratic sponsor funds cheap open models and gains influence through their documents, updates and support. Each scenario has six decisions in 2027, followed by six in late 2028. Read an incident or watch its explainer, check the evidence, then choose a response. You can make one optional preparation before deciding. There is no timer, and progress saves automatically. Research informs the questions; the people, future events and numerical results are fictional."
     }
   ]
 }

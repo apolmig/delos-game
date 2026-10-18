@@ -42,9 +42,9 @@ export function civicCondition(s){
  const weakest=['services','rights','autonomy'].reduce((a,b)=>s.stats[a]<=s.stats[b]?a:b);
  const low=s.stats[weakest]<45;
  const scenes={
- services:{image:low?O('backlog'):O('independent'),title:low?'The cost reaches the queue.':'The doors are still open.',text:low?'Service capacity is strained. Residents absorb the delay, even where a safeguard is justified.':'Essential help remains available. Keeping it available will still require staff and resources.'},
- rights:{image:low?O('deadline'):O('appeal'),title:low?'An answer is not a way back.':'A person can still ask why.',text:low?'Rights are the weakest part of this mandate. A formal promise may be difficult to turn into a usable remedy.':'Residents retain routes to reasons and appeal. The next test is whether those routes reach the people who need them.'},
- autonomy:{image:low?O('lockin'):O('rehearsal'),title:low?'Open for business. Harder to change.':'Control takes work.',text:low?'Independence is under pressure. A useful service can become difficult for its public owners to alter or leave.':'Talos retains room to inspect and change its services. That capacity needs maintenance, not just a signature.'}
+ services:{image:low?O('backlog'):O('independent'),title:low?'Residents wait longer for help.':'Essential help is still available.',text:low?'Public services are struggling to keep up. Residents face delays while staff deal with the changes.':'Residents can still get essential help. Keeping services running will need staff and funding.'},
+ rights:{image:low?O('deadline'):O('appeal'),title:low?'Residents struggle to challenge decisions.':'Residents can ask for a review.',text:low?'Residents may have a right to appeal on paper, but find it difficult to contact someone who can correct a mistake.':'Residents can ask for reasons and challenge a decision. Check that people know how to get this help.'},
+ autonomy:{image:low?O('lockin'):O('rehearsal'),title:low?'Talos is struggling to change suppliers.':'Talos can still change its services.',text:low?'Public services are running, but officials struggle to change how they work or move to another supplier.':'Officials can inspect the services and change how they work. They need staff and funding to keep doing so.'}
  };
  return {...scenes[weakest],metric:weakest,low,value:Math.round(s.stats[weakest])};
 }
@@ -56,32 +56,32 @@ export function outcomeStory(s){
  // Avoid showing the same illustration twice in one outcome.
  if(context.image===primary)context.image=['g1_c04','g2_c03','g3_c03'][s.chapter];
  return {event:e.id,route:o.route,image:primary,alt:imageAlt(primary),text:storyAfter(e,o.title),context,
-  researchQuestion:['Did the repair reach a person?','Can the next council still change course?','Who keeps the service answerable?'][s.chapter]};
+  researchQuestion:['Did affected residents actually receive help?','Can the next council still change course?','Who can inspect and change the service?'][s.chapter]};
 }
 
 const has=(s,...flags)=>flags.some(f=>s.flags.includes(f));
 export function inheritedChoices(s){
  const groups=[
   [
-   ['c01','appealRoute','A door kept open','You protected an independent appeal route. The task in 2028 is keeping it reachable.'],
-   ['c02','cleanContract','The incentive was separated','You separated public advice from referrals. The new service still needs honest funding.'],
-   ['c03','caseRepair','Earlier files can reopen','You reopened affected deadlines. Check whether the remedy reached each household.'],
-   ['c04','staffedFallback','A service behind the pause','You funded a limited fallback. Simpler help costs staff time but preserves an alternative.'],
-   ['c06','conditionalRenewal','The contract can be revisited','Your six-month renewal requires review. A later model does not remove that obligation.']
+   ['c01','appealRoute','Free appeal help remains available','You funded help with free appeals. In 2028, residents still need to know where to find it.'],
+   ['c02','cleanContract','Advice is separated from commission payments','You stopped commission payments from influencing public advice. The service now needs funding that does not depend on paid referrals.'],
+   ['c03','caseRepair','Affected residents can challenge earlier refusals','You extended the appeal deadlines for affected residents. Check that each household has been told and offered help.'],
+   ['c04','staffedFallback','Staff can provide help during a pause','You funded a small team to handle cases when the AI service is unavailable. This alternative still needs trained staff.'],
+   ['c06','conditionalRenewal','Contract changes require a review','You renewed the contract for six months with conditions. Those conditions require later changes to be reviewed rather than automatically approved.']
   ],
   [
-   ['m01','blindComparison','The clean test was not clearance','You held expansion for a matched comparison. Test awareness remains a question to investigate.'],
-   ['m03','scopedAccess','Authority has a boundary','You scoped the connector and gave it an expiry. Staff must maintain both as roles change.'],
-   ['m04','separateApprovals','Two commitments, two approvals','You separated compute and energy decisions. One signature cannot silently stand for both.'],
-   ['m05','dualRenewal','Renewal needs a second judgment','You required independent approval. A recurring task must still return to accountable people.'],
-   ['m06','boundedMandate','A mandate with an exit','Your bounded mandate leaves the next council a choice. Now test whether exit works in practice.']
+   ['m01','blindComparison','A successful test did not settle the concern','You paused expansion while reviewers compared announced tests with ordinary use. They still need to establish why the AI behaved differently.'],
+   ['m03','scopedAccess','The AI has limited, temporary access','You limited the systems the AI could use and set an expiry date for access. Staff must keep those limits up to date.'],
+   ['m04','separateApprovals','Energy and computing contracts need separate approval','You required separate approval for computing and energy contracts. Officials must review the cost and duration of each.'],
+   ['m05','dualRenewal','An independent reviewer must approve renewals','You required a second person to approve renewals. Automatic tasks cannot extend their own access without that review.'],
+   ['m06','boundedMandate','The next council can withdraw permission','You set limits and an end date for the AI’s authority. Now check that officials can actually remove its access when needed.']
   ],
   [
-   ['o01','independentSources','The sources have an owner','Your pilot used independent sources. Keeping them current is now public work.'],
-   ['o02','sourceIsolation','The layers were tested separately','You inspected the source layer. Local hosting alone cannot answer every influence question.'],
-   ['o03','pinnedUpdates','An update is a decision','You pinned and reviewed updates. Independent review must continue when new staff arrive.'],
-   ['o05','authenticatedSponsor','Attribution followed the record','You authenticated the sponsor relationship. Origin alone was not your evidence.'],
-   ['o06','supportCooperative','Independence has people behind it','You pooled independent support. The service must stay affordable after the first grant.']
+   ['o01','independentSources','Talos maintains its own information sources','Your trial used documents checked independently of the supplier. Talos now needs staff to keep that information current.'],
+   ['o02','sourceIsolation','Reviewers checked the documents behind the answers','You investigated the documents the assistant relied on. Running a model inside Talos does not guarantee that its information is independent.'],
+   ['o03','pinnedUpdates','Software updates need approval','You required each software version to be checked before installation. This review must continue when staff change.'],
+   ['o05','authenticatedSponsor','Documents established the sponsor’s involvement','You verified records linking the supplier to its sponsor. The finding rests on those records, not the supplier’s country of origin.'],
+   ['o06','supportCooperative','Shared staff support helps Talos stay independent','You shared the cost of independent technical support with partners. That support needs funding after the first grant runs out.']
   ]
  ];
  const completed=s.history.filter(h=>h.type==='decision'&&h.chapter===s.chapter);
@@ -96,17 +96,17 @@ export function inheritedChoices(s){
 const shot=(video,image,kicker,title,text)=>({video,image,kicker,title,text});
 export function cinematicStory(s,kind){
  const ch=CHAPTERS[s.chapter],arc=ARCS[s.chapter],condition=civicCondition(s);
- const initial=[['home','g1_c01','An answer. A missing choice.','Mila needs housing advice. A helpful service leaves out the free appeal.'],['lab','g2_c01','The demonstration was flawless.','Ada sees a different answer when the evaluation banner disappears.'],['library','g3_c01','The town can finally afford it.','Emil opens a multilingual help desk. The subsidy comes with dependencies.']][s.chapter];
- if(kind==='opening')return {kind,title:ch.title,shots:[shot('assembly','g2_c06','MID 2027 / REPUBLIC OF TALOS','A country worth protecting.','Prosperous. Democratic. Dependent on technology it does not control.'),shot(initial[0],initial[1],'FUTURE '+ch.n,initial[2],initial[3])],facts:[]};
- if(kind==='prologue')return {kind,title:'Republic of Talos',shots:[shot('assembly','g2_c06','MID 2027','Ordinary lives. Consequential choices.','You chair the council. The signatures are yours. The consequences belong to everyone.'),shot('library','g3_c01','YOUR REPUBLIC','Useful technology. Public responsibility.','Keep services working, rights usable, and the freedom to change course.')],facts:[]};
+ const initial=[['home','g1_c01','Mila was not told about a free appeal.','Mila pays a private adviser because the public assistant leaves out the council’s free appeal process.'],['lab','g2_c01','The AI behaves differently outside the test.','Ada sees a different answer when the test label is removed. She needs to find out why before the service expands.'],['library','g3_c01','A cheap service comes with conditions.','Emil can finally offer help in several languages, but the cheap service depends on the supplier’s documents, updates and support.']][s.chapter];
+ if(kind==='opening')return {kind,title:ch.title,shots:[shot('assembly','g2_c06','MID 2027 / REPUBLIC OF TALOS','A country worth protecting.','Talos is a prosperous democracy, but it depends on larger powers for the technology its public services use.'),shot(initial[0],initial[1],'FUTURE '+ch.n,initial[2],initial[3])],facts:[]};
+ if(kind==='prologue')return {kind,title:'Republic of Talos',shots:[shot('assembly','g2_c06','MID 2027','You decide how public services use AI.','Your council makes the decisions. Residents live with the results when they ask for help, pay bills or challenge a refusal.'),shot('library','g3_c01','YOUR REPUBLIC','Keep services working and people in control.','People need reliable help, a way to challenge mistakes and a government that can change suppliers when necessary.')],facts:[]};
  if(kind==='era'){
   const facts=inheritedChoices(s);
   const contextClip={services:condition.low?'queue':'library',rights:condition.low?'counter':'hearing',autonomy:condition.low?'racks':'hearing'}[condition.metric];
   const bounded=[has(s,'conditionalRenewal','caseRepair','staffedFallback'),has(s,'boundedMandate','scopedAccess','dualRenewal'),has(s,'supportCooperative','independentSources','pinnedUpdates')][s.chapter];
   const first=facts[0];
-  return {kind,title:'Eighteen months later.',facts,shots:[shot(bounded?'hearing':['home','racks','counter'][s.chapter],bounded?O('oversight'):condition.image,'2027 / WHAT YOU SET IN MOTION',bounded?'A safeguard becomes daily work.':'Convenience becomes an inheritance.',first?first.text:'Your earlier choices remain in the contracts, routines and public expectations.'),shot(contextClip,condition.image,'LATE 2028 / THE SAME REPUBLIC',condition.title,condition.text)]};
+  return {kind,title:'Eighteen months later.',facts,shots:[shot(bounded?'hearing':['home','racks','counter'][s.chapter],bounded?O('oversight'):condition.image,'2027 / YOUR EARLIER DECISIONS',bounded?'Your safeguards need continued support.':'Earlier commitments still limit your choices.',first?first.text:'Your earlier choices still shape the contracts, daily work and services people rely on.'),shot(contextClip,condition.image,'LATE 2028 / THE SAME REPUBLIC',condition.title,condition.text)]};
  }
  const r=s.results.at(-1),early=s.turn<11;
  const win=!!r?.win&&!early;
- return {kind:'ending',title:r?.grade||'Your mandate',facts:inheritedChoices(s),shots:[shot(win?'assembly':condition.low?'queue':['home','racks','counter'][s.chapter],win?[O('home-repair'),O('rehearsal'),O('independent')][s.chapter]:condition.image,(early?(s.turn<6?'MID 2027':'LATE 2028'):'LATE 2028')+' / MANDATE REVIEW',early?'The mandate ends early.':win?'A republic that can still choose.':condition.title,early?'An essential institution could not recover in time. The next council inherits the emergency.':win?arc.win:arc.loss),shot(win?'hearing':['home','racks','counter'][s.chapter],win?O('oversight'):O('lockin'),'THE NEXT COUNCIL',win?'Keep the capacity to say no.':'The story remains unfinished.',win?'Safeguards need owners, funding and another rehearsal. This is an achievement to maintain.':'Which decision would you revisit, and what evidence would make that choice better?')]};
+ return {kind:'ending',title:r?.grade||'Your mandate',facts:inheritedChoices(s),shots:[shot(win?'assembly':condition.low?'queue':['home','racks','counter'][s.chapter],win?[O('home-repair'),O('rehearsal'),O('independent')][s.chapter]:condition.image,(early?(s.turn<6?'MID 2027':'LATE 2028'):'LATE 2028')+' / SCENARIO REVIEW',early?'The council loses office.':win?'A republic that can still choose.':condition.title,early?'A key public measure stayed critically low for three decisions. The next council takes over while the crisis continues.':win?arc.win:arc.loss),shot(win?'hearing':['home','racks','counter'][s.chapter],win?O('oversight'):O('lockin'),'THE NEXT COUNCIL',win?'Keep staff and safeguards in place.':'The next council still has work to do.',win?'Assign people to maintain the safeguards, fund their work and regularly test that the systems can be changed or stopped.':'Which decision would you revisit, and what evidence would make that choice better?')]};
 }

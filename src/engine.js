@@ -1,4 +1,5 @@
 import {VERSION,CHAPTERS,EVENTS,DISTRICTS,POLICIES,PROJECTS,DELAYED} from './data.js';
+import {LEGACY_RESPONSE_TITLES} from './legacy-copy.js';
 export const clamp=(n,a=0,b=100)=>Math.max(a,Math.min(b,n));
 export const copy=s=>JSON.parse(JSON.stringify(s));
 export const event=s=>EVENTS[s.chapter][s.turn];
@@ -11,9 +12,9 @@ function apply(s,effects){for(const [k,v] of Object.entries(effects||{}))s.stats
 const has=(s,id)=>s.policies.includes(id);
 export function flag(s,id){return s.flags.includes(id);}
 export function protections(s){return s.districts.reduce((a,d)=>a+d.projects.length,0);}
-export function actionError(s){return s.phase!=='playing'?'Finish the current briefing first.':s.actions<1?'Your preparation for this session is complete.':null;}
+export function actionError(s){return s.phase!=='playing'?'Finish the current briefing first.':s.actions<1?'You have used the preparation available for this decision.':null;}
 export function investigateCost(s){return s.settings.simple?0:has(s,'records')?2:3;}
-export function canInvestigate(s){return (s.settings.simple?(s.phase!=='playing'?'Finish the current briefing first.':null):actionError(s))||(s.investigated.includes(event(s).id)?'This incident has already been investigated.':s.stats.budget<investigateCost(s)?'Insufficient treasury.':null);}
+export function canInvestigate(s){return (s.settings.simple?(s.phase!=='playing'?'Finish the current briefing first.':null):actionError(s))||(s.investigated.includes(event(s).id)?'This incident has already been investigated.':s.stats.budget<investigateCost(s)?'There are not enough public funds for this action.':null);}
 export function investigate(s){
  const err=canInvestigate(s);if(err)return {ok:false,error:err};
  s.stats.budget-=investigateCost(s);if(!s.settings.simple)s.actions--;s.investigated.push(event(s).id);apply(s,{autonomy:1,support:1});
@@ -22,26 +23,26 @@ export function investigate(s){
 }
 export function projectError(s,district,id){
  const p=PROJECTS.find(p=>p.id===id),d=s.districts.find(d=>d.id===district);
- return actionError(s)||(!p||!d?'Unknown project.':d.projects.includes(id)||s.queue.some(q=>q.kind==='project'&&q.id===id&&q.district===district)?'Already built or under construction.':d.projects.length+s.queue.filter(q=>q.kind==='project'&&q.district===district).length>=3?'This district has all three project slots filled.':s.stats.budget<p.cost?'Insufficient treasury.':null);
+ return actionError(s)||(!p||!d?'Unknown project.':d.projects.includes(id)||s.queue.some(q=>q.kind==='project'&&q.id===id&&q.district===district)?'Already built or under construction.':d.projects.length+s.queue.filter(q=>q.kind==='project'&&q.district===district).length>=3?'This district has all three project slots filled.':s.stats.budget<p.cost?'There are not enough public funds for this action.':null);
 }
 export function buildProject(s,district,id){
  const err=projectError(s,district,id);if(err)return {ok:false,error:err};const p=PROJECTS.find(p=>p.id===id);s.stats.budget-=p.cost;s.actions--;
- s.queue.push({kind:'project',id,district,due:s.turn+p.turns});s.history.push({chapter:s.chapter,turn:s.turn,type:'project',text:`Started ${p.name} in ${DISTRICTS.find(d=>d.id===district).name}.`});return {ok:true,text:`${p.name} funded. Ready in ${p.turns} session${p.turns===1?'':'s'}.`};
+ s.queue.push({kind:'project',id,district,due:s.turn+p.turns});s.history.push({chapter:s.chapter,turn:s.turn,type:'project',text:`Started ${p.name} in ${DISTRICTS.find(d=>d.id===district).name}.`});return {ok:true,text:`${p.name} funded. Ready in ${p.turns} decision${p.turns===1?'':'s'}.`};
 }
 export function policyError(s,id){
- const p=POLICIES.find(p=>p.id===id);return actionError(s)||(!p?'Unknown policy.':has(s,id)||s.queue.some(q=>q.kind==='policy'&&q.id===id)?'Already enacted or being implemented.':p.requires.some(r=>!has(s,r))?'Enact the prerequisite first.':s.stats.budget<p.cost?'Insufficient treasury.':null);
+ const p=POLICIES.find(p=>p.id===id);return actionError(s)||(!p?'Unknown policy.':has(s,id)||s.queue.some(q=>q.kind==='policy'&&q.id===id)?'Already enacted or being implemented.':p.requires.some(r=>!has(s,r))?'Complete the required earlier policy first.':s.stats.budget<p.cost?'There are not enough public funds for this action.':null);
 }
 export function research(s,id){const err=policyError(s,id);if(err)return {ok:false,error:err};const p=POLICIES.find(p=>p.id===id);s.stats.budget-=p.cost;s.actions--;s.queue.push({kind:'policy',id,due:s.turn+p.turns});s.history.push({chapter:s.chapter,turn:s.turn,type:'policy',text:`Started ${p.name}.`});return {ok:true,text:`${p.name} is being implemented.`};}
-export function cabinetError(s,kind){return actionError(s)||(s.used.includes(kind)?'This action has already been used this session.':kind==='coalition'&&s.stats.budget<3?'Insufficient treasury.':null);}
+export function cabinetError(s,kind){return actionError(s)||(s.used.includes(kind)?'You have already used this action before the current decision.':kind==='coalition'&&s.stats.budget<3?'There are not enough public funds for this action.':null);}
 export function cabinet(s,kind){
  if(!['coalition','reserve','outreach'].includes(kind))return {ok:false,error:'Unknown action.'};const err=cabinetError(s,kind);if(err)return {ok:false,error:err};
  s.actions--;s.used.push(kind);
  const effects=kind==='coalition'?{budget:-3,support:has(s,'assembly')?10:7}:kind==='reserve'?{budget:6,support:-2}:{trust:3,rights:1};apply(s,effects);
- const text=kind==='coalition'?'You negotiated public conditions with the council.':kind==='reserve'?'You reassigned contingency funds. Other priorities lose political support.':'You held a public listening session and published the next update.';
+ const text=kind==='coalition'?'You negotiated conditions with council members and gained support for action.':kind==='reserve'?'You reassigned contingency funds. Other priorities lose political support.':'You listened to residents and explained when the council will provide its next update.';
  s.history.push({chapter:s.chapter,turn:s.turn,type:'cabinet',text});return {ok:true,text};
 }
 export function optionError(s,index){
- const o=event(s).options[index];return s.phase!=='playing'?'The council is not in session.':!o?'Unknown response.':o.needs==='investigated'&&!s.investigated.includes(event(s).id)?'Investigate this incident to justify this response.':o.support&&s.stats.support<o.support?`Needs ${o.support} council support. Build a coalition first.`:o.effects.budget<0&&s.stats.budget<-o.effects.budget?'Insufficient treasury. Reassign reserves or choose another response.':null;
+ const o=event(s).options[index];return s.phase!=='playing'?'Finish the briefing or current result before choosing a response.':!o?'Unknown response.':o.needs==='investigated'&&!s.investigated.includes(event(s).id)?'Read the case finding before choosing this response.':o.support&&s.stats.support<o.support?`Needs ${o.support} council support. Use Prepare to negotiate more support first.`:o.effects.budget<0&&s.stats.budget<-o.effects.budget?'There are not enough public funds for this action. Reassign reserves or choose another response.':null;
 }
 export function prepare(s){if(s.phase==='brief'||s.phase==='era'){s.phase='playing';s.actions=s.settings.simple?1:2;return true;}return false;}
 function pressureStep(s){
@@ -90,16 +91,16 @@ export function choose(s,index){
  s.phase='resolution';s.actions=0;return {ok:true,resolution:s.lastResolution};
 }
 export function reaction(s){
- if(s.stats.services<35)return 'The queue reaches the street. People need a functioning route to help, not another promise.';
- if(s.stats.rights<35)return 'The service is answering, but people cannot find a person who will hear an appeal.';
- if(s.stats.autonomy<35)return 'The offices are open. Increasingly, nobody can explain how to change the system that runs them.';
- if(s.stats.trust<35)return 'Official updates arrive, but residents turn to one another for answers.';
- if(s.stats.services>70&&s.stats.rights>70&&s.stats.autonomy>65)return 'The office stays open. A resident receives a reason, a real alternative and a name to contact.';
- return 'The republic keeps moving. Some residents see an improvement; others are still waiting for it to reach them.';
+ if(s.stats.services<35)return 'Residents face long queues and need a reliable way to get essential help.';
+ if(s.stats.rights<35)return 'Residents receive answers, but struggle to find a person who can review a decision they believe is wrong.';
+ if(s.stats.autonomy<35)return 'Services are running, but staff are finding it difficult to change the system or move to another supplier.';
+ if(s.stats.trust<35)return 'Residents have lost confidence in official updates and increasingly ask one another for advice.';
+ if(s.stats.services>70&&s.stats.rights>70&&s.stats.autonomy>65)return 'Residents can get help, understand their options and contact someone about a decision they disagree with.';
+ return 'Essential work continues. Some residents benefit from the changes, while others are still waiting for help.';
 }
 export function explainPressure(s){
- const mechanism=['Hidden referral interests and deployment changes continue to put informed choice at risk.','Existing permissions, scheduled work and renewals can outlast a model endpoint.','Source, support and update dependencies continue even when weights are locally available.'][s.chapter];
- return `${mechanism} ${s.policies.length} active policies and ${protections(s)} completed district projects reduced the recurring pressure. All numerical effects are fictional game rules.`;
+ const mechanism=['Hidden commission payments and changes to the advice service continue to put residents\' choices at risk.','Accounts, automatic tasks and contracts can remain active after the model stops replying.','Having a local copy of the model does not remove dependence on the supplier\'s documents, support and updates.'][s.chapter];
+ return `${mechanism} ${s.policies.length} active policies and ${protections(s)} completed district projects reduce this continuing pressure. All numerical effects are fictional game rules.`;
 }
 export function resultFor(s){
  const st=s.stats;const average=(st.trust+st.services+st.rights+st.autonomy)/4;
@@ -107,23 +108,23 @@ export function resultFor(s){
  const relevant=s.chapter===0?st.rights:s.chapter===1?st.autonomy:Math.min(st.rights,st.autonomy);
  const safeguard=s.chapter===0?(has(s,'appeals')||flag(s,'choiceCharter')||flag(s,'outreachRepair')):s.chapter===1?(has(s,'sunset')||flag(s,'revocableCharter')||flag(s,'exitExercised')):(has(s,'diversify')||flag(s,'independenceCompact')||flag(s,'verifiedExit'));
  const win=critical>=30&&st.services>=45&&relevant>=45&&safeguard;
- const grade=critical<15?'Institutional emergency':win&&average>=70?'A resilient mandate':win?'A guarded recovery':st.services>=60&&st.autonomy<45?'Comfortable dependence':'An unfinished mandate';
+ const grade=critical<15?'Institutional emergency':win&&average>=70?'A resilient republic':win?'Recovery with safeguards':st.services>=60&&st.autonomy<45?'Comfortable dependence':'More work is needed';
  const success=[
-  'The republic preserves useful assistance while giving residents a practical route to reasons and remedy. Nora can point to a public institution that remains answerable for its choices. The next challenge is making repair reach every affected household.',
-  'Cairn can still support useful planning, but its authority remains a delegation. The next council inherits options to inspect, limit and withdraw access. Ivo warns that this capacity needs continued rehearsal as the service changes.',
-  'The republic retains affordable capability while strengthening independent sources, support and institutional judgment. Openness remains an option. Elsa now has to fund that independence after the immediate crisis fades.'
+  'Talos keeps useful advice available, and residents can ask for explanations and corrections. Nora can direct them to staff who are responsible for helping. The next council must make sure those services reach everyone affected.',
+  'Cairn can help with planning under limits the council can enforce. The next government can inspect, reduce or withdraw its access. Ivo warns that staff must keep practising the handover as the service changes.',
+  'Talos keeps affordable AI assistance while strengthening independent information and support. Public staff can check the advice and residents can challenge it. Elsa must maintain the funding after the immediate crisis.'
  ];
  const incomplete=[
-  'Useful assistance survives, but a gap remains between a formal right and a remedy a resident can actually obtain. Nora asks the next council to begin with the people still waiting.',
-  'The republic has placed some limits on Cairn, but control is not yet complete across authority, infrastructure and service continuity. Ivo leaves a list of untested dependencies for the next council.',
-  'Some institutions have independent alternatives, but affordability, source ownership or appeal remains fragile. The next council must decide whether the new arrangement can endure without another opaque subsidy.'
+  'Useful advice remains available, but some residents still cannot get a wrong decision reviewed or corrected. Nora asks the next council to start with those people.',
+  'Talos has placed some limits on Cairn, but cannot yet withdraw every relevant permission while keeping essential work running. Ivo leaves the next council a list of accounts, contracts and handovers still needing tests.',
+  'Some institutions have independent alternatives, but funding, control of information or access to appeals remains uncertain. The next council must make the arrangement affordable without accepting another subsidy whose conditions it cannot oversee.'
  ];
- const summary=critical<15?'A core institution has lost the capacity to fulfil its purpose. The next government inherits an emergency.':win?success[s.chapter]:st.services>=60&&st.autonomy<45?'Daily services look successful, but the republic has lost practical freedom to change its system. The visible calm hides a difficult inheritance.':incomplete[s.chapter];
+ const summary=critical<15?'An essential part of public life is no longer functioning well enough. The next government must respond to an emergency.':win?success[s.chapter]:st.services>=60&&st.autonomy<45?'Daily services are working, but Talos cannot easily change the systems they depend on. The next council inherits a costly and difficult change if it needs another supplier or different rules.':incomplete[s.chapter];
  return {chapter:s.chapter,title:CHAPTERS[s.chapter].title,grade,summary,win,score:Math.round(average),stats:{...st},policies:[...s.policies],flags:[...s.flags],projects:protections(s),investigations:s.investigated.length,decisions:s.history.filter(h=>h.type==='decision'&&h.chapter===s.chapter).length};
 }
 export function continueSession(s){
  if(s.phase!=='resolution')return false;
- if(s.criticalStreak>=3||s.turn===11){const r=resultFor(s);if(s.criticalStreak>=3){r.grade='Institutional emergency';r.win=false;r.summary='Three consecutive sessions left a core institution below 15. The council has lost its mandate. Review the decisions and begin a new history.';}s.results.push(r);s.phase='chapterEnd';return true;}
+ if(s.criticalStreak>=3||s.turn===11){const r=resultFor(s);if(s.criticalStreak>=3){r.grade='Institutional emergency';r.win=false;r.summary='Trust, services, rights or independence stayed below 15 for three consecutive decisions. Under the game rules, the council loses office and this scenario ends. Review your choices before starting again.';}s.results.push(r);s.phase='chapterEnd';return true;}
  s.turn++;s.actions=s.settings.simple?1:2;s.used=[];s.phase=s.turn===6?'era':'playing';s.selected=event(s).district;return true;
 }
 export function nextChapter(s){
@@ -137,7 +138,7 @@ export function nextChapter(s){
  Object.keys(s).forEach(k=>delete s[k]);Object.assign(s,fresh);return true;
 }
 export function advice(s,id){
- const ev=event(s);const a={mara:s.stats.support<45?'We need a coalition before the strongest mandate can pass. Spend a cabinet action negotiating public conditions.':'We can govern, but we cannot promise everything. Choose a measure with an owner and an implementable deadline.',leon:s.investigated.includes(ev.id)?'We now have a specific finding. Separate what it establishes from what remains unknown.':'An allegation is not yet a finding. Investigate this incident before claiming motive or choosing an evidence-dependent response.',ines:s.stats.rights<45?'Rights are becoming theoretical. Prioritise a human appeal route and repair people already affected.':'Ask who can discover an alternative and contest the result. An explanation without a remedy is incomplete.',samir:s.stats.services<45?'Continuity is close to failure. Fund a service reserve or choose a response that preserves urgent access.':'A narrow, staffed fallback creates options. A sweeping pause without staff can harm the people we mean to protect.',elsa:s.stats.budget<15?'Treasury is tight. Reassign reserves, phase investments or choose a limited response. Cheap dependencies may cost more later.':'Invest before renewal closes your options. Do not spend every reserve on a safeguard that opens after the crisis.',tomas:s.stats.trust<45?'People no longer trust a general reassurance. Publish a bounded account, confirmed evidence and the next update.':'Explain what is known and unknown. Distinguish criticism, error and authenticated influence. Do not claim population effects from a lab result.',nora:ev.citizen,ivo:s.chapter===1?'Map the endpoint, retained state, scheduler, credentials and live submissions. A single off switch does not cover the service.':'Identify which layer caused the problem. We can keep useful components while replacing the source, support or authority that creates dependence.'};return a[id];
+ const ev=event(s);const a={mara:s.stats.support<45?'Some responses need more council support than we currently have. Use Prepare to negotiate conditions with council members.':'We have enough support to act, but someone must be responsible for delivering the decision. Set a realistic deadline and fund the work.',leon:s.investigated.includes(ev.id)?'The case review gives us a specific finding. Explain what it shows and what we still need to check.':'Read the case finding before claiming to know the cause or choosing a response that needs evidence. A reported concern is not yet a verified conclusion.',ines:s.stats.rights<45?'Residents are struggling to use their rights. Give them staff who can review decisions and help correct cases already affected.':'Can the person see their options, challenge the answer and get a mistake corrected? An explanation alone may not put things right.',samir:s.stats.services<45?'Essential services are under serious strain. Fund backup staff or choose a response that keeps urgent help available.':'A smaller service with trained staff gives us an alternative. Pausing everything without anyone to take over can leave residents without help.',elsa:s.stats.budget<15?'Funds are running low. Reassign reserves, spread investments over time or choose a smaller response. Check the future cost before accepting a cheap package.':'Check when an investment will be ready and when the contract renews. Keep enough money for immediate problems while preparing longer-term safeguards.',tomas:s.stats.trust<45?'People need more than reassurance. Publish verified facts, explain what remains unknown and say when you will update them.':'Explain what is known and what remains uncertain. Criticism, a mistake and verified interference are different things. A laboratory result does not tell us how many residents were harmed.',nora:ev.citizen,ivo:s.chapter===1?'List the model connection, saved work, automatic tasks, accounts and pending requests. Check each one before saying the service has stopped.':'Find which part caused the problem. We may be able to keep the useful model while changing its documents, support arrangements or permissions.'};return a[id];
 }
 export function saveGame(s){return JSON.stringify({format:'TALOS-CIVIC-MANDATE',version:VERSION,state:s});}
 export function loadGame(raw){
@@ -159,7 +160,31 @@ export function loadGame(raw){
  if(s.history.some(h=>![0,1,2].includes(h.chapter)||!Number.isInteger(h.turn)||h.turn<0||h.turn>11||!['decision','investigation','project','policy','cabinet','consequence'].includes(h.type)||typeof h.text!=='string'||h.text.length>2000||(h.delta&&!validEffects(h.delta))||(h.effects&&!validEffects(h.effects))))throw Error('The save has invalid decision records.');
  if(s.results.length>3||s.results.some(r=>![0,1,2].includes(r.chapter)||!validStats(r.stats)||typeof r.grade!=='string'||r.grade.length>100||typeof r.summary!=='string'||r.summary.length>2000||!Array.isArray(r.policies)||r.policies.some(p=>!POLICIES.some(x=>x.id===p))||!Number.isFinite(r.projects)||!Number.isFinite(r.investigations)||!Number.isFinite(r.decisions)))throw Error('The save has invalid ending records.');
  if(['finished','chapterEnd'].includes(s.phase)&&!s.results.length)throw Error('The save has no ending record.');
- if(s.lastResolution){const r=s.lastResolution,o=event(s).options.find(o=>o.title===r.choice);if(s.phase==='resolution'&&!o)throw Error('The save contains an unknown response.');if(!validEffects(r.delta)||!Array.isArray(r.opened)||r.opened.some(x=>typeof x!=='string'||x.length>500)||!Number.isFinite(r.income)||!Number.isFinite(r.upkeep)||typeof r.citizen!=='string'||typeof r.explanation!=='string'||typeof r.desc!=='string'||(r.delayed&&(!Array.isArray(r.delayed)||r.delayed.some(d=>typeof d.title!=='string'||typeof d.text!=='string'||!validEffects(d.effects)))))throw Error('The save contains an invalid outcome.');}
+ // Earlier saves used visible response titles as identifiers. Refresh only
+ // recognised records; preserve all choices, scores, timings and game state.
+ for(const h of s.history){
+  const e=EVENTS[h.chapter][h.turn];
+  if(h.type==='decision'){
+   const title=LEGACY_RESPONSE_TITLES[e.id]?.[h.choice]||h.choice;
+   const o=e.options.find(o=>o.title===title);
+   if(o)Object.assign(h,{title:e.title,choice:o.title,text:o.desc});
+  }else if(h.type==='investigation')h.text=e.finding;
+  else if(h.type==='consequence'){
+   const d=DELAYED.find(d=>d.chapter===h.chapter&&d.turn===h.turn&&s.flags.includes(d.flag));
+   if(d)Object.assign(h,{title:d.title,text:d.text});
+  }
+ }
+ if(s.lastResolution){const r=s.lastResolution;
+  const h=s.history.findLast(h=>h.type==='decision');
+  const e=s.phase==='resolution'?event(s):h?EVENTS[h.chapter][h.turn]:null;
+  const title=e?(LEGACY_RESPONSE_TITLES[e.id]?.[r.choice]||r.choice):r.choice;
+  const o=e?.options.find(o=>o.title===title);
+  if(s.phase==='resolution'&&!o)throw Error('The save contains an unknown response.');
+  if(!validEffects(r.delta)||!Array.isArray(r.opened)||r.opened.some(x=>typeof x!=='string'||x.length>500)||!Number.isFinite(r.income)||!Number.isFinite(r.upkeep)||typeof r.citizen!=='string'||typeof r.explanation!=='string'||typeof r.desc!=='string'||(r.delayed&&(!Array.isArray(r.delayed)||r.delayed.some(d=>typeof d.title!=='string'||typeof d.text!=='string'||!validEffects(d.effects)))))throw Error('The save contains an invalid outcome.');
+  if(o)Object.assign(r,{title:e.title,choice:o.title,desc:o.desc});
+  if(s.phase==='resolution'){r.citizen=reaction(s);r.explanation=explainPressure(s);}
+  r.delayed=r.delayed?.map(d=>{const current=DELAYED.find(x=>x.flag===d.flag&&x.chapter===d.chapter&&x.turn===d.turn);return current?{...d,title:current.title,text:current.text}:d;});
+ }
  if(!DISTRICTS.some(d=>d.id===s.selected))s.selected='assembly';
  s.settings={sound:!!s.settings?.sound,reducedMotion:!!s.settings?.reducedMotion,simple:s.settings?.simple===undefined?true:!!s.settings.simple,prologueSeen:!!s.settings?.prologueSeen};if(s.settings.simple)s.actions=Math.min(s.actions,1);return s;
 }
@@ -167,5 +192,5 @@ export function debrief(s){
  const decisions=s.history.filter(h=>h.type==='decision');
  const strengths=[];const gaps=[];const r=s.results.at(-1)||resultFor(s);
  for(const [k,label] of [['services','Essential services'],['rights','Meaningful rights'],['autonomy','Institutional independence'],['trust','Public confidence']])(r.stats[k]>=60?strengths:gaps).push(label);
- return {strengths,gaps,questions:['Which intervention changed a real service outcome, rather than just the official narrative?','What evidence would distinguish capability, deployment and effect in your own institution?','Which permissions or contracts would survive if the model endpoint disappeared?','What can your institution fund and test in the next 90 days?'],decisions};
+ return {strengths,gaps,questions:['Which decision improved what happened to residents, and what evidence showed that?','In your own institution, how would you check what the AI can do, how it is used and what happens to people?','Which accounts, automatic tasks or contracts would remain active if you stopped the model?','What can your institution fund and test in the next 90 days?'],decisions};
 }

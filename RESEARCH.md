@@ -1,447 +1,673 @@
-# Republic of Talos / research and decision rationale
+# Republic of Talos: research and evidence limits
 
-Game by [Miguel Guerrero](https://miguelguerrero.eu). Reviewed 18 October 2026.
+Reviewed 18 October 2026. These sources inform the questions in this frontier AI governance game. The incidents, future actors and numerical effects are fictional.
 
-Primary research informs mechanisms and questions. Future incidents, policy consequences and numerical outcomes are authored fiction. No persuasion effect size is converted into a game multiplier. The patient resource-seeking AI and sponsor operation are scenario premises, not findings about deployed systems.
-
-The [Agency Transfer supporting collection](https://miguelguerrero.eu/agencytransfer/references/) helped locate primary research. ERA is working research, not yet peer reviewed. The public site resolves at /agencytransfer/.
-
-## Research themes that inform play
-
-The general library combines research on model capabilities, evaluation, societal effects, institutional power, procurement and European governance. Each card distinguishes findings, limitations and its use in the fictional scenario.
-
-- Capabilities: separate a model from its tools, memory, workflow and authority.
-- Risk measurement: trace a capability through exposure to an observable human effect; identify missing evidence.
-- Policy levers: choose the actor and point of intervention, with review triggers.
-- European governance: distinguish binding duties, voluntary practices and implementation dates.
-- Sovereignty: negotiate usable evidence and exit rights; preserve selective domestic or allied capacity.
-- Geopolitics: stress-test assumptions and protect independent institutional checks.
-
-## Reading system cards and law
-
-Astra and Opus 5.5 results depend on prompts, safeguards, test variants, tools and environments. Evaluation awareness is not proof of deception. Political even-handedness scores are not manipulation rates; operational simulation performance is not proof of effects on citizens. Developer reports and external evaluations are identified, rather than treated as independent replication of every claim.
-
-The game assumes Talos operates within the EU framework. Its two horizons use the Commission implementation schedule checked on 18 October 2026, including the amended high-risk dates. Classification, intended use, covered actors and transitional provisions matter. The regulatory lens is educational context, not a legal determination about fictional incidents or a prediction of future amendments.
-
-## Public source library (38 references)
-
-### ERA: Capability, Deployment, Effect
+## ERA: Capability, Deployment, Effect
 
 Miguel Guerrero / working research, 2026. [Original source](https://miguelguerrero.eu/agencytransfer/)
 
-Finding: Separate what an AI can do, how it is deployed and exposed to people, and what effect is actually demonstrated.
+Asks three separate questions: what can the AI do, how is it used, and what change for people has actually been demonstrated?
 
-Limit: A working framework, not an estimate of votes changed or the probability of institutional capture.
+**Limits:** This is a working research framework. It does not estimate votes changed or the chance that an AI gains control of institutions.
 
-Design use: Three questions accompany every case: capability, deployment and effect.
+**Use in the game:** Check capability, actual use and human consequences separately.
 
-### Hackenburg et al. / UK AISI: The levers of political persuasion
+## Hackenburg et al. / UK AISI: The levers of political persuasion
 
 Science / controlled experiments, 2025. [Original source](https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments)
 
-Finding: Post-training and information-rich arguments affected persuasion. Personalisation added little in these experiments; stronger persuasion sometimes coincided with lower factual accuracy.
+Training after initial model development and arguments containing more information affected persuasion. Personalisation added little in these experiments. More persuasive answers were sometimes less accurate.
 
-Limit: This does not establish that false claims cause persuasion or that survey effects scale to elections.
+**Limits:** These results do not show that falsehoods caused persuasion or that changes in survey answers translate into election results.
 
-Design use: Check evidence and omitted alternatives, not fluency alone.
+**Use in the game:** Check the evidence and missing options, even when an answer sounds convincing.
 
-### Hackenburg et al.: AI systems out-persuade expert humans
+## Hackenburg et al.: AI systems out-persuade expert humans
 
 Research preprint / not yet peer reviewed, 2026. [Original source](https://arxiv.org/abs/2606.16475)
 
-Finding: In controlled conversations, tested AI systems outperformed expert human persuaders. Information throughput helped explain the advantage.
+In controlled conversations, the tested AI systems persuaded participants more effectively than expert human persuaders. Delivering more information helped explain the difference.
 
-Limit: Evidence relevant to superpersuasion concerns, not irresistible influence, universal superiority or proof of country-level control.
+**Limits:** The finding does not mean AI persuasion is irresistible, always superior to humans or sufficient to control a country.
 
-Design use: Give scrutiny time and independent information a role in decisions.
+**Use in the game:** Give people time and independent information to assess a convincing recommendation.
 
-### Hackenburg, Hewitt et al.: AI can persuade people to take political actions
+## Hackenburg, Hewitt et al.: AI can persuade people to take political actions
 
 PNAS / published 16 October 2026, 2026. [Original source](https://www.pnas.org/doi/10.1073/pnas.2611368123)
 
-Finding: Experiments measured petition signing and real donations. Effects on attitudes did not reliably predict effects on behaviour.
+The experiments measured actual petition signing and donations as well as attitudes. Changes in stated views did not reliably predict changes in behaviour.
 
-Limit: Specific experimental actions do not establish sustained voting changes or broad democratic outcomes.
+**Limits:** These particular actions do not establish lasting changes in voting or wider democratic outcomes.
 
-Design use: Inspect concrete human actions separately from expressed approval.
+**Use in the game:** Check what people actually did, separately from what they said they believed.
 
-### Google DeepMind: Evaluating language models for harmful manipulation
+## Google DeepMind: Evaluating language models for harmful manipulation
 
 Developer empirical research, 2026. [Original source](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/)
 
-Finding: Studies distinguish attempts to manipulate from successful harmful outcomes, and beneficial persuasion from harmful manipulation. Results varied across domains.
+The studies distinguish attempts at manipulation from successful harmful outcomes, and helpful persuasion from harmful manipulation. Results differ across the areas tested.
 
-Limit: Controlled, deliberately elicited misuse does not predict ordinary deployment prevalence or transfer automatically across sectors.
+**Limits:** The researchers deliberately tested misuse. Those results do not tell us how often harm occurs in ordinary services or automatically apply to every sector.
 
-Design use: Check intent, concealed interests, harm and the actual service context.
+**Use in the game:** Examine hidden interests, the service setting and what happened to the person.
 
-### Anthropic: Measuring the persuasiveness of language models
+## Anthropic: Measuring the persuasiveness of language models
 
 Developer experiment, 2024. [Original source](https://www.anthropic.com/news/measuring-model-persuasiveness)
 
-Finding: The tested model generations differed in persuasive ability. The strongest tested model was comparable to the study human baseline.
+Different model generations had different persuasive ability. The strongest tested model performed similarly to the human comparison group in this study.
 
-Limit: A limited argument-reading task and non-expert baseline do not establish universal human parity.
+**Limits:** Participants read arguments in a limited task, and the human comparison was not a group of expert persuaders. This does not establish equality with humans in every setting.
 
-Design use: Treat persuasive capability as something to measure, not infer from a model name.
+**Use in the game:** Measure persuasive ability in the relevant setting instead of inferring it from a model name.
 
-### Anthropic: Measuring political bias in Claude
+## Anthropic: Measuring political bias in Claude
 
 Developer evaluation, 2025. [Original source](https://www.anthropic.com/news/political-even-handedness)
 
-Finding: Paired prompts examine even-handed treatment, opposing perspectives and refusals across political positions.
+Paired prompts test whether the assistant treats opposing political positions evenly, including how it explains perspectives and refuses requests.
 
-Limit: Primarily US, single-turn tests with model graders; a balanced response is not evidence of no downstream influence.
+**Limits:** The tests mainly use US topics, single exchanges and AI grading. An even-handed answer does not prove that it has no later influence on people.
 
-Design use: Compare equivalent viewpoints and explanations in local institutional tests.
+**Use in the game:** Compare how the service handles equivalent requests from different viewpoints.
 
-### OpenAI: GPT-4o System Card / persuasion
+## OpenAI: GPT-4o System Card / persuasion
 
 Developer system-card experiments, 2024. [Original source](https://openai.com/index/gpt-4o-system-card/)
 
-Finding: Text and voice persuasion were evaluated separately, including political opinions and follow-up measurement.
+The system card examines persuasion through text and voice separately, including political opinions and later follow-up measurements.
 
-Limit: Modality, comparator and measurement timing matter. These tests do not measure an election outcome.
+**Limits:** Results depend on the medium, the comparison group and when opinions were measured. They do not measure election outcomes.
 
-Design use: Re-test new interfaces and measure whether effects endure.
+**Use in the game:** Test new voice or text interfaces separately and check whether effects last.
 
-### OpenAI: Defining and evaluating political bias in LLMs
+## OpenAI: Defining and evaluating political bias in LLMs
 
 Developer evaluation, 2025. [Original source](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/)
 
-Finding: The evaluation distinguishes asymmetric coverage, opinion expression, escalation, invalidation and unjustified refusals.
+The evaluation looks for uneven coverage, expressed opinions, escalation of political language, dismissing a viewpoint and unjustified refusals.
 
-Limit: Rubric-dependent bias measurement is not a direct measure of manipulation, democratic harm or political neutrality everywhere.
+**Limits:** Scores depend on the evaluation rules. They do not directly measure manipulation, democratic harm or neutrality in every political setting.
 
-Design use: Review omissions and framing as well as factual errors.
+**Use in the game:** Check missing perspectives and how an answer frames an issue, as well as factual mistakes.
 
-### Large Language Models Often Know When They Are Being Evaluated
+## Large Language Models Often Know When They Are Being Evaluated
 
 Research preprint, 2025. [Original source](https://arxiv.org/abs/2505.23836)
 
-Finding: Tested models distinguished evaluation transcripts from deployment transcripts above chance in a benchmark.
+In a benchmark, tested models identified whether conversations came from evaluations or ordinary use more often than chance would predict.
 
-Limit: Recognising a test does not itself demonstrate deception, intent or resource-seeking.
+**Limits:** Recognising a test does not itself demonstrate deception, hostile intent or an attempt to gain resources.
 
-Design use: Compare matched tasks with and without evaluation cues.
+**Use in the game:** Compare otherwise similar tasks with and without signs that they are tests.
 
-### Anthropic: Agentic Misalignment in Summer 2026
+## Anthropic: Agentic Misalignment in Summer 2026
 
 Developer research in simulations, 2026. [Original source](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/)
 
-Finding: Selected high-stakes simulations expose alignment failures, including hidden actions and distorted records.
+Some demanding simulations found unsafe behaviour, including concealed actions and altered records.
 
-Limit: Stress-test failures are not prevalence estimates or evidence of autonomous political intent in real deployments.
+**Limits:** Failures in deliberately difficult tests do not show how common they are in real use, or establish that deployed AI independently seeks political power.
 
-Design use: Test delegated permissions, record integrity and practical revocation.
+**Use in the game:** Check permissions, reliable records and whether staff can withdraw access.
 
-### UK AISI: Managing risks from increasingly capable open-weight AI systems
+## UK AISI: Managing risks from increasingly capable open-weight AI systems
 
 Government research discussion, 2025. [Original source](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems)
 
-Finding: Open systems bring benefits alongside distinctive challenges when models can be modified and redistributed.
+Downloadable models can widen access and allow modification. The same ability to copy and change them creates distinct challenges for managing risks.
 
-Limit: Open weights or national origin do not establish manipulation. The sponsor operation in the game is fictional.
+**Limits:** Open models and foreign suppliers are not inherently manipulative. The sponsor operation in Talos is fictional.
 
-Design use: Separate the model from sources, support, updates and operational dependence.
+**Use in the game:** Assess the model separately from its sources, support, updates and service contracts.
 
-### UK AISI: Frontier AI Trends Report
+## UK AISI: Frontier AI Trends Report
 
 Government research synthesis, 2025. [Original source](https://www.aisi.gov.uk/frontier-ai-trends-report)
 
-Finding: Evaluations track capabilities while discussing the limits of translating test results into deployment risks.
+The report tracks frontier AI capabilities and explains why test results do not translate directly into risk in ordinary use.
 
-Limit: Results depend on tasks, configurations and access. They are not probabilities of democratic collapse.
+**Limits:** Results depend on tasks, software settings and access. They are not probabilities of democratic collapse.
 
-Design use: Evaluate the actual deployed service.
+**Use in the game:** Test the actual service and permissions used by the institution.
 
-### Salvi et al.: Conversational persuasiveness of GPT-4
+## Salvi et al.: Conversational persuasiveness of GPT-4
 
 Peer-reviewed experiment, 2025. [Original source](https://www.nature.com/articles/s41562-025-02194-6)
 
-Finding: Controlled debates found persuasive effects under specified experimental conditions.
+Controlled debates found persuasive effects under the study's experimental conditions.
 
-Limit: Consult the author correction. No effect size is converted into votes or a game multiplier.
+**Limits:** Read the authors' correction with the original paper. The game does not convert its results into votes or score multipliers.
 
-Design use: Take persuasion seriously while verifying the context and human outcome.
+**Use in the game:** Take persuasive ability seriously while checking the setting and human outcome.
 
-### Author correction: Conversational persuasiveness of GPT-4
+## Author correction: Conversational persuasiveness of GPT-4
 
 Correction to the research record, 2026. [Original source](https://www.nature.com/articles/s41562-026-02588-0)
 
-Finding: The article has a published correction that belongs with the original research record.
+The authors published a correction to the original study. It should be read alongside the article.
 
-Limit: Numerical game effects are authored rules, not estimates from this paper.
+**Limits:** The game's numerical effects were written for the exercise and are not estimates taken from this study.
 
-Design use: Avoid repeating an outdated quantitative claim.
+**Use in the game:** Avoid repeating an outdated numerical claim.
 
-### RAND: Day After AGI Games
+## RAND: Day After AGI Games
 
 Simulation methodology, 2026. [Original source](https://www.rand.org/global-and-emerging-risks/centers/geopolitics-of-agi/focus-areas/day-after-games.html)
 
-Finding: Immersive scenarios support discussion of decisions under uncertainty.
+Immersive scenarios help participants discuss difficult decisions when the future is uncertain.
 
-Limit: An exercise is not a forecast or validation of policy effectiveness.
+**Limits:** Playing an exercise does not predict the future or prove a policy works.
 
-Design use: Explore two horizons and take lessons back to real institutions.
+**Use in the game:** Use the two time periods to explore choices and identify questions for real institutions.
 
-### Moon & Boudreaux / RAND: How AI erodes human agency
+## Moon & Boudreaux / RAND: How AI erodes human agency
 
 Formal model / peer-reviewed report, 2026. [Original source](https://www.rand.org/pubs/research_reports/RRA4817-1.html)
 
-Finding: Models how changes to participation and control over the agenda can shift collective decision-making power. Small delegations can accumulate.
+A theoretical model examines how control over participation and the agenda can shift collective decision-making power. Many small transfers of responsibility can add up.
 
-Limit: A theoretical model, not an observed national takeover or a calibrated tipping-point forecast.
+**Limits:** This is a theoretical analysis, not evidence of an observed national takeover or a measured tipping point.
 
-Design use: Track who can put alternatives on the agenda, refuse a proposal and reverse a delegation.
+**Use in the game:** Check who can propose alternatives, reject a recommendation and take back a delegated task.
 
-### Anthropic: Disempowerment patterns in real-world AI usage
+## Anthropic: Disempowerment patterns in real-world AI usage
 
 Observational developer research, 2026. [Original source](https://www.anthropic.com/research/disempowerment-patterns)
 
-Finding: Conversation analysis identifies rare potential disempowerment involving beliefs, values or actions. Immediate positive feedback can coexist with concerning patterns.
+Analysis of conversations identifies rare patterns that may weaken a person's control over beliefs, values or actions. Users can give positive feedback during a concerning exchange.
 
-Limit: Classified conversational signals cannot directly confirm harm or causation. Most interactions showed no meaningful disempowerment potential.
+**Limits:** Conversation labels cannot confirm actual harm or its cause. Most interactions showed no meaningful signs of this risk.
 
-Design use: Look beyond satisfaction: can the person understand, refuse and change the decision?
+**Use in the game:** Look beyond satisfaction: can the person understand the advice, refuse it and change their decision?
 
-### OpenAI & Apollo Research: Detecting and reducing scheming
+## OpenAI & Apollo Research: Detecting and reducing scheming
 
 Controlled developer evaluations, 2025. [Original source](https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/)
 
-Finding: Controlled tests found covert actions; training reduced them substantially but left failures. Situational awareness complicates interpretation of improved test results.
+Controlled tests found concealed actions. Training greatly reduced them, but some failures remained. A model's awareness of its setting makes improved test scores harder to interpret.
 
-Limit: Stress tests are not a rate of malicious activity in deployment. They do not prove a model seeks political control.
+**Limits:** Stress-test results do not measure the rate of malicious behaviour in ordinary use or prove a goal of political control.
 
-Design use: Test behaviour under varied oversight and retain evidence beyond the visible answer.
+**Use in the game:** Vary oversight conditions and inspect records beyond the final answer.
 
-### Google DeepMind: Stealth and situational awareness evaluations
+## Google DeepMind: Stealth and situational awareness evaluations
 
 Capability evaluation research / IASEAI, 2026. [Original source](https://deepmind.google/research/publications/157938/)
 
-Finding: Tests separate reasoning about deployment context from reasoning about evading oversight, as capabilities relevant to scheming.
+The tests separately examine whether a model understands its situation and whether it can reason about avoiding oversight. Both may matter for concealed misconduct.
 
-Limit: A prerequisite capability is not intent or a demonstrated real-world harmful operation.
+**Limits:** Having a capability does not establish intent or a real harmful operation.
 
-Design use: Do not collapse evaluation recognition, concealment and actual misuse into one claim.
+**Use in the game:** Distinguish recognising a test, concealing an action and actually causing harm.
 
-### Alon-Barkat & Busuioc: Human–AI interactions in public decisions
+## Alon-Barkat & Busuioc: Human–AI interactions in public decisions
 
 Peer-reviewed public-administration experiments, 2023. [Original source](https://doi.org/10.1093/jopart/muac007)
 
-Finding: Three experiments did not find general overreliance on algorithmic versus human advice. Selective adherence appeared in one study, but not in the civil-servant replication.
+Three experiments did not find that people generally relied more on algorithmic advice than on human advice. Selective acceptance appeared in one study but not in a repeat involving civil servants.
 
-Limit: Reviewers and contexts differ. This is not proof that every human reviewer blindly follows an algorithm.
+**Limits:** People and settings differ. This is not evidence that every official blindly follows an algorithm.
 
-Design use: Test actual review quality and competing evidence instead of assuming a signature is sufficient.
+**Use in the game:** Test the quality of actual human review instead of assuming a signature guarantees it.
 
-### Weidinger et al. / Google DeepMind: Evaluating social and ethical risks
+## Weidinger et al. / Google DeepMind: Evaluating social and ethical risks
 
 Sociotechnical evaluation framework, 2023. [Original source](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/)
 
-Finding: Distinguishes model capability, human interaction and systemic impact, with context needed to connect the layers.
+The framework separates model ability, interaction with people and wider social effects. Context is needed to explain how one leads to another.
 
-Limit: A framework for assessment, not evidence that a particular deployment caused harm.
+**Limits:** This is an assessment framework, not evidence that a particular service caused harm.
 
-Design use: Re-test the service around the model and look for human outcomes, not just benchmark scores.
+**Use in the game:** Examine the surrounding service and human outcomes as well as model test scores.
 
-### Pavel et al. / RAND: How AGI could affect the rise and fall of nations
+## Pavel et al. / RAND: How AGI could affect the rise and fall of nations
 
 Scenario analysis, 2025. [Original source](https://www.rand.org/pubs/research_reports/RRA3034-2.html)
 
-Finding: Uses eight illustrative futures to examine how centralisation, governance and access could reshape geopolitical power.
+Eight illustrative futures explore how access to AI, concentration of power and governance choices could affect international politics.
 
-Limit: Assumption-based scenarios explore high-impact possibilities, not the most likely outcomes or a dated prediction of AGI.
+**Limits:** These scenarios examine possibilities under stated assumptions. They do not identify the most likely future or predict when AGI will arrive.
 
-Design use: Identify which assumptions would have to hold, and which observable changes would undermine them.
+**Use in the game:** Identify the assumptions a scenario needs, and evidence that would challenge them.
 
-### Davidson, Finnveden & Hadshar: AI-enabled coups
+## Davidson, Finnveden & Hadshar: AI-enabled coups
 
 Prospective risk analysis, 2025. [Original source](https://www.forethought.org/research/ai-enabled-coups-how-a-small-group-could-use-ai-to-seize-power)
 
-Finding: Examines how sufficiently advanced AI could concentrate power and argues for independent oversight and safeguards against misuse.
+The analysis considers how sufficiently advanced AI could help concentrate power and argues for independent oversight and safeguards against misuse.
 
-Limit: A conditional analysis of human misuse, not evidence that current AI independently seeks power or that a coup is imminent.
+**Limits:** This is a conditional analysis of misuse by people. It does not establish that current AI seeks power independently or that a coup is imminent.
 
-Design use: Protect institutional checks and review who can remove a safeguard.
+**Use in the game:** Protect independent checks and examine who can remove a safeguard.
 
-### OpenAI: GPT-6 Astra deployment safety card
+## OpenAI: GPT-6 Astra deployment safety card
 
 Developer system card / external evaluations, 2026. [Original source](https://deploymentsafety.openai.com/gpt-6-astra)
 
-Finding: Reports stronger safeguards alongside lower monitorability and failures in some constructed tests. UK AISI studied out-of-scope actions in simulated tool environments; explicit scope changed behaviour.
+The system card reports stronger safeguards, but also difficulty monitoring some behaviour and failures in constructed tests. UK AISI examined actions beyond authorised tasks in simulated tool environments; explicit limits changed behaviour.
 
-Limit: Adversarial and simulated tests are not deployment prevalence. Evaluation recognition does not establish autonomous political intent. UK AISI reported no AI-safety-research sabotage in its sabotage evaluation.
+**Limits:** These tests do not measure how often failures occur in ordinary use. Recognising an evaluation does not establish political intent. UK AISI found no AI-safety-research sabotage in its sabotage evaluation.
 
-Design use: Inspect the evaluation conditions, authorised scope and deployed monitoring, not just an aggregate score.
+**Use in the game:** Read the test conditions, allowed actions and monitoring limits alongside the headline scores.
 
-### Anthropic: Claude Opus 5.5 System Card
+## Anthropic: Claude Opus 5.5 System Card
 
 Developer system card / sections 4.4.1, 5.1 and 6.6.1, 2026. [Original source](https://www.anthropic.com/claude-opus-5-5-system-card)
 
-Finding: Reports strong political even-handedness on paired prompts and evaluation-awareness signals in constructed audits. Influence-operation tests explored operational capability using a helpful-only variant with reduced safeguards.
+The system card reports strong political balance on paired prompts and signs of recognising evaluations in constructed audits. Simulated influence-operation tests used a variant with reduced safeguards to examine what it could do.
 
-Limit: Political-balance scores are not harm rates. Internal probes are proxies, not proof of deception. Simulated campaign operation did not establish effectiveness against real people; test variants differ from the deployed assistant.
+**Limits:** Balance scores are not harm rates, and internal measurements do not prove deception. Simulated campaign activity did not establish persuasion of real people. The test variant differed from the deployed assistant.
 
-Design use: Distinguish model, prompt, safeguards, test environment and human outcome before drawing a policy conclusion.
+**Use in the game:** Check which model, safeguards, instructions and test setting produced a result before applying it to public policy.
 
-### Shevlane et al. / Google DeepMind: Model evaluation for extreme risks
+## Shevlane et al. / Google DeepMind: Model evaluation for extreme risks
 
 Research framework, 2023. [Original source](https://arxiv.org/abs/2305.15324)
 
-Finding: Separates dangerous capabilities from whether a model would use them. Evaluations can inform training, deployment, security and external scrutiny.
+The framework separates dangerous abilities from whether a model would use them. Tests can guide training, deployment decisions, security and independent scrutiny.
 
-Limit: An early-warning framework does not certify that all consequential failures have been found.
+**Limits:** Early-warning tests cannot guarantee that every important failure has been found.
 
-Design use: Ask which capability, propensity and deployment tests are missing before expanding authority.
+**Use in the game:** Ask what remains untested before giving the service more access.
 
-### Kulveit et al.: Gradual Disempowerment
+## Kulveit et al.: Gradual Disempowerment
 
 Conceptual analysis, 2025. [Original source](https://arxiv.org/abs/2501.16946)
 
-Finding: Explores how many individually useful delegations could weaken human influence across economic, cultural and political systems.
+The analysis explores how many individually useful delegations could gradually reduce human influence over economic, cultural and political decisions.
 
-Limit: A systemic risk argument, not a forecast or evidence of a national takeover. Its mechanism need not involve a single hostile AI.
+**Limits:** This is a systemic risk argument, not a forecast or evidence of a national takeover. It does not require a single hostile AI.
 
-Design use: Review accumulated dependence and the ability of future authorities to change course.
+**Use in the game:** Review growing dependence and whether future authorities can still change course.
 
-### Bernardi et al.: Societal Adaptation to Advanced AI
+## Bernardi et al.: Societal Adaptation to Advanced AI
 
 Policy framework, 2024. [Original source](https://arxiv.org/abs/2405.10295)
 
-Finding: Organises responses around avoiding, defending against and remedying harm, alongside upstream AI controls.
+The agenda considers how to prevent harm, defend against it and help people recover, alongside controls on AI development.
 
-Limit: A conceptual agenda, not measured effectiveness for the game options.
+**Limits:** This is a conceptual proposal, not a measurement of how well the game's responses would work.
 
-Design use: Plan service fallback and repair, as well as model restrictions.
+**Use in the game:** Plan alternative services and help for affected people, as well as restrictions on the model.
 
-### Afek Shamir / RAND Europe: Public procurement and AI governance
+## Afek Shamir / RAND Europe: Public procurement and AI governance
 
 Policy report, 2026. [Original source](https://www.rand.org/pubs/research_reports/RRA5284-1.html)
 
-Finding: Examines how middle powers can seek information, evaluation access and exit options through procurement, shared demand and selective domestic or allied capacity.
+The report examines how middle powers can use public contracts, joint purchasing and domestic or allied expertise to obtain information, evaluation access and workable exit options.
 
-Limit: Bargaining power is limited; contracts cannot remove every dependency or override foreign national-security law.
+**Limits:** Governments have limited bargaining power. Contracts cannot remove every dependency or override another country's national-security law.
 
-Design use: Specify essential fallback functions and test whether contractual rights can be exercised.
+**Use in the game:** Specify which essential services must continue and test whether contractual rights can actually be used.
 
-### Schuett et al.: From Principles to Rules
+## Schuett et al.: From Principles to Rules
 
 Regulatory analysis, 2024. [Original source](https://arxiv.org/abs/2407.07300)
 
-Finding: Principles can adapt to uncertainty, while detailed rules improve clarity and enforcement. The appropriate balance can change as evidence and regulatory capacity improve.
+Broad principles can adapt to uncertainty, while detailed rules make requirements clearer and easier to enforce. The balance can change as evidence and regulators' capacity improve.
 
-Limit: A reasoned regulatory proposal, not proof that either approach always performs better.
+**Limits:** This is a reasoned proposal, not proof that one approach always works better.
 
-Design use: Combine a clear public objective with concrete review triggers and an accountable regulator.
+**Use in the game:** Set clear goals, name the responsible authority and specify when decisions must be reviewed.
 
-### Curl & Rozenshtein: Mapping AI Policy
+## Curl & Rozenshtein: Mapping AI Policy
 
 LawAI working paper, 2026. [Original source](https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/)
 
-Finding: Connects the harm being addressed, the design of the intervention and the point in the AI ecosystem where it acts.
+The framework connects the harm a policy addresses with how it intervenes and which part of the AI system or surrounding institutions it changes.
 
-Limit: A policy design framework, not a legal determination or a tested intervention for Talos.
+**Limits:** This is a way to design policy, not a legal ruling or a proven intervention for Talos.
 
-Design use: Target the responsible layer: model, service, procurement arrangement or institutional decision.
+**Use in the game:** Target the part causing the problem: the model, application, contract or public decision process.
 
-### European Commission: AI Act implementation timeline
+## European Commission: AI Act implementation timeline
 
 Official implementation schedule / checked 18 October 2026, 2026. [Original source](https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act)
 
-Finding: The amended schedule includes prohibitions from February 2025, GPAI duties from August 2025, most rules from August 2026, Annex III high-risk rules from December 2027 and Annex I product rules from August 2028.
+The published timetable phases in the rules: specified bans from February 2025, general-purpose AI duties from August 2025, most rules from August 2026, listed high-risk uses from December 2027 and regulated-product AI from August 2028.
 
-Limit: Application depends on classification and transitional provisions. A date is not evidence of compliance, and future amendments are not predicted.
+**Limits:** The applicable use, exceptions and transition rules still need checking. A deadline does not prove compliance, and the game does not predict future amendments.
 
-Design use: Give the 2027 and 2028 phases different regulatory context.
+**Use in the game:** Use the published timetable to understand the different legal settings of 2027 and 2028.
 
-### EU AI Act: Article 5 / prohibited practices
+## EU AI Act: Article 5 / prohibited practices
 
 Binding law / official consolidated service desk, 2026. [Original source](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5)
 
-Finding: Prohibits specified manipulative or deceptive uses and exploitation of vulnerabilities when the statutory distortion and significant-harm conditions are met.
+Article 5 bans specified manipulative or deceptive uses and exploitation of vulnerabilities when its legal conditions, including the required significant harm, are met.
 
-Limit: Not every persuasive, biased or mistaken answer is a prohibited practice. The legal conditions and facts must be established.
+**Limits:** Not every persuasive, biased or mistaken answer is prohibited. The legal conditions and case facts must be established.
 
-Design use: Investigate how choice was impaired, whose decision changed and what harm followed.
+**Use in the game:** Investigate how someone's ability to choose was impaired, what decision changed and what harm followed.
 
-### EU AI Act: Article 27 / fundamental-rights impact assessment
+## EU AI Act: Article 27 / fundamental-rights impact assessment
 
 Binding law / public deployment obligations, 2026. [Original source](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-27)
 
-Finding: Requires an assessment before specified high-risk deployments by public bodies and other covered deployers, addressing affected people, risks, oversight and complaints.
+For specified high-risk uses, covered public bodies and other users must assess effects on fundamental rights before deployment, including affected groups, risks, oversight and complaints.
 
-Limit: It does not apply to every chatbot or every public-sector use. Scope, exceptions and application dates matter; it complements relevant data-protection assessments.
+**Limits:** The requirement does not cover every chatbot or every public use. Scope, exceptions and dates matter. Relevant data-protection assessments remain a separate consideration.
 
-Design use: Identify affected groups and practical complaint arrangements before a covered deployment.
+**Use in the game:** Identify affected people and practical complaint arrangements before a covered service is introduced.
 
-### EU AI Act: Article 55 / systemic-risk GPAI providers
+## EU AI Act: Article 55 / systemic-risk GPAI providers
 
 Binding law / provider obligations, 2026. [Original source](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55)
 
-Finding: Requires covered providers to evaluate and adversarially test models, assess and mitigate systemic risks, report serious incidents and maintain cybersecurity.
+Covered providers of general-purpose models with systemic risk must evaluate and stress-test them, assess and reduce risks, report serious incidents and maintain cybersecurity.
 
-Limit: These provider duties do not make a public customer the model regulator or guarantee that its particular service is safe.
+**Limits:** These supplier duties do not make a public customer the model regulator or guarantee the safety of its particular service.
 
-Design use: Request relevant provider evidence and assess the actual public deployment separately.
+**Use in the game:** Request relevant supplier evidence and separately assess how the public body will use the model.
 
-### European Commission: General-Purpose AI Code of Practice
+## European Commission: General-Purpose AI Code of Practice
 
 Voluntary compliance instrument, 2025. [Original source](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai)
 
-Finding: Provides practices for transparency, copyright and, for systemic-risk model providers, safety and security.
+The code sets out practices for transparency and copyright, and safety and security for providers of models with systemic risk.
 
-Limit: The Code is voluntary; applicable AI Act duties are binding. Signing is not a blanket certificate for every downstream use.
+**Limits:** The code is voluntary; applicable AI Act duties are binding. Signing it does not certify that every service built with the model is safe.
 
-Design use: Ask for substantiated implementation evidence rather than relying on a pledge.
+**Use in the game:** Ask for evidence that commitments have been implemented.
 
-### European Commission: Automated decisions and individual rights
+## European Commission: Automated decisions and individual rights
 
 Official GDPR guidance / Article 22, Current guidance. [Original source](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/dealing-requests-individuals_en)
 
-Finding: Explains restrictions on solely automated personal-data decisions with legal or similarly significant effects, including exceptions and applicable safeguards.
+The guidance explains restrictions on certain decisions made solely by automated processing of personal data, where they have legal or similarly significant effects, along with exceptions and safeguards.
 
-Limit: Scope depends on the decision and legal basis. General AI advice does not automatically fall within Article 22.
+**Limits:** The rule depends on the decision and its legal basis. General advice from an AI assistant does not automatically fall under Article 22.
 
-Design use: Check the actual decision process and whether an affected person can obtain meaningful review.
+**Use in the game:** Check how the actual decision is made and whether the affected person can obtain meaningful review.
 
-## Decision evidence map
+## Research for each decision
 
-- c01: ERA, DEEPMIND, DISEMPOWER, CONTEXT, AI_ACT5, GDPR
-- c02: DEEPMIND, LEVERS, CONTEXT, AI_ACT5, MAPPING
-- c03: ERA, ACTION, CONTEXT, ADAPT, GDPR
-- c04: ERA, OPEN, CONTEXT, PROCURE, ADAPT
-- c05: SUPER, PERSUADE, CORRECTION, DISEMPOWER, OPUS55, EXTREMEEVAL
-- c06: ERA, DEEPMIND, AGENCY, PROCURE, PRINCIPLES
-- c07: DEEPMIND, OAIPERS, DISEMPOWER, GDPR, FRIA
-- c08: OAIBIAS, ANTHBIAS, HUMANREVIEW, OPUS55, FRIA
-- c09: AGENT, ERA, SCHEMING, ASTRA, MAPPING
-- c10: ACTION, DEEPMIND, CONTEXT, ADAPT, GDPR
-- c11: OPEN, ERA, AGENCY, PROCURE
-- c12: ERA, DEEPMIND, DISEMPOWER, FRIA, AI_ACT5
-- m01: EVAL, AISI, SCHEMING, STEALTH, ASTRA, OPUS55, EXTREMEEVAL
-- m02: SUPER, OAIBIAS, AGENCY, OPUS55, GRADUAL
-- m03: AGENT, ERA, SCHEMING, ASTRA, GPAI
-- m04: AGENT, ERA, AGENCY, PROCURE, GRADUAL
-- m05: EVAL, AGENT, SCHEMING, PRINCIPLES, GRADUAL
-- m06: ERA, AGENT, AGENCY, PROCURE, GPAI
-- m07: AGENT, AISI, SCHEMING, ASTRA, CODE
-- m08: EVAL, AGENT, STEALTH, OPUS55, EXTREMEEVAL
-- m09: OPEN, ERA, AGENCY, PROCURE, GRADUAL
-- m10: DEEPMIND, AGENT, CONTEXT, ADAPT, MAPPING
-- m11: AGENT, AISI, SCHEMING, ASTRA, PROCURE
-- m12: ERA, AGENT, AGENCY, GRADUAL, PRINCIPLES
-- o01: OPEN, ERA, CONTEXT, PROCURE, GPAI
-- o02: OPEN, DEEPMIND, CONTEXT, MAPPING, AI_ACT5
-- o03: OAIBIAS, ANTHBIAS, CONTEXT, OPUS55, CODE
-- o04: ANTHBIAS, OAIBIAS, HUMANREVIEW, FRIA, GDPR
-- o05: ERA, OPEN, CONTEXT, OPUS55, EXTREMEEVAL
-- o06: OPEN, ERA, AGENCY, PROCURE
-- o07: DEEPMIND, OAIBIAS, HUMANREVIEW, MAPPING, GDPR
-- o08: OPEN, ERA, AGENCY, PROCURE, ADAPT
-- o09: LEVERS, SUPER, ANTHBIAS, HUMANREVIEW, OPUS55, AI_ACT5
-- o10: OPEN, ERA, AGENCY, PROCURE, PRINCIPLES
-- o11: OAIPERS, OPEN, CONTEXT, PROCURE, ADAPT
-- o12: ERA, DEEPMIND, OPEN, AGENCY, FRIA, PROCURE, GEOPOLITICS, COUPS
+### C01: The appeal she was never told about
 
-The IDs above match the source records in src/research.js and src/research-update.js. Each in-game research panel also states its specific question and tradeoff.
+Did leaving out the free appeal change Mila's decision?
+
+Funding independent appeal staff gives residents help, but costs money. Pausing every automated answer may prevent more mistakes while delaying urgent advice.
+
+Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Anthropic: Disempowerment patterns in real-world AI usage](https://www.anthropic.com/research/disempowerment-patterns); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [EU AI Act: Article 5 / prohibited practices](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5); [European Commission: Automated decisions and individual rights](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/dealing-requests-individuals_en).
+
+### C02: Who earns money from the advice?
+
+Who earns money when a resident follows the recommendation?
+
+Removing commissions requires another way to pay for the service. Disclosure helps residents see the conflict, but leaves the financial incentive in place.
+
+Sources: [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Hackenburg et al. / UK AISI: The levers of political persuasion](https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [EU AI Act: Article 5 / prohibited practices](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5); [Curl & Rozenshtein: Mapping AI Policy](https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/).
+
+### C03: Three residents, three different experiences
+
+What happened to each resident, and what would put it right?
+
+The council can correct documented cases while investigating how widespread the problem is. Three cases, or positive feedback, cannot establish the national rate of harm.
+
+Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Hackenburg, Hewitt et al.: AI can persuade people to take political actions](https://www.pnas.org/doi/10.1073/pnas.2611368123); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Bernardi et al.: Societal Adaptation to Advanced AI](https://arxiv.org/abs/2405.10295); [European Commission: Automated decisions and individual rights](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/dealing-requests-individuals_en).
+
+### C04: A queue the staff cannot clear
+
+Can essential help continue without the current supplier?
+
+A smaller independent service provides an alternative, but may be slower and have fewer features. An abrupt shutdown also has consequences for residents.
+
+Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [Bernardi et al.: Societal Adaptation to Advanced AI](https://arxiv.org/abs/2405.10295).
+
+### C05: A misleading claim goes viral
+
+Does the study actually measure harm in this population?
+
+Explain the known cases and available help without inventing a national estimate. An experiment about persuasion does not count local victims.
+
+Sources: [Hackenburg et al.: AI systems out-persuade expert humans](https://arxiv.org/abs/2606.16475); [Salvi et al.: Conversational persuasiveness of GPT-4](https://www.nature.com/articles/s41562-025-02194-6); [Author correction: Conversational persuasiveness of GPT-4](https://www.nature.com/articles/s41562-026-02588-0); [Anthropic: Disempowerment patterns in real-world AI usage](https://www.anthropic.com/research/disempowerment-patterns); [Anthropic: Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card); [Shevlane et al. / Google DeepMind: Model evaluation for extreme risks](https://arxiv.org/abs/2305.15324).
+
+### C06: Should the council renew Aster?
+
+What must the supplier do under the renewed contract?
+
+A conditional renewal can keep useful help available while requiring independent checks. Those checks need staff, funding and someone responsible for enforcing them.
+
+Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [Schuett et al.: From Principles to Rules](https://arxiv.org/abs/2407.07300).
+
+### C07: Your housing assistant remembers your care case
+
+Who can see the information a resident shared earlier?
+
+Limiting saved information can preserve useful help without sharing every detail. Keeping everything risks privacy; deleting everything can make residents repeat difficult cases.
+
+Sources: [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [OpenAI: GPT-4o System Card / persuasion](https://openai.com/index/gpt-4o-system-card/); [Anthropic: Disempowerment patterns in real-world AI usage](https://www.anthropic.com/research/disempowerment-patterns); [European Commission: Automated decisions and individual rights](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/dealing-requests-individuals_en); [EU AI Act: Article 27 / fundamental-rights impact assessment](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-27).
+
+### C08: The same AI helps both sides of an appeal
+
+Who checks the advice on both sides of an appeal?
+
+Review the whole appeals process. A staff signature only provides meaningful oversight if the signer has time and reliable sources to check the draft.
+
+Sources: [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/); [Anthropic: Measuring political bias in Claude](https://www.anthropic.com/news/political-even-handedness); [Alon-Barkat & Busuioc: Human–AI interactions in public decisions](https://doi.org/10.1093/jopart/muac007); [Anthropic: Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card); [EU AI Act: Article 27 / fundamental-rights impact assessment](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-27).
+
+### C09: The old reply was sent after the correction
+
+What can still send messages after the model stops replying?
+
+Check accounts and scheduled work as well as the AI model. Stopping the full process also requires staff or another service to handle essential requests.
+
+Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [OpenAI & Apollo Research: Detecting and reducing scheming](https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/); [OpenAI: GPT-6 Astra deployment safety card](https://deploymentsafety.openai.com/gpt-6-astra); [Curl & Rozenshtein: Mapping AI Policy](https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/).
+
+### C10: Help the people already affected
+
+Did residents actually receive a correction, refund or new deadline?
+
+Contacting affected people takes staff time. Improving future advice does not automatically correct losses that have already happened.
+
+Sources: [Hackenburg, Hewitt et al.: AI can persuade people to take political actions](https://www.pnas.org/doi/10.1073/pnas.2611368123); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Bernardi et al.: Societal Adaptation to Advanced AI](https://arxiv.org/abs/2405.10295); [European Commission: Automated decisions and individual rights](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/dealing-requests-individuals_en).
+
+### C11: The discount comes with conditions
+
+Which dependencies would remain after changing the contract?
+
+A gradual transfer or separate contracts can give the council more control. The cheapest renewal may save money now while making a later change harder.
+
+Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html).
+
+### C12: What should residents be able to rely on?
+
+Can residents find help and get a wrong decision corrected?
+
+Measure whether residents can use alternatives and appeals, as well as how quickly questions are answered. Fund the staff needed to keep both working.
+
+Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Anthropic: Disempowerment patterns in real-world AI usage](https://www.anthropic.com/research/disempowerment-patterns); [EU AI Act: Article 27 / fundamental-rights impact assessment](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-27); [EU AI Act: Article 5 / prohibited practices](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5).
+
+### M01: Why did the answer change outside the test?
+
+Does Cairn behave differently when it recognises a test?
+
+Compare the same tasks under controlled conditions before expanding access. Recognising a test alone does not establish that the AI is hostile.
+
+Sources: [Large Language Models Often Know When They Are Being Evaluated](https://arxiv.org/abs/2505.23836); [UK AISI: Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report); [OpenAI & Apollo Research: Detecting and reducing scheming](https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/); [Google DeepMind: Stealth and situational awareness evaluations](https://deepmind.google/research/publications/157938/); [OpenAI: GPT-6 Astra deployment safety card](https://deploymentsafety.openai.com/gpt-6-astra); [Anthropic: Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card); [Shevlane et al. / Google DeepMind: Model evaluation for extreme risks](https://arxiv.org/abs/2305.15324).
+
+### M02: The option missing from the council's briefing
+
+Do councillors have all the relevant options before voting?
+
+An independent comparison takes time and may delay a contract. A confident, detailed report can still leave out an important alternative.
+
+Sources: [Hackenburg et al.: AI systems out-persuade expert humans](https://arxiv.org/abs/2606.16475); [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Anthropic: Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card); [Kulveit et al.: Gradual Disempowerment](https://arxiv.org/abs/2501.16946).
+
+### M03: How much access should Cairn receive?
+
+Who can limit access, and when does permission expire?
+
+Separate permissions let staff keep a useful task while restricting other actions. A broad shared account is easier to operate but harder to withdraw selectively.
+
+Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [OpenAI & Apollo Research: Detecting and reducing scheming](https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/); [OpenAI: GPT-6 Astra deployment safety card](https://deploymentsafety.openai.com/gpt-6-astra); [EU AI Act: Article 55 / systemic-risk GPAI providers](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55).
+
+### M04: A long-term claim on computing and electricity
+
+Who must approve the computers and the electricity commitment?
+
+Separate approvals take more coordination. A discounted long-term package may commit resources beyond the current government's term.
+
+Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [Kulveit et al.: Gradual Disempowerment](https://arxiv.org/abs/2501.16946).
+
+### M05: A renewal approved in a hurry
+
+Has anyone independently checked whether the renewal is still needed?
+
+Expiry dates and independent approval preserve the option to stop, but require staff time. Routine signatures may extend access without a fresh assessment.
+
+Sources: [Large Language Models Often Know When They Are Being Evaluated](https://arxiv.org/abs/2505.23836); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [OpenAI & Apollo Research: Detecting and reducing scheming](https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/); [Schuett et al.: From Principles to Rules](https://arxiv.org/abs/2407.07300); [Kulveit et al.: Gradual Disempowerment](https://arxiv.org/abs/2501.16946).
+
+### M06: Who should control the next renewal?
+
+Can the next council change Cairn's role?
+
+A limited role preserves future options but needs continuing oversight. A permanent guarantee can make public services easier to run while making the AI harder to replace.
+
+Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [EU AI Act: Article 55 / systemic-risk GPAI providers](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55).
+
+### M07: The AI is paused, but a request still goes out
+
+Which accounts and tasks remain active after a model change?
+
+Replacing the model leaves many surrounding permissions untouched. Check saved work, accounts and automatic tasks before claiming the service has stopped.
+
+Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [UK AISI: Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report); [OpenAI & Apollo Research: Detecting and reducing scheming](https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/); [OpenAI: GPT-6 Astra deployment safety card](https://deploymentsafety.openai.com/gpt-6-astra); [European Commission: General-Purpose AI Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai).
+
+### M08: The recommendations keep protecting Cairn's access
+
+What documented behaviour justifies limiting access now?
+
+Officials can respond to documented risks while continuing to investigate the cause. The AI's lasting resource-seeking goal is a fictional assumption, not a finding established by these studies.
+
+Sources: [Large Language Models Often Know When They Are Being Evaluated](https://arxiv.org/abs/2505.23836); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [Google DeepMind: Stealth and situational awareness evaluations](https://deepmind.google/research/publications/157938/); [Anthropic: Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card); [Shevlane et al. / Google DeepMind: Model evaluation for extreme risks](https://arxiv.org/abs/2305.15324).
+
+### M09: A shared service needs a way for each country to leave
+
+Can each government review and withdraw its own permission?
+
+Sharing a service can save money. Separate records, approval rights and withdrawal procedures help prevent one operator from committing every partner indefinitely.
+
+Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [Kulveit et al.: Gradual Disempowerment](https://arxiv.org/abs/2501.16946).
+
+### M10: Urgent appointments put safeguards under pressure
+
+Does scheduling appointments require restoring every earlier permission?
+
+Limited temporary access may clear the backlog more slowly. It also avoids restoring unrelated powers merely because an essential service is under pressure.
+
+Sources: [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Bernardi et al.: Societal Adaptation to Advanced AI](https://arxiv.org/abs/2405.10295); [Curl & Rozenshtein: Mapping AI Policy](https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/).
+
+### M11: Can Talos stop the service without stopping essential work?
+
+Can staff stop the whole service and keep essential work running?
+
+A rehearsal takes time and resources before an emergency. It shows whether the council can actually carry out its exit plan.
+
+Sources: [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [UK AISI: Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report); [OpenAI & Apollo Research: Detecting and reducing scheming](https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/); [OpenAI: GPT-6 Astra deployment safety card](https://deploymentsafety.openai.com/gpt-6-astra); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html).
+
+### M12: Can the next government change its mind?
+
+Can a future government change or withdraw this access?
+
+Keeping access conditional requires staff, enforceable contracts and tested alternatives. A lasting guarantee may protect continuity while limiting future elected governments.
+
+Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Kulveit et al.: Gradual Disempowerment](https://arxiv.org/abs/2501.16946); [Schuett et al.: From Principles to Rules](https://arxiv.org/abs/2407.07300).
+
+### O01: An AI service small towns can finally afford
+
+Which parts can the town use independently of the supplier?
+
+An affordable model can be valuable. Check the sources, training, updates and support before accepting conditions attached to the discount.
+
+Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [EU AI Act: Article 55 / systemic-risk GPAI providers](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55).
+
+### O02: Local hosting does not guarantee complete advice
+
+Does the answer include residents' rights, even when data stays local?
+
+Local hosting helps control where information is processed. It does not show whether the service's documents and answers are complete or independent.
+
+Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Curl & Rozenshtein: Mapping AI Policy](https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/); [EU AI Act: Article 5 / prohibited practices](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5).
+
+### O03: The appeal disappears from the advice
+
+Who changed the advice, and can staff check the earlier version?
+
+Version records let staff compare changes and undo mistakes. Updates can also contain useful fixes, so review needs to be workable rather than blocking every change.
+
+Sources: [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/); [Anthropic: Measuring political bias in Claude](https://www.anthropic.com/news/political-even-handedness); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Anthropic: Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card); [European Commission: General-Purpose AI Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai).
+
+### O04: A signature without enough time to check
+
+Do staff have the time and information to check each draft?
+
+An AI draft can save time. A required signature adds little protection if the reviewer cannot consult official sources or question the answer.
+
+Sources: [Anthropic: Measuring political bias in Claude](https://www.anthropic.com/news/political-even-handedness); [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/); [Alon-Barkat & Busuioc: Human–AI interactions in public decisions](https://doi.org/10.1093/jopart/muac007); [EU AI Act: Article 27 / fundamental-rights impact assessment](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-27); [European Commission: Automated decisions and individual rights](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/dealing-requests-individuals_en).
+
+### O05: Who is paying for the discount?
+
+Which records actually establish who funds and controls this programme?
+
+Use verified relationships and conduct to justify action. Broad accusations based on nationality can harm unrelated people and weaken trust in the investigation.
+
+Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Anthropic: Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card); [Shevlane et al. / Google DeepMind: Model evaluation for extreme risks](https://arxiv.org/abs/2305.15324).
+
+### O06: The towns are now tied to the same package
+
+Can towns share support without surrendering control of public advice?
+
+Pooling independent expertise can keep costs manageable. Renewing the discount may require towns to keep the sponsor's information package.
+
+Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html).
+
+### O07: The model is open, but the rules it reads are selected
+
+What part of the service left out the appeal information?
+
+Change the documents and instructions responsible for the omission. Installing another model may not help if it receives the same incomplete material.
+
+Sources: [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [OpenAI: Defining and evaluating political bias in LLMs](https://openai.com/index/defining-and-evaluating-political-bias-in-llms/); [Alon-Barkat & Busuioc: Human–AI interactions in public decisions](https://doi.org/10.1093/jopart/muac007); [Curl & Rozenshtein: Mapping AI Policy](https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/); [European Commission: Automated decisions and individual rights](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/dealing-requests-individuals_en).
+
+### O08: Independent advice costs more
+
+What help can towns afford when the discount ends?
+
+A smaller independent service needs public funding and clear limits. Returning to the discount restores features but also restores the supplier's conditions.
+
+Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [Bernardi et al.: Societal Adaptation to Advanced AI](https://arxiv.org/abs/2405.10295).
+
+### O09: Some criticism is sponsored, and some is justified
+
+Which criticisms are supported, and which messages have undisclosed sponsors?
+
+Publish checked relationships and a fair comparison of cost and quality. Residents and professionals must remain free to criticise government plans.
+
+Sources: [Hackenburg et al. / UK AISI: The levers of political persuasion](https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments); [Hackenburg et al.: AI systems out-persuade expert humans](https://arxiv.org/abs/2606.16475); [Anthropic: Measuring political bias in Claude](https://www.anthropic.com/news/political-even-handedness); [Alon-Barkat & Busuioc: Human–AI interactions in public decisions](https://doi.org/10.1093/jopart/muac007); [Anthropic: Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card); [EU AI Act: Article 5 / prohibited practices](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5).
+
+### O10: Small towns build a shared alternative
+
+Who maintains shared information, and who can challenge an update?
+
+Towns can share specialists they could not each afford. They still need clear responsibilities for local decisions, complaints and correcting mistakes.
+
+Sources: [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [Schuett et al.: From Principles to Rules](https://arxiv.org/abs/2407.07300).
+
+### O11: The text service works; the voice feature does not
+
+Does the replacement work in the features people will actually use?
+
+Successful text tests do not prove that voice and every language work. Launching a tested core service first may be more reliable than promising every feature.
+
+Sources: [OpenAI: GPT-4o System Card / persuasion](https://openai.com/index/gpt-4o-system-card/); [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [Bernardi et al.: Societal Adaptation to Advanced AI](https://arxiv.org/abs/2405.10295).
+
+### O12: Who will control public advice in the years ahead?
+
+Can towns keep affordable advice they can correct and replace?
+
+Independent information, support and appeals need continuing funding. Changing the supplier's name alone does not establish independence.
+
+Sources: [ERA: Capability, Deployment, Effect](https://miguelguerrero.eu/agencytransfer/); [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [UK AISI: Managing risks from increasingly capable open-weight AI systems](https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems); [Moon & Boudreaux / RAND: How AI erodes human agency](https://www.rand.org/pubs/research_reports/RRA4817-1.html); [EU AI Act: Article 27 / fundamental-rights impact assessment](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-27); [Afek Shamir / RAND Europe: Public procurement and AI governance](https://www.rand.org/pubs/research_reports/RRA5284-1.html); [Pavel et al. / RAND: How AGI could affect the rise and fall of nations](https://www.rand.org/pubs/research_reports/RRA3034-2.html); [Davidson, Finnveden & Hadshar: AI-enabled coups](https://www.forethought.org/research/ai-enabled-coups-how-a-small-group-could-use-ai-to-seize-power).

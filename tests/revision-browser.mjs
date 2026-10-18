@@ -10,9 +10,9 @@ check('Offline standalone game loads');check('Game title names Republic of Talos
 check('Discreet footer links author website',await page.locator('#author-credit a').getAttribute('href')==='https://miguelguerrero.eu');
 await page.screenshot({path:'qa/final-title.png'});
 await click('prologue');await click('prologue-next');await click('prologue-next');await click('prologue-finish');check('Title-screen prologue returns without trapping the player',await page.locator('#modal-root').innerHTML()==='');
-await click('new');check('New game begins with country prologue',(await page.locator('.modal.prologue-modal').innerText()).includes('middle power'));await page.screenshot({path:'qa/final-prologue-country.png'});
-await click('prologue-next');check('Prologue explains limited democratic authority',(await page.locator('.modal.prologue-modal').innerText()).includes('Courts remain independent'));await page.screenshot({path:'qa/final-prologue-role.png'});
-await click('prologue-next');check('Prologue distinguishes parallel histories',(await page.locator('.modal.prologue-modal').innerText()).includes('separate what-if'));await page.screenshot({path:'qa/final-prologue-play.png'});await click('prologue-finish');await click('begin');
+await click('new');check('New game begins with country prologue',(await page.locator('.modal.prologue-modal').innerText()).includes('medium-sized European democracy'));await page.screenshot({path:'qa/final-prologue-country.png'});
+await click('prologue-next');check('Prologue explains limited democratic authority',(await page.locator('.modal.prologue-modal').innerText()).includes('connected'));await page.screenshot({path:'qa/final-prologue-role.png'});
+await click('prologue-next');check('Prologue distinguishes parallel histories',(await page.locator('.modal.prologue-modal').innerText()).includes('three separate possibilities'));await page.screenshot({path:'qa/final-prologue-play.png'});await click('prologue-finish');await click('begin');
 check('Simple view is the default with one preparation',(await get()).settings.simple&&(await get()).actions===1);check('Only three primary gauges are displayed',await page.locator('.simple-metric').count()===3);check('Busy original sidebar is absent',await page.locator('.left-rail').count()===0);
 await page.screenshot({path:'qa/final-gameplay.png'});
 await click('research-basis');check('Current decision has a research question and live citations',await page.locator('.research-cards a').count()>=2);await page.screenshot({path:'qa/final-research-decision.png'});await close();

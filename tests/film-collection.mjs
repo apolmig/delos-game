@@ -15,7 +15,7 @@ try{
  page.setDefaultTimeout(60000);page.on('pageerror',e=>errors.push(e.message));
  page.on('response',r=>{if(r.status()>=400)bad.push({url:r.url(),status:r.status()});});
  page.on('request',r=>{if(/^https?:/.test(r.url()))network.push(r.url());});
- await page.goto(target,{timeout:120000});await page.waitForFunction(()=>window.Talos?.version==='6.1.0');
+ await page.goto(target,{timeout:120000});await page.waitForFunction(()=>window.Talos?.version==='6.2.0');
  for(let chapter=0;chapter<3;chapter++)for(let turn=0;turn<12;turn++){
   const ev=EVENTS[chapter][turn],state=G.createGame({chapter,simple:true});state.turn=turn;state.settings.prologueSeen=true;state.settings.reducedMotion=true;G.prepare(state);
   await page.locator('#import-file').setInputFiles({name:'collection-check.json',mimeType:'application/json',buffer:Buffer.from(G.saveGame(state))});
