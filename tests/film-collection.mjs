@@ -5,7 +5,8 @@ import * as G from '../src/engine.js';
 import {EVENTS} from '../src/data.js';
 const url=process.env.TALOS_URL||'http://127.0.0.1:4186/';
 const offline=process.env.TALOS_OFFLINE==='1';
-const target=offline?new URL('../dist/PLAY.html',import.meta.url).href:url;
+const portable=process.env.TALOS_PORTABLE==='1';
+const target=portable?new URL('../delivery/portable/PLAY.html',import.meta.url).href:offline?new URL('../dist/PLAY.html',import.meta.url).href:url;
 const checks=[],errors=[],bad=[],network=[],seekSamples=[];
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
 const check=(name,pass)=>{assert.ok(pass,name);checks.push(name);};
@@ -38,8 +39,8 @@ try{
  }
  check('All films load without failed responses',bad.length===0);
  check('All films run without JavaScript errors',errors.length===0);
- if(offline)check('Offline films make no network requests',network.length===0);
+ if(offline||portable)check('Offline films make no network requests',network.length===0);
  const report={url:target,date:new Date().toISOString(),checks,errors,bad,networkRequests:network.length,seekSamples};
- await fs.writeFile('qa/film-collection'+(offline?'-offline':'')+'-report.json',JSON.stringify(report,null,2));
+ await fs.writeFile('qa/film-collection'+(portable?'-portable':offline?'-offline':'')+'-report.json',JSON.stringify(report,null,2));
  console.log(JSON.stringify({checks:checks.length,errors,bad,networkRequests:network.length}));
 }finally{await browser.close();}

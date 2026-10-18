@@ -5,13 +5,17 @@ https://miguelguerrero.eu
 PLAY ONLINE: https://miguelguerrero.eu/talos-game/
 
 PLAY OFFLINE:
-1. Extract the play ZIP.
-2. Open PLAY.html in a modern browser and let the large file load.
+1. From Drive, download both Republic_of_Talos_Play.zip and Republic_of_Talos_Decision_Films.zip. Extract both into the same folder: assets should sit beside PLAY.html.
+2. Open PLAY.html in a modern browser. Keep the assets folder beside it.
 3. Enter the republic and read the three-part prologue.
 4. Read one incident, prepare if useful, and make one decision.
 
 Three possible futures. 36 decisions. About two hours at your pace.
 This is a design estimate; watching all optional explainers adds 25 minutes.
+
+For a single-file offline download, use https://miguelguerrero.eu/talos-game/PLAY.html instead. That larger file embeds every film and does not need an assets folder.
+
+Editing the source: extract the film ZIP inside the source archive's civic-mandate folder before running the build. The film library serves both the play and source packages.
 
 Each decision has a different 42-second film explaining the human stakes and response paths. Use the film button before deciding or after seeing the result. Films are optional and never advance the game. A transcript is always available.
 

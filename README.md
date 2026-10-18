@@ -10,6 +10,8 @@ Talos is a fictional, prosperous European middle power. Its universities, export
 
 Progress saves in this browser. Menu > Export save and Import save move a mandate between the website, offline file and other browsers.
 
+The private Drive backup uses two ZIPs to stay within the connection's upload limit: Republic_of_Talos_Play.zip and Republic_of_Talos_Decision_Films.zip. Extract both into the same folder, leaving the assets folder beside PLAY.html. This edition also works offline. The website's PLAY.html download remains fully self-contained. When using the Drive source archive, extract the film ZIP inside civic-mandate before building.
+
 ## One incident, one decision
 
 1. Read an incident. Open its case finding, ask an adviser or watch its optional 42-second explainer.

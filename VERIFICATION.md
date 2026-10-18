@@ -15,4 +15,6 @@
 - 38 public research/legal references have explicit findings, limits and design uses. Selected PLP weekly reading lists and introductory teaching materials informed the structure; not every private lecture or supporting link was reviewed. No private course material or participant details are published.
 - Save schema 1, game balance, numerical effects and the original Blender world remain unchanged.
 
+The Drive backup separates the optional decision-film library from a 28.5 MB portable HTML file to respect the connection's 100 MiB upload limit. Extract the Play ZIP and Decision Films ZIP into the same folder. This arrangement passed 81 additional browser checks, including all 36 films and zero network requests. The source ZIP uses the same film library. The website still provides the complete 157.1 MB single-file offline download.
+
 About two hours remains a design estimate. Watching every optional explainer adds approximately 25 minutes. No timed human playtest or independent validation of the policy model has been completed. Research does not validate the fictional numerical effects.
