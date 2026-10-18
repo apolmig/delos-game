@@ -19,3 +19,5 @@ The game contains no official Civilization assets, branding, code or affiliation
 
 - English narration: synthetic voice generated with ElevenLabs, George, Eleven v4. Scene-aligned narration is mixed over a quietly carved original score.
 - Social card: original AI-generated cinematic artwork for this game.
+
+- Front-page trailer: the final 30-second HyperFrames composition combines actual edition 6 gameplay, existing AI-generated fictional footage and synthetic English narration. Music: [The Fury by Scott Buckley](https://www.scottbuckley.com.au/library/the-fury/), released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), www.scottbuckley.com.au. Edited and mixed beneath the narration. Asset hashes and provenance are in assets/trailer/manifest.json.

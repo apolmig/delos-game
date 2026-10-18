@@ -1,0 +1,84 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import * as G from '../src/engine.js';
+
+const url=process.env.TALOS_URL||'http://127.0.0.1:4190/';
+const label=process.env.TALOS_QA_LABEL||'local';
+const checks=[],errors=[],requests=[];
+const check=(name,value)=>{assert.ok(value,name);checks.push(name);};
+const version=JSON.parse(await fs.readFile(new URL('../package.json',import.meta.url),'utf8')).version;
+const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+try{
+ const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});
+ const page=await context.newPage();
+ page.on('pageerror',e=>errors.push(e.message));
+ page.on('request',r=>{if(r.url().includes('/trailer/'))requests.push(r.url());});
+ page.setDefaultTimeout(45000);
+ await page.goto(url,{timeout:120000});
+ await page.waitForFunction(v=>window.Talos?.version===v,version);
+ await page.waitForFunction(()=>window.Talos.getWorldStats()?.ready);
+ check('The front page does not request any trailer assets',requests.length===0);
+ const open=()=>page.locator('#watch-trailer').click();
+ const close=()=>page.locator('.trailer-modal [data-action="close"]').click();
+ check('Trailer is visible beside the main play button',await page.locator('#watch-trailer').isVisible()&&await page.locator('#start-game').isVisible());
+ await page.screenshot({path:`qa/trailer-${label}-landing.png`});
+ await page.locator('#mode').selectOption('2');
+ await page.locator('#start-sound').uncheck();
+ await open();
+ const video=page.locator('[data-trailer]');
+ check('Trailer opens in an accessible dialog',await page.getByRole('dialog',{name:'Republic of Talos'}).count()===1);
+ check('Playback is explicit, with native controls and inline mobile playback',await video.evaluate(v=>v.paused&&!v.autoplay&&v.controls&&v.playsInline&&v.preload==='none'));
+ check('Video download waits for playback',!requests.some(u=>u.endsWith('.mp4')));
+ check('The trailer remains on the game page',context.pages().length===1);
+ await video.focus();await video.press('Space');
+ await page.waitForFunction(()=>document.querySelector('[data-trailer]')?.currentTime>.5);
+ check('The delivered 30-second film plays with its narration mix',await video.evaluate(v=>Math.abs(v.duration-30)<.05&&!v.muted&&v.volume===1&&v.videoWidth===1920));
+ await page.waitForFunction(()=>document.querySelector('[data-trailer]')?.textTracks[0]?.cues?.length===6);
+ check('English captions are available and enabled',await video.evaluate(v=>v.textTracks[0].language==='en'&&v.textTracks[0].mode==='showing'));
+ check('The game soundtrack stays silent under the trailer',!(await page.evaluate(()=>window.Talos.getMusicState())).playing);
+ await video.evaluate(v=>{v.pause();v.currentTime=12;});
+ await page.waitForFunction(()=>!document.querySelector('[data-trailer]').seeking);
+ await page.screenshot({path:`qa/trailer-${label}-player.png`});
+ await page.evaluate(()=>window.previousTrailer=document.querySelector('[data-trailer]'));
+ await page.keyboard.press('Escape');
+ check('Escape stops playback and releases the media',await page.evaluate(()=>window.previousTrailer.paused&&!window.previousTrailer.getAttribute('src')&&!document.querySelector('[data-trailer]')));
+ check('Focus returns to Watch trailer',await page.locator('#watch-trailer').evaluate(b=>b===document.activeElement));
+ check('Campaign and sound preferences survive closing',await page.locator('#mode').inputValue()==='2'&&!await page.locator('#start-sound').isChecked());
+ await open();
+ check('Reopening starts at the beginning and waits for play',await video.evaluate(v=>v.currentTime===0&&v.paused));
+ await page.locator('.trailer-modal [data-action="new"]').click();
+ await page.waitForFunction(()=>window.Talos.getState()?.chapter===2);
+ check('The play button enters the selected future through the prologue',await page.locator('section.prologue-modal').isVisible()&&(await page.evaluate(()=>window.Talos.getState())).mode==='scenario');
+ check('Starting the game removes the trailer',await video.count()===0);
+ check('Starting respects the selected sound preference',!(await page.evaluate(()=>window.Talos.getState())).settings.sound);
+
+ // Returning players can watch without replacing their existing mandate.
+ const saved=G.createGame({mode:'scenario',chapter:1,simple:true,seed:123});
+ saved.settings.prologueSeen=true;G.prepare(saved);
+ const savedText=G.saveGame(saved);
+ await page.addInitScript(text=>localStorage.setItem('talos-civic-mandate-v1',text),savedText);
+ await page.reload({timeout:120000});await page.waitForFunction(()=>window.Talos?.getWorldStats()?.ready);
+ await open();await close();
+ check('Watching leaves an existing save unchanged',await page.evaluate(()=>localStorage.getItem('talos-civic-mandate-v1'))===savedText);
+ await open();
+ check('Returning players can resume directly from the trailer',await page.locator('section.trailer-modal [data-action="resume"]').isVisible());
+ await page.locator('section.trailer-modal [data-action="resume"]').click();
+ check('Resume opens the saved decision and releases the trailer',(await page.evaluate(()=>window.Talos.getState())).chapter===1&&await page.locator('.incident-panel').isVisible()&&await video.count()===0);
+
+ await page.reload({timeout:120000});await page.waitForFunction(()=>window.Talos?.getWorldStats()?.ready);
+ await page.setViewportSize({width:390,height:844});
+ await page.screenshot({path:`qa/trailer-${label}-mobile-landing.png`,fullPage:true});
+ await open();
+ check('The phone player stays within the viewport',await video.evaluate(v=>{const b=v.getBoundingClientRect();return b.left>=0&&b.right<=innerWidth;}));
+ check('Phone layout has no horizontal overflow',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.screenshot({path:`qa/trailer-${label}-mobile-player.png`,fullPage:true});
+ await close();
+ check('The phone close button returns to the front page',await page.locator('#watch-trailer').isVisible()&&await page.locator('[data-trailer]').count()===0);
+ check('No JavaScript errors',errors.length===0);
+ console.log(JSON.stringify({url,version,checks:checks.length,errors}));
+}finally{
+ await fs.mkdir('qa',{recursive:true});
+ await fs.writeFile(`qa/trailer-${label}-report.json`,JSON.stringify({url,version,checks,errors},null,2));
+ await browser.close();
+}

@@ -2,13 +2,15 @@
 
 **A frontier AI governance game by Miguel Guerrero.**
 
-A strategy game by [Miguel Guerrero](https://miguelguerrero.eu). Edition 5.
+A strategy game by [Miguel Guerrero](https://miguelguerrero.eu). Edition 6.1.
 
 Talos is a fictional, prosperous European middle power. Its universities, exports and public institutions are strong, but its advanced chips, cloud infrastructure and frontier AI depend on larger powers. Energy, security and trade constrain its choices.
 
 ## Play
 
 [Play Republic of Talos](https://miguelguerrero.eu/talos-game/) in a modern browser. No account or installation is needed. For offline play, download [PLAY.html](https://miguelguerrero.eu/talos-game/PLAY.html) and open it locally. All images, films, music and code are inside that large file; allow it to finish loading.
+
+**Watch trailer** on the front page opens the 30-second film in the game, with English captions and native playback controls. It waits for you to press play, and closes without changing your campaign selection or save. The film is included in the self-contained offline download too.
 
 Progress saves in this browser. Menu > Export save and Import save move a mandate between the website, offline file and other browsers.
 

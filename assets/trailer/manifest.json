@@ -1,0 +1,32 @@
+{
+  "title": "Republic of Talos: a frontier AI governance game",
+  "durationSeconds": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "source": "Republic_of_Talos_Frontier_AI_Governance_Trailer_30s.mp4",
+  "production": "HyperFrames; actual edition 6 gameplay and AI-generated fictional scenes; synthetic English narration",
+  "music": {
+    "title": "The Fury",
+    "artist": "Scott Buckley",
+    "url": "https://www.scottbuckley.com.au/library/the-fury/",
+    "licence": "CC BY 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Edited and mixed beneath narration"
+  },
+  "files": {
+    "captions-en.vtt": {
+      "bytes": 508,
+      "sha256": "31087c9bbfa86d49b879c12c7ac4bcf66b0a1bca6466af08d51fbcd04a1328cf"
+    },
+    "poster.jpg": {
+      "bytes": 112273,
+      "sha256": "55be7eb580dd8b65900932d6feed635e799b6aaf6c36100190dc50dbaa303601"
+    },
+    "republic-of-talos-30s.mp4": {
+      "bytes": 31413117,
+      "sha256": "22031622a3fc1a40c35b404505b1febcaf3b71f6231557e3974d236183af35c2"
+    }
+  }
+}

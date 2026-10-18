@@ -98,3 +98,9 @@ body.reduced .story-aftermath{animation:none}
 .narration-controls{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin:22px 0 12px}.narration-controls span{font-size:12px;color:var(--muted)}.narration-transcript{font-size:13px;margin-bottom:22px}.narration-transcript summary{cursor:pointer;color:var(--gold)}.narration-transcript p{line-height:1.65}
 
 .landing-copy>.eyebrow{font-size:14px;letter-spacing:.12em;color:var(--gold)}@media(max-width:500px){.landing-copy>.eyebrow{font-size:12px;line-height:1.5}}
+
+/* Optional front-page trailer; no media is requested until the panel opens. */
+.start-buttons{flex-wrap:wrap}.start-buttons .trailer-button{padding:12px 13px;gap:7px;min-height:44px}.trailer-button small{font-size:10px;color:var(--muted)}
+.trailer-modal.modal{width:min(1050px,100%);padding:28px}.trailer-modal h1{margin:10px 35px 20px 0;font-size:32px}.trailer-modal>.eyebrow{font-size:10px;padding-right:25px;display:block;line-height:1.5}
+.trailer-modal video{display:block;width:100%;aspect-ratio:16/9;background:#06181d;border-radius:4px}.trailer-footer{display:flex;gap:20px;align-items:center;justify-content:space-between;margin-top:16px}.trailer-footer p{margin:0}.trailer-footer .primary{flex-shrink:0}.trailer-footer a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:650px){.trailer-modal.modal{padding:22px 16px}.trailer-modal h1{font-size:28px}.trailer-footer{align-items:stretch;flex-direction:column;gap:15px}.trailer-footer .primary{justify-content:center}}
