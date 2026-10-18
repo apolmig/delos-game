@@ -55,4 +55,4 @@
 @media(max-width:500px){.scene-figure{aspect-ratio:1.85}.scene-figure figcaption{font-size:10px;padding:23px 9px 8px}.scene-figure figcaption small{font-size:8px}.scene-beat{font-size:17px!important}.scene-figure.wide{aspect-ratio:2}.story-person p,.story-aftermath p,.story-bridge{font-size:18px}}
 @media(prefers-reduced-motion:no-preference){.story-aftermath{animation:story-reveal .35s ease-out both}@keyframes story-reveal{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}}
 body.reduced .story-aftermath{animation:none}
-.incident-panel .scene-figure{max-height:205px}
+.incident-panel .scene-figure{width:100%;max-height:205px}

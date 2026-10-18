@@ -11,7 +11,7 @@ c01:S('Mila’s kitchen / 06:40','A rent notice lies beside a cold cup of tea. T
 'Nora can point Mila to a human appeal route. Keeping it open will cost staff time, but a missed option no longer has to become a closed case.',
 'The automated desk goes quiet. Mila still needs an answer, and the human queue is growing. A pause needs a service behind it.',
 'The provider promises a cleaner answer. Mila’s deadline has not moved. Someone must still check whether a correction reaches the people already affected.']),
-c02:S('Public services office / 09:15','A finance officer places two documents on your desk: a referral agreement and the bill for keeping the service open.','g1_c03',[
+c02:S('Evening tram / 19:15','Mila reads the recommended service on her way home. At the treasury, the commission behind that recommendation is keeping the public desk affordable.','g1_c03',[
 'The commission no longer decides which public options appear. The treasury must now pay openly for advice that used to arrive with a hidden commercial bargain.',
 'The referral carries a notice. Residents can see a relationship that was concealed, although the incentive behind the recommendation remains.',
 'The subsidy stays. The desk can afford more conversations, while the preferred referral keeps paying for the advice that recommends it.']),

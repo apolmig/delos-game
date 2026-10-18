@@ -15,6 +15,7 @@ export class AudioDirector {
    if(!this.music){this.music=new Audio(SCORE);this.music.loop=true;this.music.preload='auto';this.music.addEventListener('error',()=>{this.on=false;this.notify();});}
    const AC=window.AudioContext||window.webkitAudioContext;if(!this.context&&AC)this.context=new AC();
    if(this.context?.state==='suspended')await this.context.resume();
+   if(!this.on||document.hidden){this.notify();return;}
    this.applyVolume();await this.music.play();this.ready=true;
   }catch{this.on=false;window.dispatchEvent(new CustomEvent('talos-audio-error'));}
   this.notify();
