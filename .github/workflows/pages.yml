@@ -1,4 +1,4 @@
-name: Test and publish Republic of Talos
+name: Test and publish Republic of Delos
 on:
   push:
     branches: [main]
