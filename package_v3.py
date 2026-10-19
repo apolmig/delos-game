@@ -9,11 +9,11 @@ def archive(name,items):
   assert z.testzip() is None
   count=len(z.namelist())
  return {'name':name,'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'entries':count,'crc':'passed'}
-play=[(root/'dist/PLAY.html','PLAY.html')]+[(root/n,n) for n in ['START_GAME.cmd','START_HERE.txt','README.md','RESEARCH.md','CREDITS.md','VERIFICATION.md']]+[(root/'assets'/n,'licenses/'+n) for n in ['FONT-LICENSE.txt','THREE-LICENSE.txt']]+[(out/'Republic_of_Talos_Cover.png','Republic_of_Talos_Cover.png')]
+play=[(root/'dist/PLAY.html','PLAY.html')]+[(root/n,n) for n in ['START_GAME.cmd','START_HERE.txt','README.md','RESEARCH.md','CREDITS.md','VERIFICATION.md']]+[(root/'assets'/n,'licenses/'+n) for n in ['FONT-LICENSE.txt','THREE-LICENSE.txt']]+[(out/'Republic_of_Delos_Cover.png','Republic_of_Delos_Cover.png')]
 files=subprocess.check_output(['git','ls-files','-z'],cwd=root).decode().split('\0');files=[f for f in files if f]
-source=[(root/f,'republic-of-talos/'+f) for f in files]
+source=[(root/f,'republic-of-delos/'+f) for f in files]
 for n in ['revision-browser-report.json','web-release-report.json','release-v3.json','web-decision.png','web-aftermath.png','web-audio.png','web-mobile.png']:
- source.append((root/'qa'/n,'republic-of-talos/qa/'+n))
-source.append((out/'Game_Data.json','republic-of-talos/Game_Data.json'))
-reports=[archive('Republic_of_Talos_Play.zip',play),archive('Republic_of_Talos_Blender_and_Source.zip',source)]
+ source.append((root/'qa'/n,'republic-of-delos/qa/'+n))
+source.append((out/'Game_Data.json','republic-of-delos/Game_Data.json'))
+reports=[archive('Republic_of_Delos_Play.zip',play),archive('Republic_of_Delos_Blender_and_Source.zip',source)]
 (out/'PACKAGE_VERIFICATION_V3.json').write_text(json.dumps(reports,indent=2),encoding='utf8');print(json.dumps(reports))

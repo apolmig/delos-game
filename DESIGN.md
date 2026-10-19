@@ -1,4 +1,4 @@
-# Republic of Talos / edition 4
+# Republic of Delos / edition 4
 
 Author: Miguel Guerrero, https://miguelguerrero.eu
 

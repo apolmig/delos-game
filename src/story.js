@@ -182,8 +182,8 @@ export const SCENES={
     "image": "g2_c03",
     "after": [
       "The technology and energy authorities assess their commitments separately. The proposal takes longer to approve, but one committee cannot quietly commit another authority's resources.",
-      "Talos secures the discounted capacity and electricity together. A future council will have to deal with both commitments if it wants to change the service.",
-      "Talos pays more for a shorter rental. The next council can review its needs earlier without reopening a long-term package."
+      "Delos secures the discounted capacity and electricity together. A future council will have to deal with both commitments if it wants to change the service.",
+      "Delos pays more for a shorter rental. The next council can review its needs earlier without reopening a long-term package."
     ]
   },
   "m05": {
@@ -233,7 +233,7 @@ export const SCENES={
     "after": [
       "Governments share costs while retaining separate approval and withdrawal rights. Each must maintain the staff and records needed to exercise those rights in practice.",
       "One operator manages continuity for the partners. Expansion is simpler, but all governments become more dependent on the same operator's decisions.",
-      "Expansion is delayed while Talos addresses its existing service. This avoids extending unresolved risks, but postpones the savings that partners hoped to gain."
+      "Expansion is delayed while Delos addresses its existing service. This avoids extending unresolved risks, but postpones the savings that partners hoped to gain."
     ]
   },
   "m10": {

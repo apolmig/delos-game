@@ -1,4 +1,4 @@
-# Republic of Talos: research and evidence limits
+# Republic of Delos: research and evidence limits
 
 Reviewed 18 October 2026. These sources inform the questions in this frontier AI governance game. The incidents, future actors and numerical effects are fictional.
 
@@ -118,7 +118,7 @@ Government research discussion, 2025. [Original source](https://www.aisi.gov.uk/
 
 Downloadable models can widen access and allow modification. The same ability to copy and change them creates distinct challenges for managing risks.
 
-**Limits:** Open models and foreign suppliers are not inherently manipulative. The sponsor operation in Talos is fictional.
+**Limits:** Open models and foreign suppliers are not inherently manipulative. The sponsor operation in Delos is fictional.
 
 **Use in the game:** Assess the model separately from its sources, support, updates and service contracts.
 
@@ -318,7 +318,7 @@ LawAI working paper, 2026. [Original source](https://law-ai.org/mapping-ai-polic
 
 The framework connects the harm a policy addresses with how it intervenes and which part of the AI system or surrounding institutions it changes.
 
-**Limits:** This is a way to design policy, not a legal ruling or a proven intervention for Talos.
+**Limits:** This is a way to design policy, not a legal ruling or a proven intervention for Delos.
 
 **Use in the game:** Target the part causing the problem: the model, application, contract or public decision process.
 
@@ -560,7 +560,7 @@ Limited temporary access may clear the backlog more slowly. It also avoids resto
 
 Sources: [Google DeepMind: Evaluating language models for harmful manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/); [Anthropic: Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/); [Weidinger et al. / Google DeepMind: Evaluating social and ethical risks](https://deepmind.google/blog/evaluating-social-and-ethical-risks-from-generative-ai/); [Bernardi et al.: Societal Adaptation to Advanced AI](https://arxiv.org/abs/2405.10295); [Curl & Rozenshtein: Mapping AI Policy](https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/).
 
-### M11: Can Talos stop the service without stopping essential work?
+### M11: Can Delos stop the service without stopping essential work?
 
 Can staff stop the whole service and keep essential work running?
 

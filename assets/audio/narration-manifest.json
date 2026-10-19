@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "edition": "6.2.0",
+  "edition": "6.3.0",
   "language": "en-GB",
   "synthetic": true,
   "provider": "ElevenLabs",
@@ -9,10 +9,10 @@
   "prologue": [
     {
       "file": "assets/audio/prologue-1.mp3",
-      "duration": 49.002667,
-      "bytes": 588903,
-      "sha256": "7038b1bf95bb64cac84d1a707a429e569a738dd40efe6bc0840008ec441136ce",
-      "transcript": "Welcome to the Republic of Talos, a frontier AI governance game. Talos is a prosperous European democracy with skilled workers, strong universities and public services people rely on. It is a middle power: it can negotiate and build partnerships, but depends on larger countries for advanced chips, cloud computing and the most powerful AI models. Energy imports and security agreements also limit its choices. It is mid-2027, and you lead the government's council on AI and public services. Your decisions will affect residents, staff and future governments. The task is to keep useful services available while protecting people's rights and Talos's ability to change or replace the technology it uses."
+      "duration": 48.72,
+      "bytes": 585261,
+      "sha256": "ccd7517dd78571d9fa76b68c585ff6f473167a609dce90a3f1083ff1d387798a",
+      "transcript": "Welcome to the Republic of Delos, a frontier AI governance game. Delos is a prosperous European democracy with skilled workers, strong universities and public services people rely on. It is a middle power: it can negotiate and build partnerships, but depends on larger countries for advanced chips, cloud computing and the most powerful AI models. Energy imports and security agreements also limit its choices. It is mid-2027, and you lead the government's council on AI and public services. Your decisions will affect residents, staff and future governments. The task is to keep useful services available while protecting people's rights and Delos's ability to change or replace the technology it uses."
     },
     {
       "file": "assets/audio/prologue-2.mp3",

@@ -36,7 +36,7 @@ export const METRICS={
     "short": "Independence",
     "icon": "⬡",
     "color": "#b4abd1",
-    "tip": "Whether Talos can inspect its services, change suppliers and withdraw access when needed."
+    "tip": "Whether Delos can inspect its services, change suppliers and withdraw access when needed."
   },
   "support": {
     "name": "Council support",
@@ -88,7 +88,7 @@ export const CHARACTERS=[
     "id": "elsa",
     "name": "Elsa Novak",
     "role": "Treasury commissioner",
-    "mandate": "Pay for services Talos can afford and control",
+    "mandate": "Pay for services Delos can afford and control",
     "voice": "The discount looks good. What will it cost us to change supplier later?",
     "bio": "Elsa oversees public spending and contracts. She asks who controls the records, what ending a contract would cost and whether independent staff and alternatives have a real budget.",
     "metric": "budget"
@@ -596,7 +596,7 @@ export const CHAPTERS=[
       "Oriel Civic 28"
     ],
     "actor": "A fictional autocratic government funding the support programme",
-    "brief": "Oriel gives towns affordable AI they can run locally. Its discounted package also supplies documents, instructions, training and updates. In this scenario, an autocratic sponsor uses those dependencies to influence how public institutions explain rules and rights. Talos needs an affordable service it can oversee and change.",
+    "brief": "Oriel gives towns affordable AI they can run locally. Its discounted package also supplies documents, instructions, training and updates. In this scenario, an autocratic sponsor uses those dependencies to influence how public institutions explain rules and rights. Delos needs an affordable service it can oversee and change.",
     "question": "Can towns afford useful AI without losing control of their advice?",
     "threat": "Dependence on a subsidised service package",
     "stakes": [
@@ -751,7 +751,7 @@ export const EVENTS=[
       "speaker": "ines",
       "body": "Three residents agree to have their cases reviewed. One missed the deadline to challenge a rent-support decision. Another paid for help they could have received free. A third was shown the alternatives and found the paid help useful. The council can address the documented problems now, even though it does not yet know how widespread they are.",
       "citizen": "I can show you what happened. Please don't make me start the whole application again.",
-      "signal": "These three cases show different experiences. They are too few to estimate how many residents were harmed across Talos.",
+      "signal": "These three cases show different experiences. They are too few to estimate how many residents were harmed across Delos.",
       "finding": "The records confirm that one resident missed an appeal opportunity after receiving incomplete advice. An independent reviewer can arrange a new deadline for that case.",
       "options": [
         {
@@ -841,10 +841,10 @@ export const EVENTS=[
       "title": "A misleading claim goes viral",
       "district": "press",
       "speaker": "tomas",
-      "body": "A widely shared post claims that almost everyone in Talos has been manipulated by Aster. Its evidence is a laboratory study of AI persuasion, not a study of residents using this service. The problems already found in Talos are real, but this national estimate is unsupported. Journalists need a council response by noon.",
+      "body": "A widely shared post claims that almost everyone in Delos has been manipulated by Aster. Its evidence is a laboratory study of AI persuasion, not a study of residents using this service. The problems already found in Delos are real, but this national estimate is unsupported. Journalists need a council response by noon.",
       "citizen": "My father read that post and stopped asking the service for help. What can I tell him?",
       "signal": "The post confuses an AI's performance in an experiment with the number of people harmed by a particular public service.",
-      "finding": "Reviewers check the original study. It did not measure harm in Talos. Local records identify some affected users, but do not establish the total number.",
+      "finding": "Reviewers check the original study. It did not measure harm in Delos. Local records identify some affected users, but do not establish the total number.",
       "options": [
         {
           "title": "Wait before making a statement",
@@ -1585,7 +1585,7 @@ export const EVENTS=[
       "options": [
         {
           "title": "Postpone international expansion",
-          "desc": "Keep the current service within Talos until its permissions and oversight are under control.",
+          "desc": "Keep the current service within Delos until its permissions and oversight are under control.",
           "effects": {
             "services": -2,
             "autonomy": 3,
@@ -1667,7 +1667,7 @@ export const EVENTS=[
     },
     {
       "id": "m11",
-      "title": "Can Talos stop the service without stopping essential work?",
+      "title": "Can Delos stop the service without stopping essential work?",
       "district": "energy",
       "speaker": "ivo",
       "body": "The council plans a rehearsal of leaving Cairn's service. Engineers will check the model connection, background programs, accounts, authorised copies and pending requests. Each has a named owner. Staff must also demonstrate how essential work continues after access is withdrawn. The aim is to find gaps before a real emergency.",

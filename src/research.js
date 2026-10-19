@@ -118,7 +118,7 @@ export const SOURCES=[...[
     "year": "2025",
     "url": "https://www.aisi.gov.uk/blog/managing-risks-from-increasingly-capable-open-weight-ai-systems",
     "finding": "Downloadable models can widen access and allow modification. The same ability to copy and change them creates distinct challenges for managing risks.",
-    "limit": "Open models and foreign suppliers are not inherently manipulative. The sponsor operation in Talos is fictional.",
+    "limit": "Open models and foreign suppliers are not inherently manipulative. The sponsor operation in Delos is fictional.",
     "use": "Assess the model separately from its sources, support, updates and service contracts."
   },
   {

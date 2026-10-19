@@ -37,7 +37,7 @@ for bar in range(48):
 dry=mix.copy()
 for delay,gain in [(0.113,.08),(.229,.065),(.417,.10),(.834,.045)]:mix+=np.roll(dry,int(delay*SR),axis=0)*gain
 mix=np.tanh(mix*1.1);mix*=.76/max(abs(mix).max(),.01)
-out=Path('assets/audio');out.mkdir(parents=True,exist_ok=True);wav=Path('qa/talos-night-session.wav');wav.parent.mkdir(exist_ok=True)
+out=Path('assets/audio');out.mkdir(parents=True,exist_ok=True);wav=Path('qa/delos-night-session.wav');wav.parent.mkdir(exist_ok=True)
 with wave.open(str(wav),'wb') as f:f.setnchannels(2);f.setsampwidth(2);f.setframerate(SR);f.writeframes((mix*32767).astype('<i2').tobytes())
-subprocess.run([args.ffmpeg,'-y','-v','error','-i',str(wav),'-c:a','libmp3lame','-b:a','112k','-metadata','title=Talos - Night Session',str(out/'night-session.mp3')],check=True)
+subprocess.run([args.ffmpeg,'-y','-v','error','-i',str(wav),'-c:a','libmp3lame','-b:a','112k','-metadata','title=Delos - Night Session',str(out/'night-session.mp3')],check=True)
 print(f'Original {length:.0f}s score written. Peak {abs(mix).max():.3f}; RMS {np.sqrt(np.mean(mix**2)):.3f}.')

@@ -36,7 +36,7 @@ export const IMAGE_ALTS={
  deadline:'A resident holds a paper and phone on a tram at dusk.',
  records:'A journalist and an official compare documentary sources.'
 };
-export function imageAlt(key){return IMAGE_ALTS[key.replace('outcome-','')]||Object.values(SCENES).find(s=>s.image===key)?.place||'Public life in the fictional Republic of Talos';}
+export function imageAlt(key){return IMAGE_ALTS[key.replace('outcome-','')]||Object.values(SCENES).find(s=>s.image===key)?.place||'Public life in the fictional Republic of Delos';}
 
 export function civicCondition(s){
  const weakest=['services','rights','autonomy'].reduce((a,b)=>s.stats[a]<=s.stats[b]?a:b);
@@ -44,7 +44,7 @@ export function civicCondition(s){
  const scenes={
  services:{image:low?O('backlog'):O('independent'),title:low?'Residents wait longer for help.':'Essential help is still available.',text:low?'Public services are struggling to keep up. Residents face delays while staff deal with the changes.':'Residents can still get essential help. Keeping services running will need staff and funding.'},
  rights:{image:low?O('deadline'):O('appeal'),title:low?'Residents struggle to challenge decisions.':'Residents can ask for a review.',text:low?'Residents may have a right to appeal on paper, but find it difficult to contact someone who can correct a mistake.':'Residents can ask for reasons and challenge a decision. Check that people know how to get this help.'},
- autonomy:{image:low?O('lockin'):O('rehearsal'),title:low?'Talos is struggling to change suppliers.':'Talos can still change its services.',text:low?'Public services are running, but officials struggle to change how they work or move to another supplier.':'Officials can inspect the services and change how they work. They need staff and funding to keep doing so.'}
+ autonomy:{image:low?O('lockin'):O('rehearsal'),title:low?'Delos is struggling to change suppliers.':'Delos can still change its services.',text:low?'Public services are running, but officials struggle to change how they work or move to another supplier.':'Officials can inspect the services and change how they work. They need staff and funding to keep doing so.'}
  };
  return {...scenes[weakest],metric:weakest,low,value:Math.round(s.stats[weakest])};
 }
@@ -77,11 +77,11 @@ export function inheritedChoices(s){
    ['m06','boundedMandate','The next council can withdraw permission','You set limits and an end date for the AI’s authority. Now check that officials can actually remove its access when needed.']
   ],
   [
-   ['o01','independentSources','Talos maintains its own information sources','Your trial used documents checked independently of the supplier. Talos now needs staff to keep that information current.'],
-   ['o02','sourceIsolation','Reviewers checked the documents behind the answers','You investigated the documents the assistant relied on. Running a model inside Talos does not guarantee that its information is independent.'],
+   ['o01','independentSources','Delos maintains its own information sources','Your trial used documents checked independently of the supplier. Delos now needs staff to keep that information current.'],
+   ['o02','sourceIsolation','Reviewers checked the documents behind the answers','You investigated the documents the assistant relied on. Running a model inside Delos does not guarantee that its information is independent.'],
    ['o03','pinnedUpdates','Software updates need approval','You required each software version to be checked before installation. This review must continue when staff change.'],
    ['o05','authenticatedSponsor','Documents established the sponsor’s involvement','You verified records linking the supplier to its sponsor. The finding rests on those records, not the supplier’s country of origin.'],
-   ['o06','supportCooperative','Shared staff support helps Talos stay independent','You shared the cost of independent technical support with partners. That support needs funding after the first grant runs out.']
+   ['o06','supportCooperative','Shared staff support helps Delos stay independent','You shared the cost of independent technical support with partners. That support needs funding after the first grant runs out.']
   ]
  ];
  const completed=s.history.filter(h=>h.type==='decision'&&h.chapter===s.chapter);
@@ -97,8 +97,8 @@ const shot=(video,image,kicker,title,text)=>({video,image,kicker,title,text});
 export function cinematicStory(s,kind){
  const ch=CHAPTERS[s.chapter],arc=ARCS[s.chapter],condition=civicCondition(s);
  const initial=[['home','g1_c01','Mila was not told about a free appeal.','Mila pays a private adviser because the public assistant leaves out the council’s free appeal process.'],['lab','g2_c01','The AI behaves differently outside the test.','Ada sees a different answer when the test label is removed. She needs to find out why before the service expands.'],['library','g3_c01','A cheap service comes with conditions.','Emil can finally offer help in several languages, but the cheap service depends on the supplier’s documents, updates and support.']][s.chapter];
- if(kind==='opening')return {kind,title:ch.title,shots:[shot('assembly','g2_c06','MID 2027 / REPUBLIC OF TALOS','A country worth protecting.','Talos is a prosperous democracy, but it depends on larger powers for the technology its public services use.'),shot(initial[0],initial[1],'FUTURE '+ch.n,initial[2],initial[3])],facts:[]};
- if(kind==='prologue')return {kind,title:'Republic of Talos',shots:[shot('assembly','g2_c06','MID 2027','You decide how public services use AI.','Your council makes the decisions. Residents live with the results when they ask for help, pay bills or challenge a refusal.'),shot('library','g3_c01','YOUR REPUBLIC','Keep services working and people in control.','People need reliable help, a way to challenge mistakes and a government that can change suppliers when necessary.')],facts:[]};
+ if(kind==='opening')return {kind,title:ch.title,shots:[shot('assembly','g2_c06','MID 2027 / REPUBLIC OF DELOS','A country worth protecting.','Delos is a prosperous democracy, but it depends on larger powers for the technology its public services use.'),shot(initial[0],initial[1],'FUTURE '+ch.n,initial[2],initial[3])],facts:[]};
+ if(kind==='prologue')return {kind,title:'Republic of Delos',shots:[shot('assembly','g2_c06','MID 2027','You decide how public services use AI.','Your council makes the decisions. Residents live with the results when they ask for help, pay bills or challenge a refusal.'),shot('library','g3_c01','YOUR REPUBLIC','Keep services working and people in control.','People need reliable help, a way to challenge mistakes and a government that can change suppliers when necessary.')],facts:[]};
  if(kind==='era'){
   const facts=inheritedChoices(s);
   const contextClip={services:condition.low?'queue':'library',rights:condition.low?'counter':'hearing',autonomy:condition.low?'racks':'hearing'}[condition.metric];

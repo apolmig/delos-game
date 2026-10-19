@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import * as G from '../src/engine.js';
 
-const url=process.env.TALOS_URL||'http://127.0.0.1:4190/';
-const label=process.env.TALOS_QA_LABEL||'local';
+const url=process.env.DELOS_URL||'http://127.0.0.1:4190/';
+const label=process.env.DELOS_QA_LABEL||'local';
 const checks=[],errors=[],requests=[];
 const check=(name,value)=>{assert.ok(value,name);checks.push(name);};
 const version=JSON.parse(await fs.readFile(new URL('../package.json',import.meta.url),'utf8')).version;
@@ -16,8 +16,8 @@ try{
  page.on('request',r=>{if(r.url().includes('/trailer/'))requests.push(r.url());});
  page.setDefaultTimeout(45000);
  await page.goto(url,{timeout:120000});
- await page.waitForFunction(v=>window.Talos?.version===v,version);
- await page.waitForFunction(()=>window.Talos.getWorldStats()?.ready);
+ await page.waitForFunction(v=>window.Delos?.version===v,version);
+ await page.waitForFunction(()=>window.Delos.getWorldStats()?.ready);
  check('The front page does not request any trailer assets',requests.length===0);
  const open=()=>page.locator('#watch-trailer').click();
  const close=()=>page.locator('.trailer-modal [data-action="close"]').click();
@@ -27,7 +27,7 @@ try{
  await page.locator('#start-sound').uncheck();
  await open();
  const video=page.locator('[data-trailer]');
- check('Trailer opens in an accessible dialog',await page.getByRole('dialog',{name:'Republic of Talos'}).count()===1);
+ check('Trailer opens in an accessible dialog',await page.getByRole('dialog',{name:'Republic of Delos'}).count()===1);
  check('Playback is explicit, with native controls and inline mobile playback',await video.evaluate(v=>v.paused&&!v.autoplay&&v.controls&&v.playsInline&&v.preload==='none'));
  check('Video download waits for playback',!requests.some(u=>u.endsWith('.mp4')));
  check('The trailer remains on the game page',context.pages().length===1);
@@ -36,7 +36,7 @@ try{
  check('The delivered 30-second film plays with its narration mix',await video.evaluate(v=>Math.abs(v.duration-30)<.05&&!v.muted&&v.volume===1&&v.videoWidth===1920));
  await page.waitForFunction(()=>document.querySelector('[data-trailer]')?.textTracks[0]?.cues?.length===6);
  check('English captions are available and enabled',await video.evaluate(v=>v.textTracks[0].language==='en'&&v.textTracks[0].mode==='showing'));
- check('The game soundtrack stays silent under the trailer',!(await page.evaluate(()=>window.Talos.getMusicState())).playing);
+ check('The game soundtrack stays silent under the trailer',!(await page.evaluate(()=>window.Delos.getMusicState())).playing);
  await video.evaluate(v=>{v.pause();v.currentTime=12;});
  await page.waitForFunction(()=>!document.querySelector('[data-trailer]').seeking);
  await page.screenshot({path:`qa/trailer-${label}-player.png`});
@@ -48,25 +48,25 @@ try{
  await open();
  check('Reopening starts at the beginning and waits for play',await video.evaluate(v=>v.currentTime===0&&v.paused));
  await page.locator('.trailer-modal [data-action="new"]').click();
- await page.waitForFunction(()=>window.Talos.getState()?.chapter===2);
- check('The play button enters the selected future through the prologue',await page.locator('section.prologue-modal').isVisible()&&(await page.evaluate(()=>window.Talos.getState())).mode==='scenario');
+ await page.waitForFunction(()=>window.Delos.getState()?.chapter===2);
+ check('The play button enters the selected future through the prologue',await page.locator('section.prologue-modal').isVisible()&&(await page.evaluate(()=>window.Delos.getState())).mode==='scenario');
  check('Starting the game removes the trailer',await video.count()===0);
- check('Starting respects the selected sound preference',!(await page.evaluate(()=>window.Talos.getState())).settings.sound);
+ check('Starting respects the selected sound preference',!(await page.evaluate(()=>window.Delos.getState())).settings.sound);
 
  // Returning players can watch without replacing their existing mandate.
  const saved=G.createGame({mode:'scenario',chapter:1,simple:true,seed:123});
  saved.settings.prologueSeen=true;G.prepare(saved);
  const savedText=G.saveGame(saved);
- await page.addInitScript(text=>localStorage.setItem('talos-civic-mandate-v1',text),savedText);
- await page.reload({timeout:120000});await page.waitForFunction(()=>window.Talos?.getWorldStats()?.ready);
+ await page.addInitScript(text=>localStorage.setItem('delos-civic-mandate-v1',text),savedText);
+ await page.reload({timeout:120000});await page.waitForFunction(()=>window.Delos?.getWorldStats()?.ready);
  await open();await close();
- check('Watching leaves an existing save unchanged',await page.evaluate(()=>localStorage.getItem('talos-civic-mandate-v1'))===savedText);
+ check('Watching leaves an existing save unchanged',await page.evaluate(()=>localStorage.getItem('delos-civic-mandate-v1'))===savedText);
  await open();
  check('Returning players can resume directly from the trailer',await page.locator('section.trailer-modal [data-action="resume"]').isVisible());
  await page.locator('section.trailer-modal [data-action="resume"]').click();
- check('Resume opens the saved decision and releases the trailer',(await page.evaluate(()=>window.Talos.getState())).chapter===1&&await page.locator('.incident-panel').isVisible()&&await video.count()===0);
+ check('Resume opens the saved decision and releases the trailer',(await page.evaluate(()=>window.Delos.getState())).chapter===1&&await page.locator('.incident-panel').isVisible()&&await video.count()===0);
 
- await page.reload({timeout:120000});await page.waitForFunction(()=>window.Talos?.getWorldStats()?.ready);
+ await page.reload({timeout:120000});await page.waitForFunction(()=>window.Delos?.getWorldStats()?.ready);
  await page.setViewportSize({width:390,height:844});
  await page.screenshot({path:`qa/trailer-${label}-mobile-landing.png`,fullPage:true});
  await open();

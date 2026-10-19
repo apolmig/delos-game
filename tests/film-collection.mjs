@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import * as G from '../src/engine.js';
 import {EVENTS} from '../src/data.js';
-const url=process.env.TALOS_URL||'http://127.0.0.1:4186/';
-const offline=process.env.TALOS_OFFLINE==='1';
-const portable=process.env.TALOS_PORTABLE==='1';
+const url=process.env.DELOS_URL||'http://127.0.0.1:4186/';
+const offline=process.env.DELOS_OFFLINE==='1';
+const portable=process.env.DELOS_PORTABLE==='1';
 const target=portable?new URL('../delivery/portable/PLAY.html',import.meta.url).href:offline?new URL('../dist/PLAY.html',import.meta.url).href:url;
 const checks=[],errors=[],bad=[],network=[],seekSamples=[];
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
@@ -15,11 +15,11 @@ try{
  page.setDefaultTimeout(60000);page.on('pageerror',e=>errors.push(e.message));
  page.on('response',r=>{if(r.status()>=400)bad.push({url:r.url(),status:r.status()});});
  page.on('request',r=>{if(/^https?:/.test(r.url()))network.push(r.url());});
- await page.goto(target,{timeout:120000});await page.waitForFunction(()=>window.Talos?.version==='6.2.0');
+ await page.goto(target,{timeout:120000});await page.waitForFunction(()=>window.Delos?.version==='6.3.0');
  for(let chapter=0;chapter<3;chapter++)for(let turn=0;turn<12;turn++){
   const ev=EVENTS[chapter][turn],state=G.createGame({chapter,simple:true});state.turn=turn;state.settings.prologueSeen=true;state.settings.reducedMotion=true;G.prepare(state);
   await page.locator('#import-file').setInputFiles({name:'collection-check.json',mimeType:'application/json',buffer:Buffer.from(G.saveGame(state))});
-  await page.waitForFunction(([c,t])=>{const s=window.Talos.getState();return s?.chapter===c&&s?.turn===t&&s.phase==='playing';},[chapter,turn]);
+  await page.waitForFunction(([c,t])=>{const s=window.Delos.getState();return s?.chapter===c&&s?.turn===t&&s.phase==='playing';},[chapter,turn]);
   await page.locator('[data-action="film"]').filter({visible:true}).first().click();
   const video=page.locator('[data-decision-film]');
   check(ev.id+' selects its own film',await video.getAttribute('data-decision-film')===ev.id);

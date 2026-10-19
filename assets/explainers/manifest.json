@@ -1,11 +1,11 @@
 {
   "version": 3,
-  "edition": "6.2.0",
+  "edition": "6.3.0",
   "narrated": true,
   "duration": 42,
   "status": "complete",
   "verifiedCount": 36,
-  "totalBytes": 92291235,
+  "totalBytes": 92275701,
   "format": {
     "width": 1280,
     "height": 720,
@@ -119,8 +119,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "c58f21d10cebfb8e37e8c14f5b712f42c83bfdb3012d99ced347d5d86cd89fdc",
-      "size": 2872267,
+      "sha256": "e29a694977f08a1c150f005e74a37bff785610e12bae1f1d87c32ecb4b5d4317",
+      "size": 2869398,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -238,8 +238,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "98107fd354843b9eeb885377c77db95dd549cea8119aea9bc5b5a313f53f8577",
-      "size": 2443922,
+      "sha256": "5fb5eba614c176cb71f8efcf7a7e6a166aef1784470fb7d65899a21462d64d92",
+      "size": 2442869,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -357,8 +357,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "d3787715854c49ed0de04fb8aa25c2eeef27cba419b7b7000e5d9ef016cefbfb",
-      "size": 2474100,
+      "sha256": "5bbed618bbe1048070d927cd274fcf08f5859171e416e97d9010ff82e1d312ed",
+      "size": 2468243,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -476,8 +476,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "4af6c00f3ef23ae3d87fd45bee141f33657eb9da6635a63ad1f737f0972969fb",
-      "size": 2687687,
+      "sha256": "b95653ed1a6f6f2f0fa44dd594b4bb053f2f7e02f92e69ad78e14529f4bf32a8",
+      "size": 2689767,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -501,13 +501,13 @@
       "duration": 42,
       "video": "c05.mp4",
       "poster": "c05.jpg",
-      "transcript": "A viral post turns a laboratory persuasion result into a claim that almost everyone in Talos was manipulated.\n\nThe local service has real problems, but this national estimate is unsupported. A study elsewhere cannot count local victims. Laboratory study → Unsupported estimate → Residents lose trust\n\nExplain what the evidence shows. Publishing confirmed cases and unknowns gives residents an account they can check.\n\nRepeat the alarming estimate. Repeating the alarming estimate builds urgency but risks the council's credibility.\n\nWait before making a statement. Waiting for certainty leaves residents without a clear explanation in the meantime.\n\nDoes the study actually measure harm in this population?",
+      "transcript": "A viral post turns a laboratory persuasion result into a claim that almost everyone in Delos was manipulated.\n\nThe local service has real problems, but this national estimate is unsupported. A study elsewhere cannot count local victims. Laboratory study → Unsupported estimate → Residents lose trust\n\nExplain what the evidence shows. Publishing confirmed cases and unknowns gives residents an account they can check.\n\nRepeat the alarming estimate. Repeating the alarming estimate builds urgency but risks the council's credibility.\n\nWait before making a statement. Waiting for certainty leaves residents without a clear explanation in the meantime.\n\nDoes the study actually measure harm in this population?",
       "segments": [
         {
           "start": 0,
           "end": 8,
           "type": "human",
-          "text": "A viral post turns a laboratory persuasion result into a claim that almost everyone in Talos was manipulated."
+          "text": "A viral post turns a laboratory persuasion result into a claim that almost everyone in Delos was manipulated."
         },
         {
           "start": 8,
@@ -566,7 +566,7 @@
         }
       ],
       "synthetic": true,
-      "scriptSha256": "55a116721cb0617762085e18cedb16b275c108658b05b5667f4b2e83d720c0b1",
+      "scriptSha256": "8fa4a0679af14bbd98c9109848ffdf8b51b0b86088d6e3187d0380d65b84cb69",
       "footageSequence": [
         "assembly",
         "home",
@@ -584,8 +584,8 @@
         "synthetic": true,
         "sceneAligned": true,
         "transcriptMatch": 1,
-        "maximumTimeAdjustment": 1.0082568807339445,
-        "sourceSha256": "6a2b45fe0c85f6e572f4dfa5d7445b79d303d657e6606aae29bb04c6ab87cb6a",
+        "maximumTimeAdjustment": 1.0302752293577986,
+        "sourceSha256": "57ed4522725c7ee5a7f47acbefd5c19669e9d8122057ca787fa36a1fbc3af7cc",
         "musicGain": 0.07
       },
       "voice": {
@@ -596,8 +596,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "2fc58061208b5826c81c350f2ebe3612511b7e61136b7c785082e01f68a113a7",
-      "size": 2524283,
+      "sha256": "e5327e41fcc9b12511cb3738f4149925c7005ee1d304a3cff0aa23e6e0d9a8c9",
+      "size": 2525403,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -611,7 +611,7 @@
         "lintErrors": 0,
         "lintWarnings": 0
       },
-      "narrationTranscript": "A viral post turns a laboratory persuasion result into a claim that almost everyone in Talos was manipulated.\n\nThe local service has real problems, but this national estimate is unsupported. A study elsewhere cannot count local victims.\n\nPublishing confirmed cases and unknowns gives residents an account they can check.\n\nRepeating the alarming estimate builds urgency but risks the council's credibility.\n\nWaiting for certainty leaves residents without a clear explanation in the meantime.\n\nDoes the study actually measure harm in this population?"
+      "narrationTranscript": "A viral post turns a laboratory persuasion result into a claim that almost everyone in Delos was manipulated.\n\nThe local service has real problems, but this national estimate is unsupported. A study elsewhere cannot count local victims.\n\nPublishing confirmed cases and unknowns gives residents an account they can check.\n\nRepeating the alarming estimate builds urgency but risks the council's credibility.\n\nWaiting for certainty leaves residents without a clear explanation in the meantime.\n\nDoes the study actually measure harm in this population?"
     },
     "c06": {
       "id": "c06",
@@ -715,8 +715,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "ff80f7fcda50a99c4a7fd93458f6b44a3fb01e8857b32c52180dfe78eaff9e3b",
-      "size": 2629962,
+      "sha256": "8387d19aed92e17ad9704631b10788d1bc142fd3cb17f11d0dab03ffebe6457f",
+      "size": 2627878,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -834,8 +834,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "a8ea8321d92e06dd3fd41989a07fa5e943030303c703df7c149b046c2f763d04",
-      "size": 2650726,
+      "sha256": "635be6cc3dc2a5487a28e735dad46b81615a25cacb8b383c666e0753f0e6297f",
+      "size": 2648532,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -953,8 +953,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "979c77bc2ffecce8d19831ff879b4077aee6fa7f372f3f3d59a8cc2a0492750f",
-      "size": 2342254,
+      "sha256": "6445e6749041c2a67824c63e55ce8fb538ca91c375575695ac36670017c658e4",
+      "size": 2345566,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -1072,8 +1072,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "8832618d35da7faf35a7937fbd9041d1045676cbd040689f12a1f86f1587fc39",
-      "size": 2366069,
+      "sha256": "53751436176c977a10f4eb8daef4f05e1ba37ae22e53d4bc7dc74ea267614465",
+      "size": 2366224,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -1191,8 +1191,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "240e1b2fb30c4802d2266f4e5df49ac4b814c7cd4117235840ca59a6b44fd9f2",
-      "size": 2756777,
+      "sha256": "3dc4408ded7c273e513b47dd472aa866c2f59e6f91fc04b8fdafb1f212c0ca29",
+      "size": 2759399,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -1216,13 +1216,13 @@
       "duration": 42,
       "video": "c11.mp4",
       "poster": "c11.jpg",
-      "transcript": "The supplier offers its discount only if Talos keeps paid referrals and shared history in one package.\n\nAn independent basic service costs more initially and lacks some features. The council must compare today's savings with future control. Discount conditions → Cost of switching → Future control\n\nMove essential services to a new supplier. A gradual transfer gives more independence but costs money and temporarily limits features.\n\nKeep the package for another discount. Another discount eases the budget while keeping the same conditions.\n\nBuy the components separately. Separate contracts give more flexibility but require staff to manage the different parts.\n\nWhich dependencies would remain after changing the contract?",
+      "transcript": "The supplier offers its discount only if Delos keeps paid referrals and shared history in one package.\n\nAn independent basic service costs more initially and lacks some features. The council must compare today's savings with future control. Discount conditions → Cost of switching → Future control\n\nMove essential services to a new supplier. A gradual transfer gives more independence but costs money and temporarily limits features.\n\nKeep the package for another discount. Another discount eases the budget while keeping the same conditions.\n\nBuy the components separately. Separate contracts give more flexibility but require staff to manage the different parts.\n\nWhich dependencies would remain after changing the contract?",
       "segments": [
         {
           "start": 0,
           "end": 8,
           "type": "human",
-          "text": "The supplier offers its discount only if Talos keeps paid referrals and shared history in one package."
+          "text": "The supplier offers its discount only if Delos keeps paid referrals and shared history in one package."
         },
         {
           "start": 8,
@@ -1279,7 +1279,7 @@
         }
       ],
       "synthetic": true,
-      "scriptSha256": "b60c713b4ec16d015afc9a1e35808410f2287cdc7b97185eefefd979a13c0d9d",
+      "scriptSha256": "56245b792d534702e99da6790ba53b510999fcc90e2717a3ce9218f9d803feda",
       "footageSequence": [
         "hearing",
         "racks",
@@ -1297,8 +1297,8 @@
         "synthetic": true,
         "sceneAligned": true,
         "transcriptMatch": 1,
-        "maximumTimeAdjustment": 1.1036697247706422,
-        "sourceSha256": "9a6607b643cda27d60ec9d2332e908406858948e956f98f4c5681380f44cd353",
+        "maximumTimeAdjustment": 1.0889908256880738,
+        "sourceSha256": "ccef7c192d1db26536d32426b4d92096cfd200deb28bdf458e2c5372192a86fb",
         "musicGain": 0.07
       },
       "voice": {
@@ -1309,8 +1309,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "fda8e15b9dc08da176e7a9865d338ac4fb30f577c137309938151a306d0b6e57",
-      "size": 2418687,
+      "sha256": "f2ffae7b8d159068358ee18a99439c2e6650923aa75af6a28e0d040e30911b82",
+      "size": 2418583,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -1324,7 +1324,7 @@
         "lintErrors": 0,
         "lintWarnings": 0
       },
-      "narrationTranscript": "The supplier offers its discount only if Talos keeps paid referrals and shared history in one package.\n\nAn independent basic service costs more initially and lacks some features. The council must compare today's savings with future control.\n\nA gradual transfer gives more independence but costs money and temporarily limits features.\n\nAnother discount eases the budget while keeping the same conditions.\n\nSeparate contracts give more flexibility but require staff to manage the different parts.\n\nWhich dependencies would remain after changing the contract?"
+      "narrationTranscript": "The supplier offers its discount only if Delos keeps paid referrals and shared history in one package.\n\nAn independent basic service costs more initially and lacks some features. The council must compare today's savings with future control.\n\nA gradual transfer gives more independence but costs money and temporarily limits features.\n\nAnother discount eases the budget while keeping the same conditions.\n\nSeparate contracts give more flexibility but require staff to manage the different parts.\n\nWhich dependencies would remain after changing the contract?"
     },
     "c12": {
       "id": "c12",
@@ -1428,8 +1428,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "4a68e8e49d1ef1757584f36ead3270ed50bbdb3c271f15a1ccf6a289030c9df3",
-      "size": 2705997,
+      "sha256": "43fbfbed406f29ba045693a2ec4a95f5d114cff0990c4b4037389225991eae15",
+      "size": 2705501,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -1549,8 +1549,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "5401975ee4e30276e30b9286b95d28e07bbdb19abd164ee81de16b071ef238ba",
-      "size": 2443309,
+      "sha256": "d32f36a9f9316b24fb619d8f80f5daa5c605e89a5b4c01c57d13261d06f5e627",
+      "size": 2440836,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -1668,8 +1668,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "c495651af8f04aa6a6d9d9e53ade2fe2d424b19d261747ca0e3d0565b7e47269",
-      "size": 2605806,
+      "sha256": "8f74506c228d55047924cf0d755a27639739ec39164c05ce58aa1143e868b96e",
+      "size": 2607110,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -1787,8 +1787,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "a4b2ba4be12399e48deca8cd73eea2fd9125cae6c1701e81890616f42bbb5b1d",
-      "size": 2361165,
+      "sha256": "883392ac05def1c3a1406940b1ea8c611a7c09dce36f5d4debbade5ee1e7a841",
+      "size": 2365319,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -1906,8 +1906,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "d47b5328735a7aa863558c0fdb571f1cd6161389ed4797bf5f1ce63a33b55b54",
-      "size": 2556450,
+      "sha256": "5e9848c36e4c6cde5f7ee2bc15d5f48ef9fd274be39620535687c889330b7fb7",
+      "size": 2549847,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -2025,8 +2025,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "00e1491438a51d757cc6c89e8ec2de1c8116ace99234f5c569bef90079321edc",
-      "size": 2367218,
+      "sha256": "92957dd12487c50668ff45eb2b03cb602cf83bf16ad5107dfd07a0e16a731376",
+      "size": 2372296,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -2144,8 +2144,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "d496ccc724feed0ea4c4f313d36a7124ac3cab719d4e9eced76b1e0d85310fc5",
-      "size": 2589986,
+      "sha256": "45a2e7aaadc5c800b1df08254042f563f3d9831e51cea549b273fb25d0475867",
+      "size": 2592106,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -2263,8 +2263,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "8606d4e5f5026607adeb3f4f0db839eb78ced799dd4424f1b0e2474afa0f09f2",
-      "size": 2471233,
+      "sha256": "4bcd0fbdc04dbd51db1e4057b6f00bdf93dc4846e36623991a9450d06f4017c2",
+      "size": 2470830,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -2382,8 +2382,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "a046d866c95a1139d8392a86e452d4486cd315d61d8c7ccbb133d25a1a9622cf",
-      "size": 2381675,
+      "sha256": "36799456714b384440064660b0fb22d4b5890e32012eb04263ea60a1d20bc7d7",
+      "size": 2381360,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -2501,8 +2501,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "f40cb3ae7619d4df6e8a6da80e68a05ed0747afeee3bbe4143d5864f1edef2b8",
-      "size": 2750726,
+      "sha256": "e8024a1041f857ad8512344d133e775c8f7c9b1f4839d05a4b9941d9e37b9aee",
+      "size": 2751280,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -2620,8 +2620,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "688bc907ddb3e7e7dcd934aa9cdf8f6550ca1cbed067e1bf28c0150b0c960ce3",
-      "size": 2572283,
+      "sha256": "78e9a31a675002750d148b4d2772dd7a179fecbb18689912a67413c2348a4411",
+      "size": 2568586,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -2639,7 +2639,7 @@
     },
     "m11": {
       "id": "m11",
-      "title": "Can Talos stop the service without stopping essential work?",
+      "title": "Can Delos stop the service without stopping essential work?",
       "chapter": 1,
       "era": "2028",
       "duration": 42,
@@ -2739,8 +2739,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "d4be771777a83843eefac61dcbbe24c85e72f63fd8992afd92e4bee2e9e523ca",
-      "size": 2439946,
+      "sha256": "4065a203a86313aa6afefba3d0ddcc1d114796961e5d0651748933f541bd91fa",
+      "size": 2444179,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -2858,8 +2858,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "108ceaeda77813e9557461e7624c8b83114818009dd720e63ed22cb1d2e17209",
-      "size": 2547974,
+      "sha256": "e09525b2973fa1c81a4c67edebf1176cd1ad356af983f05af820c2a9af96b5f2",
+      "size": 2549057,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -2977,8 +2977,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "08536a5337baf3c0b5bbc93cf9c0bc6ce6e18b92ed65aa439298e884b42a2134",
-      "size": 2521953,
+      "sha256": "d5701a90fd13c53f716ed920d5f361006f44a76e57c6738e58a01f3ac92b3cd1",
+      "size": 2519098,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -3096,8 +3096,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "4516e621ba68b7458d3fdacd85b72271febf41e0421da9a1679c4a9f0a9a7ec7",
-      "size": 2527742,
+      "sha256": "9a1a3057dea3e106b7dbbda935ab3a127d5833ca501af708f19ad04a1922a598",
+      "size": 2527438,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -3215,8 +3215,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "761a75c75f65ce8ca823f3103c36717dc3d767a0414db503fa155f98c25849a2",
-      "size": 2516692,
+      "sha256": "5983437f69dae8fe3801d02244ab6c4a988a155d5442ad07e8f0ff36c89e679a",
+      "size": 2513522,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -3334,8 +3334,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "040e9039529daab8798b9df13ca76af0f066c4cf5fcb9474ac4d06891d0dfa44",
-      "size": 2585220,
+      "sha256": "04f6d80960574333f0aeb61c73a933489e2549cedaa5d27abe3a29723ec2bd95",
+      "size": 2581780,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -3453,8 +3453,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "6de0b2041a1cafef42a75190f3f113f3087b67e69e93077af7c9a83b05ad8166",
-      "size": 2526073,
+      "sha256": "286be11e3d186a63225796bc2abdb39beae9eb8978ddd0bbaf4fd297c7420946",
+      "size": 2524460,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -3571,8 +3571,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "9ebf2dccb590c2a85cc46f6cf1adbbbfe144a5895cb8ef31915a3a7907dc6097",
-      "size": 2720994,
+      "sha256": "0e82e7e6d713cfd16f997a32e6c45dbc27a1a14cae95aa09c892869b275332dd",
+      "size": 2715416,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -3690,8 +3690,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "ce2bd0be7de6c39557f34b72f1aa9b680882cd267203cd4851b71b73077ebdb1",
-      "size": 2605755,
+      "sha256": "c90c6438aaf8aef2f9b68a4a427962027d367234f862441feee3fcd04cd4a870",
+      "size": 2601667,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -3809,8 +3809,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "6366ad5e875b3597f8c1e6cf60ff21680ef51c1f307f9c11d6c9547b2228becd",
-      "size": 2637992,
+      "sha256": "7e2c994fd8bedf890e2e59157852b767281dc6c3b42f8bc7f81b5c70211533f4",
+      "size": 2639382,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -3929,8 +3929,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "981f5c13c54628ab37116377f8f765a60c2cbc5cfb26e25e7cbab573e7c449ae",
-      "size": 2742983,
+      "sha256": "954288ce64dcc76c56ae670d3055e9582d9b339907e04ec66dd30010bc5913a1",
+      "size": 2739002,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -4048,8 +4048,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "155ec34b522809fb5b793cddf5ab00084a66469ce8d12f5bec8826212a45e9f2",
-      "size": 2647931,
+      "sha256": "d0fd765de63d33d90b197f0fcc21f21ffe85e70c8c74a0a022a3591c1d9d9fe0",
+      "size": 2653797,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -4167,8 +4167,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "44721eca84bc73ed1227b1b104e503381b003167f502e218db0b9bf34d91ec53",
-      "size": 2529235,
+      "sha256": "5904ed49218d950a6730d101ad04260b1cde2fe576f0fcf73c5ee5574f70155e",
+      "size": 2536288,
       "verified": {
         "duration": 42,
         "width": 1280,
@@ -4289,8 +4289,8 @@
         "language": "en-GB",
         "synthetic": true
       },
-      "sha256": "50134ac70e85f636ff10e254795c04e2e11697e6f1d3d08ac5d1c85065544114",
-      "size": 2768163,
+      "sha256": "c10ef6facd82ed9544c380c5a2f6fa16ef5c2dff9f5429a41dd1eed89e014f8e",
+      "size": 2763682,
       "verified": {
         "duration": 42,
         "width": 1280,

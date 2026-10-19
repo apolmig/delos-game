@@ -204,7 +204,7 @@ for (ident,*_),o in zip(characters,portraits):
  o.hide_render=False;scene.render.filepath=os.path.join(OUT,'portraits',ident+'.png');bpy.ops.render.render(write_still=True);o.hide_render=True
 for i,o in enumerate(portraits):o.location=((i%4)*2.5,14+(i//4)*3,0);o.hide_render=False
 for o in models:o.hide_render=False
-bpy.ops.wm.save_as_mainfile(filepath=os.path.join(ROOT,'blender','TALOS_Civic_Mandate.blend'))
+bpy.ops.wm.save_as_mainfile(filepath=os.path.join(ROOT,'blender','DELOS_Civic_Mandate.blend'))
 report={'blender':bpy.app.version_string,'models':[o.name for o in models],'portraits':[c[0] for c in characters],'mesh_vertices':sum(len(o.data.vertices) for o in models),'source':'Original procedural geometry authored for this game','output':'assets/republic.glb'}
 with open(os.path.join(ROOT,'qa','blender-assets.json'),'w') as f:json.dump(report,f,indent=2)
-print('TALOS_ASSETS_COMPLETE',json.dumps(report))
+print('DELOS_ASSETS_COMPLETE',json.dumps(report))

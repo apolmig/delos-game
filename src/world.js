@@ -28,7 +28,7 @@ export class World{
   el.addEventListener('wheel',e=>{e.preventDefault();this.distance=THREE.MathUtils.clamp(this.distance+e.deltaY*.0007,.66,1.45);},{passive:false});
   new ResizeObserver(()=>this.resize()).observe(container);this.resize();
   const bytes=Uint8Array.from(atob(MODEL),c=>c.charCodeAt(0));
-  new GLTFLoader().parse(bytes.buffer,'',g=>{this.library=g.scene;this.populate();this.ready=true;window.dispatchEvent(new Event('talos-world-ready'));},e=>{console.error(e);container.dataset.error='Unable to load the Blender map.';});
+  new GLTFLoader().parse(bytes.buffer,'',g=>{this.library=g.scene;this.populate();this.ready=true;window.dispatchEvent(new Event('delos-world-ready'));},e=>{console.error(e);container.dataset.error='Unable to load the Blender map.';});
   this.clock=new THREE.Clock();this.animate=this.animate.bind(this);this.raf=requestAnimationFrame(this.animate);
  }
  pointerAt(e){const r=this.renderer.domElement.getBoundingClientRect();this.pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);}

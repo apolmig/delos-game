@@ -1,12 +1,12 @@
 {
-  "title": "Republic of Talos: a frontier AI governance game",
+  "title": "Republic of Delos: a frontier AI governance game",
   "durationSeconds": 30,
   "resolution": [
     1920,
     1080
   ],
-  "source": "Republic_of_Talos_Frontier_AI_Governance_Trailer_30s.mp4",
-  "production": "HyperFrames; actual edition 6 gameplay and AI-generated fictional scenes; synthetic English narration",
+  "source": "Republic_of_Delos_Frontier_AI_Governance_Trailer_30s.mp4",
+  "production": "HyperFrames 0.8.174; actual edition 6.3 gameplay and AI-generated fictional scenes; synthetic English narration",
   "music": {
     "title": "The Fury",
     "artist": "Scott Buckley",
@@ -17,16 +17,16 @@
   },
   "files": {
     "captions-en.vtt": {
-      "bytes": 483,
-      "sha256": "42ba03e3e8eb5be5ea8aaabddf688daf0f8151d054ee3b519642bcb5b8dca1d5"
+      "bytes": 471,
+      "sha256": "15854b9124082d5bf6803b89497e4313ac85e9e6e2b77108c2abdb2b99126a8e"
     },
     "poster.jpg": {
-      "bytes": 112273,
-      "sha256": "55be7eb580dd8b65900932d6feed635e799b6aaf6c36100190dc50dbaa303601"
+      "bytes": 112040,
+      "sha256": "4e246501fd9fa763176c89a03a2b9d080e77984f9714f1ddab2931c404c3407a"
     },
-    "republic-of-talos-30s.mp4": {
-      "bytes": 31413117,
-      "sha256": "22031622a3fc1a40c35b404505b1febcaf3b71f6231557e3974d236183af35c2"
+    "republic-of-delos-30s.mp4": {
+      "bytes": 31997490,
+      "sha256": "c022c32ea26420e148d2dbdcf01dccf17d6672511a5889294b538aeb52ae3705"
     }
   }
 }

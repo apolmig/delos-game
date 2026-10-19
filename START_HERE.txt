@@ -1,11 +1,11 @@
-REPUBLIC OF TALOS / EDITION 6.2
+REPUBLIC OF DELOS / EDITION 6.3
 A frontier AI governance game by Miguel Guerrero
 https://miguelguerrero.eu
 
-PLAY ONLINE: https://miguelguerrero.eu/talos-game/
+PLAY ONLINE: https://miguelguerrero.eu/delos-game/
 
 PLAY OFFLINE:
-1. From Drive, download both Republic_of_Talos_Play.zip and Republic_of_Talos_Decision_Films.zip. Extract both into the same folder: assets should sit beside PLAY.html.
+1. From Drive, download both Republic_of_Delos_Play.zip and Republic_of_Delos_Decision_Films.zip. Extract both into the same folder: assets should sit beside PLAY.html.
 2. Open PLAY.html in a modern browser. Keep the assets folder beside it.
 3. Enter the republic and listen to or read the three-part prologue.
 4. Read one incident, prepare if useful, and make one decision.
@@ -13,7 +13,7 @@ PLAY OFFLINE:
 Three possible futures. 36 decisions. About two hours at your pace.
 This is a design estimate; watching all optional explainers adds 25 minutes.
 
-For a single-file offline download, use https://miguelguerrero.eu/talos-game/PLAY.html instead. That larger file embeds every film and does not need an assets folder.
+For a single-file offline download, use https://miguelguerrero.eu/delos-game/PLAY.html instead. That larger file embeds every film and does not need an assets folder.
 
 Editing the source: extract the film ZIP inside the source archive's civic-mandate folder before running the build. The film library serves both the play and source packages.
 
@@ -28,6 +28,6 @@ Use Menu > Reduce ambient movement for still presentations.
 
 Progress saves automatically in this browser. Export/import saves through the menu to move them. Prior saves remain compatible.
 
-The research is real; Talos and its incidents are fictional.
+The research is real; Delos and its incidents are fictional.
 ERA: Capability, Deployment, Effect: https://miguelguerrero.eu/agencytransfer/
 Find all 38 references, their limits and policy uses in Research & credits.

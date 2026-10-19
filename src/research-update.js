@@ -97,7 +97,7 @@ export const ADDITIONAL_SOURCES=[
     "year": "2026",
     "url": "https://law-ai.org/mapping-ai-policy-where-why-and-how-to-intervene/",
     "finding": "The framework connects the harm a policy addresses with how it intervenes and which part of the AI system or surrounding institutions it changes.",
-    "limit": "This is a way to design policy, not a legal ruling or a proven intervention for Talos.",
+    "limit": "This is a way to design policy, not a legal ruling or a proven intervention for Delos.",
     "use": "Target the part causing the problem: the model, application, contract or public decision process."
   },
   {

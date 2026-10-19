@@ -15,7 +15,7 @@ export function mountNarration(root,director){
  const hide=()=>{if(document.hidden)voice.pause();};
  const sound=e=>{voice.muted=!e.detail.on;if(!e.detail.on)voice.pause();};
  const error=()=>{paused();status.textContent='Audio unavailable. The transcript is below.';};
- button.addEventListener('click',toggle);voice.addEventListener('play',playing);voice.addEventListener('pause',paused);voice.addEventListener('ended',paused);voice.addEventListener('error',error);document.addEventListener('visibilitychange',hide);window.addEventListener('talos-music-change',sound);
- cleanup=()=>{disposed=true;button.removeEventListener('click',toggle);voice.removeEventListener('play',playing);voice.removeEventListener('pause',paused);voice.removeEventListener('ended',paused);voice.removeEventListener('error',error);document.removeEventListener('visibilitychange',hide);window.removeEventListener('talos-music-change',sound);voice.pause();voice.removeAttribute('src');voice.load();director.setFilmPlaying(false);};
+ button.addEventListener('click',toggle);voice.addEventListener('play',playing);voice.addEventListener('pause',paused);voice.addEventListener('ended',paused);voice.addEventListener('error',error);document.addEventListener('visibilitychange',hide);window.addEventListener('delos-music-change',sound);
+ cleanup=()=>{disposed=true;button.removeEventListener('click',toggle);voice.removeEventListener('play',playing);voice.removeEventListener('pause',paused);voice.removeEventListener('ended',paused);voice.removeEventListener('error',error);document.removeEventListener('visibilitychange',hide);window.removeEventListener('delos-music-change',sound);voice.pause();voice.removeAttribute('src');voice.load();director.setFilmPlaying(false);};
  if(director.on)void play();
 }

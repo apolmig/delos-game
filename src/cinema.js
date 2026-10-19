@@ -6,7 +6,7 @@ export function filmMarkup(story,images,videos,reduced=false){
  const id=++serial;pending.set(id,{story,images,videos,reduced});
  const s=story.shots[0];
  return `<section class="cinema" data-film="${id}" data-kind="${story.kind}" aria-label="${esc(story.title)} film">
-  <div class="cinema-stage"><img class="cinema-poster" src="${images[s.image]}" alt="Fictional dramatization of public life in Talos" width="1280" height="720"><video muted playsinline preload="none" aria-label="Silent AI-generated fictional footage"></video><div class="cinema-shade"></div><div class="cinema-caption"><span class="eyebrow">${esc(s.kicker)}</span><h2>${esc(s.title)}</h2><p>${esc(s.text)}</p></div><div class="cinema-track" aria-hidden="true"><b></b></div></div>
+  <div class="cinema-stage"><img class="cinema-poster" src="${images[s.image]}" alt="Fictional dramatization of public life in Delos" width="1280" height="720"><video muted playsinline preload="none" aria-label="Silent AI-generated fictional footage"></video><div class="cinema-shade"></div><div class="cinema-caption"><span class="eyebrow">${esc(s.kicker)}</span><h2>${esc(s.title)}</h2><p>${esc(s.text)}</p></div><div class="cinema-track" aria-hidden="true"><b></b></div></div>
   <div class="cinema-controls"><span>AI-generated fiction <span aria-hidden="true">/</span> <span class="film-position">1 of ${story.shots.length}</span></span><div><button type="button" data-film-control="toggle">${reduced?'Play film':'Pause'}</button><button type="button" data-film-control="skip">Skip film</button></div></div>
   <details class="cinema-transcript"><summary>Read the scene</summary>${story.shots.map(x=>`<p><b>${esc(x.kicker)}: ${esc(x.title)}</b> ${esc(x.text)}</p>`).join('')}</details>
  </section>`;

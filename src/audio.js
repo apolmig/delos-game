@@ -3,11 +3,11 @@ import {SCORE} from './media.js';
 export class AudioDirector {
  constructor(){
   this.on=false;this.ready=false;this.volume=8;this.sfx=true;this.context=null;this.music=null;this.ducked=false;this.filmPlaying=false;this.lastCue=0;this.lastEffect=null;
-  try{const p=JSON.parse(localStorage.getItem('talos-audio')||'{}');this.volume=Math.max(0,Math.min(30,p.volume??8));this.sfx=p.sfx!==false;}catch{}
+  try{const p=JSON.parse((localStorage.getItem('delos-audio')||localStorage.getItem('talos-audio'))||'{}');this.volume=Math.max(0,Math.min(30,p.volume??8));this.sfx=p.sfx!==false;}catch{}
   document.addEventListener('visibilitychange',()=>{if(document.hidden){this.music?.pause();this.context?.suspend();}else if(this.on){this.context?.resume().catch(()=>{});if(!this.filmPlaying)this.music?.play().catch(()=>{});}});
  }
- notify(){window.dispatchEvent(new CustomEvent('talos-music-change',{detail:{on:this.on}}));}
- save(){try{localStorage.setItem('talos-audio',JSON.stringify({volume:this.volume,sfx:this.sfx}));}catch{}}
+ notify(){window.dispatchEvent(new CustomEvent('delos-music-change',{detail:{on:this.on}}));}
+ save(){try{localStorage.setItem('delos-audio',JSON.stringify({volume:this.volume,sfx:this.sfx}));}catch{}}
  async enable(on){
   this.on=on;
   if(!on){this.music?.pause();if(this.context)await this.context.suspend();this.notify();return;}
@@ -17,7 +17,7 @@ export class AudioDirector {
    if(this.context?.state==='suspended')await this.context.resume();
    if(!this.on||document.hidden){this.notify();return;}
    this.applyVolume();if(!this.filmPlaying)await this.music.play();this.ready=true;
-  }catch(error){if(error?.name==='AbortError'&&(this.filmPlaying||!this.on)){this.ready=true;}else{this.on=false;window.dispatchEvent(new CustomEvent('talos-audio-error'));}}
+  }catch(error){if(error?.name==='AbortError'&&(this.filmPlaying||!this.on)){this.ready=true;}else{this.on=false;window.dispatchEvent(new CustomEvent('delos-audio-error'));}}
   this.notify();
  }
  setVolume(v){this.volume=Math.max(0,Math.min(30,Number(v)||0));this.applyVolume();this.save();}

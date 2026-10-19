@@ -72,7 +72,7 @@ export const AI_PRIMER={
   "title": "What can the AI actually do?",
   "body": "A frontier AI model is one of the most capable systems available. It can compare documents, write convincing arguments and plan tasks, but it can still make mistakes. An AI agent connects a model to tools, saved information and automatic tasks. People decide which records it may read and which actions it may take.",
   "example": "For example, a model can draft a benefits letter. With extra permissions, a connected service can also open a private case file, send the letter and follow up the next day. Each of those actions needs its own oversight.",
-  "boundary": "The systems and events in 2027 and 2028 are fictional extensions of research available when the game was written. Greater capability does not automatically mean hostile intent or unrestricted autonomy. The exercise places Talos within the EU legal framework."
+  "boundary": "The systems and events in 2027 and 2028 are fictional extensions of research available when the game was written. Greater capability does not automatically mean hostile intent or unrestricted autonomy. The exercise places Delos within the EU legal framework."
 };
 
 export const LAW_CONTEXT={
