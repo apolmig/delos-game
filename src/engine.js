@@ -38,11 +38,11 @@ export function cabinet(s,kind){
  if(!['coalition','reserve','outreach'].includes(kind))return {ok:false,error:'Unknown action.'};const err=cabinetError(s,kind);if(err)return {ok:false,error:err};
  s.actions--;s.used.push(kind);
  const effects=kind==='coalition'?{budget:-3,support:has(s,'assembly')?10:7}:kind==='reserve'?{budget:6,support:-2}:{trust:3,rights:1};apply(s,effects);
- const text=kind==='coalition'?'You negotiated conditions with council members and gained support for action.':kind==='reserve'?'You reassigned contingency funds. Other priorities lose political support.':'You listened to residents and explained when the council will provide its next update.';
+ const text=kind==='coalition'?'You negotiated conditions with council members and gained support for action.':kind==='reserve'?'You moved money reserved for emergencies into this budget. That leaves less for other priorities and costs some council support.':'You listened to residents and explained when the council will provide its next update.';
  s.history.push({chapter:s.chapter,turn:s.turn,type:'cabinet',text});return {ok:true,text};
 }
 export function optionError(s,index){
- const o=event(s).options[index];return s.phase!=='playing'?'Finish the briefing or current result before choosing a response.':!o?'Unknown response.':o.needs==='investigated'&&!s.investigated.includes(event(s).id)?'Read the case finding before choosing this response.':o.support&&s.stats.support<o.support?`Needs ${o.support} council support. Use Prepare to negotiate more support first.`:o.effects.budget<0&&s.stats.budget<-o.effects.budget?'There are not enough public funds for this action. Reassign reserves or choose another response.':null;
+ const o=event(s).options[index];return s.phase!=='playing'?'Finish the briefing or current result before choosing a response.':!o?'Unknown response.':o.needs==='investigated'&&!s.investigated.includes(event(s).id)?'Read the case finding before choosing this response.':o.support&&s.stats.support<o.support?`Needs ${o.support} council support; you have ${Math.round(s.stats.support)}. Negotiate with council members before deciding.`:o.effects.budget<0&&s.stats.budget<-o.effects.budget?`This response costs ${-o.effects.budget} credits; you have ${Math.round(s.stats.budget)}. Move money from reserves or choose another response.`:null;
 }
 export function prepare(s){if(s.phase==='brief'||s.phase==='era'){s.phase='playing';s.actions=s.settings.simple?1:2;return true;}return false;}
 function pressureStep(s){
@@ -99,8 +99,8 @@ export function reaction(s){
  return 'Essential work continues. Some residents benefit from the changes, while others are still waiting for help.';
 }
 export function explainPressure(s){
- const mechanism=['Hidden commission payments and changes to the advice service continue to put residents\' choices at risk.','Accounts, automatic tasks and contracts can remain active after the model stops replying.','Having a local copy of the model does not remove dependence on the supplier\'s documents, support and updates.'][s.chapter];
- return `${mechanism} ${s.policies.length} active policies and ${protections(s)} completed district projects reduce this continuing pressure. All numerical effects are fictional game rules.`;
+ const mechanism=['Commercial incentives and incomplete advice can still affect residents as the service changes.','Accounts, automatic tasks and contracts can remain active after the model stops replying.','Having a local copy of the model does not remove dependence on the supplier\'s documents, support and updates.'][s.chapter];
+ return `${mechanism} ${s.policies.length||protections(s)?`Your ${s.policies.length} completed policies and ${protections(s)} district projects help reduce these ongoing problems.`:'No policies or district projects are complete yet, so they are not providing protection.'} All numerical effects are fictional game rules.`;
 }
 export function resultFor(s){
  const st=s.stats;const average=(st.trust+st.services+st.rights+st.autonomy)/4;

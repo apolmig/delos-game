@@ -5,7 +5,7 @@ const browser=await chromium.launch({headless:true,executablePath:process.env.CH
 const checks=[],errors=[],requests=[];const check=(name,condition)=>{assert.ok(condition,name);checks.push(name);};
 try{
 const context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce'});const page=await context.newPage();page.setDefaultTimeout(45000);page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
-await page.goto(url);await page.waitForFunction(()=>window.Delos?.version==='6.3.0');
+await page.goto(url);await page.waitForFunction(()=>window.Delos?.version==='6.4.0');
 const click=async a=>{const m=page.locator('#modal-root [data-action="'+a+'"]').filter({visible:true});await ((await m.count())?m.first():page.locator('[data-action="'+a+'"]').filter({visible:true}).first()).click();};
 const get=()=>page.evaluate(()=>window.Delos.getState());
 const load=async s=>{await page.locator('#import-file').setInputFiles({name:'test-save.json',mimeType:'application/json',buffer:Buffer.from(G.saveGame(s))});await page.waitForFunction(([c,t,p])=>{const s=window.Delos.getState();return s?.chapter===c&&s.turn===t&&s.phase===p;},[s.chapter,s.turn,s.phase]);};

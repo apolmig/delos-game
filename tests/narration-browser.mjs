@@ -2,7 +2,7 @@ import {chromium} from 'playwright';import assert from 'node:assert/strict';impo
 const url=process.env.DELOS_URL||'http://127.0.0.1:4186/';const checks=[],errors=[];const check=(name,value)=>{assert.ok(value,name);checks.push(name);};
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
 try{const context=await browser.newContext({viewport:{width:1280,height:900},reducedMotion:'reduce'});const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.setDefaultTimeout(30000);
-await page.goto(url);await page.waitForFunction(()=>window.Delos?.version==='6.3.0');
+await page.goto(url);await page.waitForFunction(()=>window.Delos?.version==='6.4.0');
 const click=async action=>{const modal=page.locator('#modal-root [data-action="'+action+'"]').filter({visible:true});await ((await modal.count())?modal.first():page.locator('[data-action="'+action+'"]').filter({visible:true}).first()).click();};
 check('Large social preview is declared',await page.locator('meta[name="twitter:card"]').getAttribute('content')==='summary_large_image');
 const image=await page.locator('meta[property="og:image"]').getAttribute('content');check('Share image uses an absolute production URL',image==='https://miguelguerrero.eu/delos-game/assets/social/republic-of-delos-v6.jpg');

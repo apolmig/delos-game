@@ -64,10 +64,10 @@ export function inheritedChoices(s){
  const groups=[
   [
    ['c01','appealRoute','Free appeal help remains available','You funded help with free appeals. In 2028, residents still need to know where to find it.'],
-   ['c02','cleanContract','Advice is separated from commission payments','You stopped commission payments from influencing public advice. The service now needs funding that does not depend on paid referrals.'],
+   ['c02','cleanContract','Advice is separated from commission payments','You removed commission payments from the public advice contract. The service now needs funding that does not depend on paid referrals.'],
    ['c03','caseRepair','Affected residents can challenge earlier refusals','You extended the appeal deadlines for affected residents. Check that each household has been told and offered help.'],
    ['c04','staffedFallback','Staff can provide help during a pause','You funded a small team to handle cases when the AI service is unavailable. This alternative still needs trained staff.'],
-   ['c06','conditionalRenewal','Contract changes require a review','You renewed the contract for six months with conditions. Those conditions require later changes to be reviewed rather than automatically approved.']
+   ['c06','conditionalRenewal','Contract changes require a review','Your six-month renewal established conditions for later reviews. In 2028, the council must check that subsequent contracts have kept those safeguards.']
   ],
   [
    ['m01','blindComparison','A successful test did not settle the concern','You paused expansion while reviewers compared announced tests with ordinary use. They still need to establish why the AI behaved differently.'],
@@ -81,7 +81,7 @@ export function inheritedChoices(s){
    ['o02','sourceIsolation','Reviewers checked the documents behind the answers','You investigated the documents the assistant relied on. Running a model inside Delos does not guarantee that its information is independent.'],
    ['o03','pinnedUpdates','Software updates need approval','You required each software version to be checked before installation. This review must continue when staff change.'],
    ['o05','authenticatedSponsor','Documents established the sponsor’s involvement','You verified records linking the supplier to its sponsor. The finding rests on those records, not the supplier’s country of origin.'],
-   ['o06','supportCooperative','Shared staff support helps Delos stay independent','You shared the cost of independent technical support with partners. That support needs funding after the first grant runs out.']
+   ['o06','supportCooperative','Shared staff support helps Delos stay independent','You shared the cost of independent technical support with partners. That support needs funding after the initial agreement ends.']
   ]
  ];
  const completed=s.history.filter(h=>h.type==='decision'&&h.chapter===s.chapter);

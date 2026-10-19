@@ -1,15 +1,19 @@
-# Republic of Delos: edition 6.3.0 verification
+# Republic of Delos: edition 6.4.0 verification
 
-A frontier AI governance game by Miguel Guerrero. Reviewed 2026-10-19.
+A frontier AI governance game by Miguel Guerrero. Reviewed 19 October 2026.
 
-The Republic of Delos name is used in the front page, game text, research panels, sharing artwork, trailer, prologue and all 36 decision films. The author credit links to Miguel Guerrero. The current one-pager, player sheets and facilitator guides were updated in place. The clear incident descriptions and explicit response choices from the previous edition are retained.
+This editorial review covered all 36 incidents, 108 responses and their outcomes, case findings, recurring characters, delayed consequences, the prologue, era transitions, help, research explanations and all 36 explainer transcripts. The changes clarify who acts, what a permission allows, what the player pays and why results differ from the direct effects of a response. An optional glossary explains model, deployment, evaluation awareness, permissions, open model and system card.
 
-Game rules, response order, costs, effects, prerequisites and delays are unchanged. The save loader accepts both the current and previous save format. Existing browser saves and audio settings migrate automatically. Saves using any of the 108 previous response titles restore the same choice, scores and progress.
+The simple view now shows the correct preparation allowance in the district panel. The difficulty summary follows the selected setting. If a scenario ends early, its button correctly offers a review rather than promising the next decision or year. Advice about a contract renewal no longer assumes that a six-month contract is still active eighteen months later. The introduction no longer lists a supplier representative who is not in the cast.
 
-The release record contains the results of unit tests, a complete 36-decision browser campaign, desktop and mobile layouts, website sound, transitions, explainers, film playback, offline playback, narration, sharing and save compatibility. These automated checks do not constitute a two-hour human playtest.
+Verification includes 48 unit tests, a complete 36-decision browser campaign, 72 desktop and phone decision layouts, and 19 checks covering the new wording and its agreement with actual game behaviour. The complete campaign finished all three scenarios successfully and made no network requests in the standalone edition. Additional browser reports cover sound, transitions, explainers, narration, sharing, trailer playback and save compatibility. Edition-specific reports are retained with the source backup and release record.
 
-All 36 decision films use 1280 by 720 resolution, 24 fps and a duration of 42 seconds. Speech is scene-aligned, verified against word-timed transcripts and mixed above the quiet original score. The two decision tracks and prologue track that name the country were replaced. The three prologue tracks remain below one minute each. The 30-second trailer includes newly captured gameplay, a new spoken country name and the new web address. The decision films were rendered and checked with HyperFrames 0.8.172. Their source project was then upgraded to 0.8.174 and representative compositions checked again. The trailer was rendered with 0.8.174. The delivery archive retains checksums and visual review samples.
+The gameplay rules, response order, costs, effects, prerequisites and delays are unchanged. The existing compatibility test compares them with the pre-editorial fixture and checks all 108 earlier response titles. The original save format, browser saves and audio settings remain supported.
 
-The 38 public research references remain linked, with their limits stated separately from fictional incidents and game scores. Publication and Drive readback are recorded separately in the private release record after deployment.
+The existing films and audio are retained from edition 6.3. Their transcripts were reviewed against the incidents and choices; this release does not claim a new render or recording. Each decision film remains 42 seconds. The three prologue recordings and 30-second trailer are included. The media manifests retain their original edition, render and checksum information.
 
-The Drive backup uses a play ZIP plus a decision-film ZIP. Extract both into the same folder. The website also offers a complete, self-contained PLAY.html download. Social preview caches are controlled by the sharing platforms.
+All 38 public reference URLs were checked: 28 allowed direct retrieval, nine were retrieved through web browsing, and the remaining publisher page was confirmed through its indexed publisher record. Automated-access restrictions are not treated as missing papers. The AI Act timetable and relevant official articles were checked again. This was a wording, consistency and link review, not a new systematic review of every cited paper. Source findings remain separate from fictional people, events and game scores.
+
+The Drive backup contains a play ZIP plus the existing decision-film ZIP; extract both into the same folder. The website also offers a self-contained PLAY.html download. Publication, archive checks and Drive readback are recorded after deployment in the private release record.
+
+Automated playthroughs and screenshot review do not constitute a two-hour human playtest. Sharing platforms control their own preview caches.

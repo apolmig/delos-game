@@ -96,6 +96,7 @@ body.reduced .story-aftermath{animation:none}
 @media(max-width:650px){.ai-primer,.ai-briefing,.policy-lens{padding:17px}.ai-brief-grid{grid-template-columns:1fr;gap:8px}.ai-flow{gap:6px}.ai-flow span{padding:10px 5px;font-size:14px}.ai-flow small{font-size:10px}.explainer-invitation{align-items:stretch;flex-direction:column}.ai-briefing h2,.ai-primer h2{font-size:25px}}
 
 .narration-controls{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin:22px 0 12px}.narration-controls span{font-size:12px;color:var(--muted)}.narration-transcript{font-size:13px;margin-bottom:22px}.narration-transcript summary{cursor:pointer;color:var(--gold)}.narration-transcript p{line-height:1.65}
+.response-cost{display:block;color:var(--gold);font-size:12px;line-height:1.5;margin-top:7px}.plain-terms{padding:16px 0;margin:18px 0;border-block:1px solid #ffffff20}.plain-terms summary{cursor:pointer;color:var(--gold)}.plain-terms p{font-size:15px;line-height:1.6}.result-explanation{line-height:1.6}
 
 .landing-copy>.eyebrow{font-size:14px;letter-spacing:.12em;color:var(--gold)}@media(max-width:500px){.landing-copy>.eyebrow{font-size:12px;line-height:1.5}}
 

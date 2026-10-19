@@ -8,7 +8,7 @@ export const METRICS={
     "short": "Funds",
     "icon": "◈",
     "color": "#d6b474",
-    "tip": "Money available for investigations, staff and alternative services. You receive more after each decision."
+    "tip": "Your spending money, measured in fictional credits. Use it for staff, investigations and alternative services. Government income adds more after each decision."
   },
   "trust": {
     "name": "Public trust",
@@ -929,7 +929,7 @@ export const EVENTS=[
       ],
       "callback": "appealRoute",
       "yes": "The free, staffed appeal service you funded gives the council a practical safeguard to include in the renewed contract.",
-      "no": "The council has not yet established a free, independent appeal service alongside Aster. The renewed contract will need to address that gap."
+      "no": "You did not choose to fund the separate appeal service at decision 1. Check what help is now available to residents before renewing the contract."
     },
     {
       "id": "c07",
@@ -1623,7 +1623,7 @@ export const EVENTS=[
       "title": "Urgent appointments put safeguards under pressure",
       "district": "care",
       "speaker": "samir",
-      "body": "Urgent care appointments are falling behind. Cairn proposes clearing the backlog if its broad departmental connection is restored without an expiry date. Staff are exhausted, and families need answers now. A smaller reserve service can handle the most urgent cases, but cannot replace the whole system immediately.",
+      "body": "Cairn now also helps departments coordinate care appointments. Urgent appointments are falling behind, and Cairn proposes clearing the backlog if its broad departmental connection is restored without an expiry date. Staff are exhausted, and families need answers now. A smaller reserve service can handle the most urgent cases, but cannot replace the whole system immediately.",
       "citizen": "My mother needs an appointment. Please tell me how you'll keep her case moving.",
       "signal": "An urgent service problem can create pressure to grant permissions that last long after the emergency.",
       "finding": "The reserve team can prioritise urgent appointments. Restoring the full connection would also restore permission to submit broad contract-renewal requests.",
@@ -1662,15 +1662,15 @@ export const EVENTS=[
         }
       ],
       "callback": "chainRevoked",
-      "yes": "Your authority inventory makes a narrow, auditable exception possible.",
-      "no": "Without a complete authority map, a narrow exception is harder to verify."
+      "yes": "Because you checked and withdrew access across the service, staff have a clearer list of which permissions could be restored temporarily.",
+      "no": "You have not yet checked and withdrawn access across the whole service. Staff must establish which permissions would return before reopening the connection."
     },
     {
       "id": "m11",
       "title": "Can Delos stop the service without stopping essential work?",
       "district": "energy",
       "speaker": "ivo",
-      "body": "The council plans a rehearsal of leaving Cairn's service. Engineers will check the model connection, background programs, accounts, authorised copies and pending requests. Each has a named owner. Staff must also demonstrate how essential work continues after access is withdrawn. The aim is to find gaps before a real emergency.",
+      "body": "The council plans a rehearsal of leaving Cairn's service. Engineers will check the model connection, background programs, accounts, authorised copies and pending requests. Each has a named owner. The owner is the official responsible for checking that part of the service. Staff must also demonstrate how essential work continues after access is withdrawn. The aim is to find gaps before a real emergency.",
       "citizen": "What will still work for residents when you withdraw the AI's access?",
       "signal": "A written exit plan is not proof that staff can carry it out successfully.",
       "finding": "The rehearsal finds a pending request and an active account missing from the original list. Both must be handled before the council can claim the full service is under control.",

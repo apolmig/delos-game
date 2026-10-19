@@ -2,7 +2,7 @@
 
 **A frontier AI governance game by Miguel Guerrero.**
 
-A strategy game by [Miguel Guerrero](https://miguelguerrero.eu). Edition 6.3.
+A strategy game by [Miguel Guerrero](https://miguelguerrero.eu). Edition 6.4.
 
 Delos is a fictional, prosperous European middle power. Its universities, exports and public institutions are strong, but its advanced chips, cloud infrastructure and frontier AI depend on larger powers. Energy, security and trade constrain its choices.
 
@@ -18,7 +18,7 @@ The private Drive backup uses two ZIPs to stay within the connection's upload li
 
 ## Plain English throughout
 
-All 36 incidents, 108 responses, evidence notes, character descriptions and outcomes use plain English. The prologue and all 36 narrated explainers use the same clearer language. Each case names the people affected, explains what happened and makes the choices explicit. Edition 6.3 introduces the Republic of Delos name throughout the game and media. Existing saves retain their choices, scores and progress.
+All 36 incidents, 108 responses, evidence notes, character descriptions and outcomes have been reviewed for plain English. Each case names the people affected, explains what happened and makes the choices explicit. Edition 6.4 clarifies costs, score changes, preparation allowances, the transition to 2028 and references to earlier decisions. An optional glossary explains technical terms. The existing narrated prologue and 36 explainers remain consistent with the scenarios. Existing saves retain their choices, scores and progress.
 
 ## One incident, one decision
 
@@ -27,6 +27,8 @@ All 36 incidents, 108 responses, evidence notes, character descriptions and outc
 3. Choose a response, confirm it, and see its human consequences.
 
 Services, rights, independence and available funds stay visible. The menu holds detailed status, council support, research and sound settings. Optional films and research panels never advance a turn.
+
+Responses show their direct cost before selection. The final result also includes ongoing problems, completed investments and government income. Investments take one to three decisions to complete, counting the decision you are about to make. Simple view allows one optional preparation and free case findings. Detailed view allows two preparations, but a new investigation uses one and costs credits.
 
 ## Three possible futures
 

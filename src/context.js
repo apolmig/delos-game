@@ -1,4 +1,13 @@
 // Plain-English explanations. Research links and legal dates retain their stated scope.
+export const PLAIN_TERMS=[
+  ['AI model', 'The software that generates an answer. The wider service also includes documents, instructions, accounts and tools.'],
+  ['Deployment', 'How an organisation puts AI into use: who uses it, which information it receives and what it is allowed to do.'],
+  ['Evaluation awareness', 'An AI recognising clues that it is being tested. This alone does not show that it is deceiving anyone.'],
+  ['Permissions', 'The records a service may read and the actions it may take, such as sending a letter or submitting a request.'],
+  ['Open model', 'Here, a model that can be downloaded and run independently. Its licence, supporting documents and paid services may still have restrictions.'],
+  ['System card', 'A developer’s report describing a model’s tests, safeguards and known limitations. It is not a guarantee that every service using the model is safe.']
+];
+
 export const AI_CONTEXT=[
   {
     "sources": [

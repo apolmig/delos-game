@@ -3,7 +3,7 @@ import {CHAPTERS,CHARACTERS,DISTRICTS,EVENTS,POLICIES,PROJECTS,SOURCES,EFFECT_NO
 import {DECISION_RESEARCH} from './src/research.js';import {SCENES,ARCS} from './src/story.js';
 import {OUTCOME_IMAGES,IMAGE_ALTS} from './src/visual-story.js';
 import {PROLOGUE_NARRATION} from './src/narration-data.js';
-import {AI_PRIMER,AI_CONTEXT,LAW_CONTEXT,POLICY_LENSES,REVIEW_DATE} from './src/context.js';
+import {AI_PRIMER,AI_CONTEXT,LAW_CONTEXT,POLICY_LENSES,REVIEW_DATE,PLAIN_TERMS} from './src/context.js';
 const json=async f=>JSON.parse(await fs.readFile(f,'utf8'));
 const edition=(await json('package.json')).version,EXPLAINERS=await json('assets/explainers/manifest.json');
 if(EXPLAINERS.status!=='complete'||Object.keys(EXPLAINERS.films).length!==36)throw Error('Film collection incomplete');
@@ -19,10 +19,11 @@ for(const [id,f] of Object.entries(EXPLAINERS.films)){
  if(JSON.stringify(f.sourceIds)!==JSON.stringify(DECISION_RESEARCH[id].sources))throw Error('Outdated citations '+id);
 }
 await fs.mkdir('delivery',{recursive:true});await fs.copyFile('dist/PLAY.html','delivery/Republic_of_Delos.html');
-await fs.writeFile('delivery/Game_Data.json',JSON.stringify({edition,author:'Miguel Guerrero',website:'https://miguelguerrero.eu',play:'https://miguelguerrero.eu/delos-game/',REVIEW_DATE,CHAPTERS,CHARACTERS,DISTRICTS,EVENTS,POLICIES,PROJECTS,SOURCES,EFFECT_NOTES,DELAYED,DECISION_RESEARCH,SCENES,ARCS,OUTCOME_IMAGES,IMAGE_ALTS,AI_PRIMER,AI_CONTEXT,LAW_CONTEXT,POLICY_LENSES,PROLOGUE_NARRATION,EXPLAINERS},null,2));
+await fs.writeFile('delivery/Game_Data.json',JSON.stringify({edition,author:'Miguel Guerrero',website:'https://miguelguerrero.eu',play:'https://miguelguerrero.eu/delos-game/',REVIEW_DATE,CHAPTERS,CHARACTERS,DISTRICTS,EVENTS,POLICIES,PROJECTS,SOURCES,EFFECT_NOTES,DELAYED,DECISION_RESEARCH,SCENES,ARCS,OUTCOME_IMAGES,IMAGE_ALTS,AI_PRIMER,AI_CONTEXT,LAW_CONTEXT,POLICY_LENSES,PLAIN_TERMS,PROLOGUE_NARRATION,EXPLAINERS},null,2));
 const report={edition,date:new Date().toISOString(),checks,sourceCount:SOURCES.length,filmCount:36,filmSeconds:42,files:[]};
 for(const file of ['dist/index.html','dist/PLAY.html','delivery/Game_Data.json','assets/explainers/manifest.json','assets/audio/narration-manifest.json','assets/trailer/manifest.json','assets/social/republic-of-delos-v6.jpg']){const b=await fs.readFile(file);report.files.push({file,bytes:b.length,sha256:crypto.createHash('sha256').update(b).digest('hex')});}
-report.scope='Republic of Delos naming across the game, sharing artwork, trailer, narration and decision films. Existing saves remain compatible.';
+report.scope='Plain-English review, explicit response costs, accurate preparation counts, score explanations, technical glossary and clear early-ending navigation. Existing media and game rules are retained.';
+report.clarity=await json('qa/clarity-browser-report.json');
 report.saveCompatibility=await json('qa/delos-browser.json');
 report.layout=await json('qa/editorial-layout-report.json');
 report.gameRulesUnchanged=(await json('qa/mechanical-comparison.json')).equal;
